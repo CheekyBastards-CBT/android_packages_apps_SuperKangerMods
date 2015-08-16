@@ -1914,4 +1914,8 @@
     <string name="qs_action_tile">VRToxin Action Tile</string>
     <string name="qs_action_tile_summary">Add and set the order of Actions for the VRToxin Action tile</string>
 
+    <!-- Time-context headers in notification header -->
+    <string name="status_bar_custom_header_title">Custom Header Image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+
 </resources>

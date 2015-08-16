@@ -24,6 +24,12 @@
         android:title="@string/expanded_header_battery_status_settings_title"
         android:summary="@string/expanded_header_battery_status_settings_summary" />
 
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+        android:key="status_bar_custom_header"
+        android:title="@string/status_bar_custom_header_title"
+        android:summary="@string/status_bar_custom_header_summary"
+        android:defaultValue="false"/>
+
     <ListPreference
         android:key="status_bar_header_font_style"
         android:entries="@array/status_bar_font_style_entries"
