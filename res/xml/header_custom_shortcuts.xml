@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 CyanideL
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/custom_header_shortcuts_title">
+
+    <PreferenceCategory
+        android:key="custom_header_shortcuts"
+        android:title="@string/custom_header_shortcuts">
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="calendar_shortcut"
+            android:title="@string/calendar_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="clock_shortcut"
+            android:title="@string/clock_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="vrtoxin_shortcut"
+            android:title="@string/vrtoxin_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="custom_header_shortcuts"
+        android:title="@string/custom_header_long_shortcuts">
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="calendar_long_shortcut"
+            android:title="@string/calendar_long_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="clock_long_shortcut"
+            android:title="@string/clock_long_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="vrtoxin_long_shortcut"
+            android:title="@string/vrtoxin_long_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+        <com.android.vrtoxin.utils.AppSelectListPreference
+            android:key="weather_long_shortcut"
+            android:title="@string/weather_long_shortcut_title"
+            android:positiveButtonText="@string/default_shortcut"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

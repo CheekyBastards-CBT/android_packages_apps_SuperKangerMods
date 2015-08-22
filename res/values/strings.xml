@@ -2022,4 +2022,21 @@
     <string name="battery_fully_charge_notif_title">Battery fully charged</string>
     <string name="battery_fully_charge_notif_summary">Shows a notification when the battery is fully charged.</string>
 
+    <!-- Status Bar Header Shortcuts -->
+    <string name="custom_header_shortcuts_frag_title">Custom App Shortcuts</string>
+    <string name="custom_header_shortcuts_summary">Select and define custom apps to open with status bar header buttons</string>
+    <string name="custom_header_shortcuts">Click Shortcuts</string>
+    <string name="custom_header_long_shortcuts">Longpress Shortcuts</string>
+    <string name="vrtoxin_shortcut_title">VRToxin Shortcut</string>
+    <string name="vrtoxin_long_shortcut_title">VRToxin Longpress Shortcut</string>
+    <string name="clock_shortcut_title">Time Shortcut</string>
+    <string name="clock_long_shortcut_title">Time Longpress Shortcut</string>
+    <string name="calendar_shortcut_title">Date Shortcut</string>
+    <string name="calendar_long_shortcut_title">Date Longpress Shortcut</string>
+    <string name="weather_shortcut_title">Weather Shortcut</string>
+    <string name="weather_long_shortcut_title">Weather Longpress Shortcut</string>
+    <string name="default_shortcut">Default</string>
+    <string name="vrtoxin_button_title">VRToxin Button</string>
+    <string name="vrtoxin_button_summary">Show a VRToxin button in the expanded header</string>
+
 </resources>

@@ -53,6 +53,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
     private static final String PREF_ICON_COLOR = "expanded_header_icon_color";
     private static final String STATUS_BAR_HEADER_BATTERY = "expanded_header_battery_settings";
     private static final String STATUS_BAR_HEADER_ICONS = "expanded_header_network_icons_settings";
+    private static final String STATUS_BAR_HEADER_SHORTCUTS = "custom_header_shortcuts";
     private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
 
     private static final int SYSTEMUI_SECONDARY = 0xff384248;
@@ -72,6 +73,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
     private ColorPickerPreference mIconColor;
     private Preference mHeaderBattery;
     private Preference mHeaderIcons;
+    private Preference mHeaderShortcuts;
     private ListPreference mCustomHeaderDefault;
 
     private ContentResolver mResolver;
@@ -100,6 +102,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
 
         mHeaderBattery = (Preference)findPreference(STATUS_BAR_HEADER_BATTERY);
         mHeaderIcons = (Preference)findPreference(STATUS_BAR_HEADER_ICONS);
+        mHeaderShortcuts = (Preference)findPreference(STATUS_BAR_HEADER_SHORTCUTS);
 
         mShowWeather = (SwitchPreference) findPreference(PREF_SHOW_WEATHER);
         mShowWeather.setChecked(showWeather);
@@ -201,6 +204,12 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
 
         if (preference == mHeaderIcons) {
             ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.expanded_header_network_icons_settings_title));
+
+            return true;
+        }
+
+        if (preference == mHeaderShortcuts) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.custom_header_shortcuts_frag_title));
 
             return true;
         }

@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>53</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>54</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>5</item>
@@ -71,6 +71,7 @@
         <item>@string/expanded_header_battery_status_settings_title</item>
         <item>@string/expanded_header_network_icons_settings_title</item>
         <item>@string/status_bar_multi_user_switch_frag_title</item>
+        <item>@string/custom_header_shortcuts_frag_title</item>
         <item>@string/navigation_bar_button_advanced_title</item>
         <item>@string/qs_colors_title</item>
         <item>@string/qs_order_title</item>
@@ -146,6 +147,7 @@
         <item>statusbar.ExpandedHeaderBatteryFragment</item>
         <item>statusbar.ExpandedHeaderNetworkIconsFragment</item>
         <item>statusbar.StatusBarMultiUserSwitchFragment</item>
+        <item>statusbar.HeaderCustomShortcutsFragment</item>
         <item>NavigationBarButtonAdvanced</item>
         <item>qs.QSColors</item>
         <item>qs.QSTiles</item>
@@ -187,6 +189,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
