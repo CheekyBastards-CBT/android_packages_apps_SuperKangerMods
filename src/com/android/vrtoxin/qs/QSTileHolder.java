@@ -206,6 +206,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_kernel";
                 stringId = R.string.qs_tile_kernel_adiutor;
                 break;
+            case QSConstants.TILE_LED:
+                resourceName = "ic_qs_led_on";
+                stringId = R.string.qs_tile_led;
+                break;
             default:
                 return null;
         }
