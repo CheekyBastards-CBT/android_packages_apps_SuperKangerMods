@@ -1915,7 +1915,12 @@
     <string name="qs_action_tile_summary">Add and set the order of Actions for the VRToxin Action tile</string>
 
     <!-- Time-context headers in notification header -->
+    <string name="contextual_title">Contextual Headers</string>
     <string name="status_bar_custom_header_title">Custom Header Image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    <string name="status_bar_custom_header_default_title">Select your images</string>
+    <string name="custom_header_image_0">Default</string>
+    <string name="custom_header_image_1">Modern</string>
+    <string name="custom_header_image_2">Poly HD</string>
 
 </resources>

@@ -24,12 +24,6 @@
         android:title="@string/expanded_header_battery_status_settings_title"
         android:summary="@string/expanded_header_battery_status_settings_summary" />
 
-    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_custom_header"
-        android:title="@string/status_bar_custom_header_title"
-        android:summary="@string/status_bar_custom_header_summary"
-        android:defaultValue="false"/>
-
     <ListPreference
         android:key="status_bar_header_font_style"
         android:entries="@array/status_bar_font_style_entries"
@@ -40,6 +34,25 @@
         android:key="expanded_header_network_icons_settings"
         android:title="@string/expanded_header_network_icons_settings_title"
         android:summary="@string/expanded_header_network_icons_settings_summary" />
+
+     <PreferenceCategory
+        android:title="@string/contextual_title" >
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="status_bar_custom_header"
+            android:title="@string/status_bar_custom_header_title"
+            android:summary="@string/status_bar_custom_header_summary"
+            android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="status_bar_custom_header_default"
+            android:title="@string/status_bar_custom_header_default_title"
+            android:dialogTitle="@string/status_bar_custom_header_default_title"
+            android:entries="@array/custom_header_entries"
+            android:entryValues="@array/custom_header_values"
+            android:dependency="status_bar_custom_header"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="expanded_header_weather_category"
