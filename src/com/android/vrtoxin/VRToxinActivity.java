@@ -792,6 +792,51 @@ public class VRToxinActivity extends AppCompatActivity {
         }
     }
 
+    private void displayVRTChangelog(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ChangelogFragment();
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
     private void removeCurrent() {
         // update the main content by replacing fragments, first by removing the old
         FragmentTransaction fragtrans = fragmentManager.beginTransaction();
@@ -928,6 +973,18 @@ public class VRToxinActivity extends AppCompatActivity {
             @Override
             public void run() {
                 displayCustomizeAppBarButtons(54);
+            }
+        }, 400);
+    }
+
+    public void displayCurrentChangelog() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayVRTChangelog(10);
             }
         }, 400);
     }

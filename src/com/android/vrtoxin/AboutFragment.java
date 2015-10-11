@@ -179,6 +179,16 @@ public class AboutFragment extends Fragment {
             }
         });
 
+        changelog.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                ((VRToxinActivity) getActivity()).displayCurrentChangelog();
+
+                return true;
+            }
+        });
+
         gapps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

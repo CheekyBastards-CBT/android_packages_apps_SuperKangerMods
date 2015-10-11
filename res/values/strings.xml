@@ -1981,8 +1981,12 @@
 
     <!-- Changelog button strings -->
     <string name="short_cut_changelog_title">Changelog</string>
-    <string name="short_cut_changelog_summary">View the changelog</string>
+    <string name="short_cut_changelog_summary">View the new changelog or longpress to view current changelog</string>
     <string name="short_cut_changelog_summary_update_available">Important!!! Read changelog carefully</string>
+
+    <!-- VRToxin Changelog -->
+    <string name="changelog_vrtoxin_frag_title">VRToxin Changelog</string>
+    <string name="changelog_vrtoxin_error">Unable to load changelog</string>
 
     <!-- Gapps button strings -->
     <string name="short_cut_gapps_title">Download Google apps</string>

@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>56</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>57</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>5</item>
@@ -46,6 +46,7 @@
         <item>@string/ota_updater_frag_title</item>
         <item>@string/sizer_frag_title</item>
         <item>@string/wakelock_frag_title</item>
+        <item>@string/changelog_vrtoxin_frag_title</item>
         <item>@string/ime_animation_title</item>
         <item>@string/scrolling_title</item>
         <item>@string/title_animation_controls</item>
@@ -124,6 +125,7 @@
         <item>VRToxinOTA</item>
         <item>SlimSizerFragment</item>
         <item>WakelockBlockerFragment</item>
+        <item>ChangelogFragment</item>
         <item>animations.KeyboardAnimationInterfaceFragment</item>
         <item>animations.ScrollAnimationInterfaceFragment</item>
         <item>animations.AnimationControlsFragment</item>
@@ -193,6 +195,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
