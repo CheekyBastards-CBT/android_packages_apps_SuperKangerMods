@@ -74,10 +74,12 @@ public class DisplayFragment extends PreferenceFragment implements
 
     private static final String KEY_SCREEN_TIMEOUT =
             "screen_timeout";
+    private static final String KEY_DOZE_CATEGORY =
+            "category_doze_options";
     private static final String KEY_DOZE =
             "doze";
-    private static final String KEY_DOZE_CAT =
-            "doze_notification_cat";
+    private static final String KEY_ADVANCED_DOZE_OPTIONS =
+            "advanced_doze_options";
     private static final String KEY_AUTO_BRIGHTNESS =
             "auto_brightness";
     private static final String KEY_DISPLAY_ROTATION =
@@ -92,7 +94,6 @@ public class DisplayFragment extends PreferenceFragment implements
 
     private ListPreference mScreenTimeoutPreference;
     private SwitchPreference mAutoBrightnessPreference;
-    private SwitchPreference mDozePreference;
     private Preference mDisplayRotationPreference;
     private ListPreference mLcdDensityPreference;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
@@ -112,6 +113,9 @@ public class DisplayFragment extends PreferenceFragment implements
             updateDisplayRotationPreferenceDescription();
         }
     };
+    private PreferenceCategory mDozeCategory;
+    private SwitchPreference mDozePreference;
+    private Preference mAdvancedDozeOptions;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -122,6 +126,8 @@ public class DisplayFragment extends PreferenceFragment implements
 
         mPrefSet = getPreferenceScreen();
         mResolver = getActivity().getContentResolver();
+
+        mAdvancedDozeOptions = (Preference)findPreference(KEY_ADVANCED_DOZE_OPTIONS);
 
         mScreenTimeoutPreference = (ListPreference) findPreference(KEY_SCREEN_TIMEOUT);
         final long currentTimeout = Settings.System.getLong(mResolver, SCREEN_OFF_TIMEOUT,
@@ -175,11 +181,13 @@ public class DisplayFragment extends PreferenceFragment implements
                 mPrefSet.removePreference(findPreference("auto_brightness"));
             }
 
+            mDozeCategory = (PreferenceCategory) findPreference(KEY_DOZE_CATEGORY);
             if (isDozeAvailable(activity)) {
+                // Doze master switch
                 mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
                 mDozePreference.setOnPreferenceChangeListener(this);
             } else {
-                mPrefSet.removePreference(findPreference("doze_notification_cat"));
+                mPrefSet.removePreference(findPreference("category_doze_options"));
             }
 
             if (RotationPolicy.isRotationLockToggleVisible(activity)) {
@@ -435,6 +443,12 @@ public class DisplayFragment extends PreferenceFragment implements
 
         if (preference == mDisplayRotationPreference) {
             ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.display_rotation_frag_title));
+
+            return true;
+        }
+
+        if (preference == mAdvancedDozeOptions) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.doze_frag_title));
 
             return true;
         }
