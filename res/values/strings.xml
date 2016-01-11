@@ -237,6 +237,7 @@
     <string name="recents_full_screen_date_summary">Shows date at the top while in fullscreen</string>
     <string name="recents_full_screen_clock_color">Clock color</string>
     <string name="recents_full_screen_date_color">Date color</string>
+    <string name="recents_font_style">Controls clock, date and memory text</string>
 
     <!-- Recents empty style -->
     <string name="recents_empty_style">VRToxin logo</string>

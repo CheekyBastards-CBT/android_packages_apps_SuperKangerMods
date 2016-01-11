@@ -75,6 +75,7 @@ public class RecentsFragment extends PreferenceFragment implements
     private static final String RECENTS_FULL_SCREEN_CLOCK_COLOR = "recents_full_screen_clock_color";
     private static final String RECENTS_FULL_SCREEN_DATE_COLOR = "recents_full_screen_date_color";
     private static final String SLIM_RECENTS = "slim_recents_settings";
+    private static final String RECENTS_FONT_STYLE = "recents_font_style";
     
     private static final int DEFAULT_COLOR = 0xff009688;
     private static final int WHITE = 0xffffffff;
@@ -104,6 +105,7 @@ public class RecentsFragment extends PreferenceFragment implements
     private PreferenceCategory mMemColors;
     private PreferenceCategory mRecentsOptions;
     private Preference mSlimRecents;
+    private ListPreference mRecentsFontStyle;
 
     private ContentResolver mResolver;
 
@@ -269,6 +271,12 @@ public class RecentsFragment extends PreferenceFragment implements
         } else {
             prefSet.removePreference(mRecentsOptions);
         }
+
+        mRecentsFontStyle = (ListPreference) findPreference(RECENTS_FONT_STYLE);
+        mRecentsFontStyle.setOnPreferenceChangeListener(this);
+        mRecentsFontStyle.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                Settings.System.RECENTS_FONT_STYLE, 0)));
+        mRecentsFontStyle.setSummary(mRecentsFontStyle.getEntry());
         
         setHasOptionsMenu(true);
     }
@@ -417,6 +425,13 @@ public class RecentsFragment extends PreferenceFragment implements
                     Settings.System.RECENTS_FULL_SCREEN_DATE_COLOR, intHex);
             preference.setSummary(hex);
             return true;
+        } else if (preference == mRecentsFontStyle) {
+            int val = Integer.parseInt((String) objValue);
+            int index = mRecentsFontStyle.findIndexOfValue((String) objValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.RECENTS_FONT_STYLE, val);
+            mRecentsFontStyle.setSummary(mRecentsFontStyle.getEntries()[index]);
+            return true;
         }
         return false;
     }
@@ -527,6 +542,9 @@ public class RecentsFragment extends PreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.RECENTS_FULL_SCREEN_DATE_COLOR,
                                     WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.RECENTS_FONT_STYLE,
+                                    0);
                             getOwner().refreshSettings();
                         }
                     })
@@ -567,6 +585,9 @@ public class RecentsFragment extends PreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.RECENTS_FULL_SCREEN_DATE_COLOR,
                                     VRTOXIN_BLUE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.RECENTS_FONT_STYLE,
+                                    3);
                             getOwner().refreshSettings();
                         }
                     })
