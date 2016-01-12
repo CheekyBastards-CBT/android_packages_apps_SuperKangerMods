@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The VRToxin Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="show_alarm_icon"
+            android:title="@string/alarm_indicator"
+            android:summary="@string/alarm_indicator_summary"
+            android:defaultValue="true" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="status_bar_brightness_control"
+            android:summary="@string/status_bar_brightness_control_summary"
+            android:title="@string/status_bar_brightness_control_title" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="disable_fc_notifications"
+            android:title="@string/disable_fc_notifications_title"
+            android:summary="@string/disable_fc_notifications_summary"
+            android:defaultValue="false" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lock_screen"
+            android:title="@string/double_tap_to_sleep_lockscreen_title"
+            android:summary="@string/double_tap_to_sleep_lockscreen_summary"
+            android:defaultValue="false" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_to_sleep_title"
+            android:summary="@string/double_tap_to_sleep_summary"
+            android:defaultValue="false" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="show_headset_icon"
+            android:title="@string/show_headset_icon_title"
+            android:summary="@string/show_headset_icon_summary"
+            android:defaultValue="true" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="show_volume_icon"
+            android:title="@string/show_volume_icon_title"
+            android:summary="@string/show_volume_icon_summary"
+            android:defaultValue="true" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_saver_notification"
+            android:title="@string/battery_saver_notif_title"
+            android:summary="@string/battery_saver_notif_summary"
+            android:defaultValue="true" />
+
+    <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_low_notification"
+            android:title="@string/battery_low_notif_title"
+            android:summary="@string/battery_low_notif_summary"
+            android:defaultValue="true" />
+
+</PreferenceScreen>

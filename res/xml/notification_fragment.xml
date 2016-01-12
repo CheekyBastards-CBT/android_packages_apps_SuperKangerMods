@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2016 The VRToxin Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="media_cat"
+        android:title="@string/media_category" >
+
+        <SwitchPreference
+            android:key="camera_sounds"
+            android:title="@string/camera_sounds_title"
+            android:summary="@string/camera_sounds_summary"
+            android:defaultValue="true" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_saver_notification"
+            android:title="@string/battery_saver_notif_title"
+            android:summary="@string/battery_saver_notif_summary"
+            android:defaultValue="true" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_low_notification"
+            android:title="@string/battery_low_notif_title"
+            android:summary="@string/battery_low_notif_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notifications_cat"
+        android:title="@string/notifications_category" >
+
+        <!-- Breathing notifications -->
+        <Preference
+            android:key="breathing_notifications"
+            android:title="@string/breathing_notifications_frag_title"
+            android:summary="@string/breathing_notifications_summary" />
+
+        <!-- Notification colors -->
+        <Preference
+            android:key="notification_colors"
+            android:title="@string/notification_color_frag_title"
+            android:summary="@string/custom_notification_color_settings_summary" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="force_expanded_notifications"
+            android:title="@string/force_expanded_notifications_title"
+            android:summary="@string/force_expanded_notifications_summary" />
+
+        <!-- Heads up -->
+        <com.android.vrtoxin.preferences.GlobalSettingSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:title="@string/heads_up_notifications"
+            android:summaryOn="@string/summary_heads_up_enabled"
+            android:summaryOff="@string/summary_heads_up_disabled" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="disable_immersive_message"
+            android:title="@string/disable_immersive_message_title"
+            android:summary="@string/disable_immersive_message_summary"
+            android:persistent="false" />
+
+        <!-- Shake to clean notifications -->
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="shake_to_clean_notifications"
+            android:title="@string/shake_to_clean_notifications_title"
+            android:summary="@string/shake_to_clean_notifications_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notification"
+        android:title="@string/notification_section_header" >
+
+        <!-- Battery light -->
+        <Preference
+            android:key="battery_light"
+            android:title="@string/battery_light_title" />
+
+        <!-- Pulse notification light -->
+        <Preference
+            android:key="notification_light"
+            android:title="@string/notification_light_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notification_manager_category"
+        android:title="@string/notification_manager">
+
+        <Preference
+            android:key="notification_manager"
+            android:title="@string/notification_manager" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,277 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card_layout_view">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:fadingEdgeLength="@dimen/card_fade_edge"
+            android:requiresFadingEdge="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title"
+                            android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial1_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial2"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title"
+                            android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial2_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial3"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title" android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial3_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial4"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title"
+                            android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial4_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial5"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title"
+                            android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial5_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cardview_pref_height"
+                    vrtoxin:cardUseCompatPadding="true"
+                    vrtoxin:cardElevation="@dimen/cardview_elevate"
+                    vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+                    vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/dialcode6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingStart="@dimen/cardview_pref_padding"
+                        android:paddingEnd="@dimen/cardview_padding"
+                        android:clickable="true"
+                        android:background="?android:selectableItemBackground">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial6"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/cardview_pref_title"
+                            android:gravity="bottom" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/dial6_sum"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:gravity="top" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_phonesettings"
+        vrtoxin:backgroundTint="@color/fab_color"
+        vrtoxin:rippleColor="@color/fab_ripple"
+        vrtoxin:borderWidth="0dp"
+        vrtoxin:elevation="5dp"
+        vrtoxin:pressedTranslationZ="10dp"
+        vrtoxin:layout_anchor="@id/card_layout_view"
+        vrtoxin:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>

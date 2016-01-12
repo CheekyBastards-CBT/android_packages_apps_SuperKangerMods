@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2016 The VRToxin Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+  <!-- Nav Drawer categories -->
+    <!-- keep in the order they will appear! -->
+    <string-array name="nav_drawer_cats" translatable="false">
+        <item>@string/interface_cat_title</item>
+        <item>@string/button_cat_title</item>
+        <item>@string/system_cat_title</item>
+        <item>@string/util_cat_title</item>
+    </string-array>
+
+    <integer-array name="nav_drawer_cat_nums" translatable="false">
+        <item>36</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>4</item>  <!-- Nav Drawer Menu Items -->
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>  <!-- Total: 12 -->
+    </integer-array>
+
+  <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items" translatable="false">
+        <item>@string/home_frag_title</item> <!-- Not listed fragments -->
+        <item>@string/buildprop_frag_title</item>
+        <item>@string/buildprop_frag_title2</item>
+        <item>@string/apppicker_frag_title</item>
+        <item>@string/sizer_frag_title</item>
+        <item>@string/wakelock_frag_title</item>
+        <item>@string/fiswitch_frag_title</item>
+        <item>@string/ime_animation_title</item>
+        <item>@string/scrolling_title</item>
+        <item>@string/title_animation_controls</item>
+        <item>@string/breathing_notifications_frag_title</item>
+        <item>@string/notification_color_frag_title</item>
+        <item>@string/status_bar_battery_status_settings_title</item>
+        <item>@string/status_bar_carrier_label_settings_title</item>
+        <item>@string/status_bar_clock_settings_title</item>
+        <item>@string/status_bar_greeting_settings_title</item>
+        <item>@string/status_bar_network_status_icons_settings_title</item>
+        <item>@string/network_traffic_title</item>
+        <item>@string/status_bar_notification_icon_settings_title</item>
+        <item>@string/status_bar_random_title</item>
+        <item>@string/status_bar_vrtoxin_logo_title</item>
+        <item>@string/status_bar_weather_temperature_title</item>
+        <item>@string/status_bar_battery_style</item>
+        <item>@string/battery_bar</item>
+        <item>@string/status_bar_expanded_header_settings_title</item>
+        <item>@string/expanded_header_battery_status_settings_title</item>
+        <item>@string/expanded_header_network_icons_settings_title</item>
+        <item>@string/navigation_bar_button_advanced_title</item>
+        <item>@string/qs_colors_title</item>
+        <item>@string/qs_order_title</item>
+        <item>@string/volume_steps_fragment_title</item>
+        <item>@string/slim_recent_category</item>
+        <item>@string/slim_recents_settings_title</item>
+        <item>@string/pie_button_style</item>
+        <item>@string/pie_style</item>
+        <item>@string/pie_control_trigger_positions</item>
+        <!-- <item>@string/lockscreen_frag_title</item> --> <!-- Nav Drawer Menu Items -->
+        <item>@string/floating_windows_frag_title</item>
+        <item>@string/qs_frag_title</item>
+        <item>@string/recents_frag_title</item>
+        <item>@string/status_bar_frag_title</item>
+        <item>@string/hw_keys_frag_title</item>
+        <item>@string/navigation_bar_settings_title</item>
+        <item>@string/pie_control_frag_title</item>
+        <item>@string/powermenu_frag_title</item>
+        <item>@string/vrtoxin_animations_settings</item>
+        <item>@string/notif_frag_title</item>
+        <item>@string/theme_frag_title</item>
+        <item>@string/toolinfo_frag_title</item>
+        <item>@string/weather_control_master_title</item>
+        <item>@string/about_frag_title</item>
+    </string-array>
+
+    <!-- Nav Drawer Fragment names-->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="nav_drawer_fragments" translatable="false">
+        <item>HomeFragment</item> <!-- Not listed fragments -->
+        <item>BuildPropFragment</item>
+        <item>EditPropFragment</item>
+        <item>AppPickerFragment</item>
+        <item>SlimSizerFragment</item>
+        <item>WakelockBlockerFragment</item>
+        <item>FiSwitchFragment</item>
+        <item>animations.KeyboardAnimationInterfaceFragment</item>
+        <item>animations.ScrollAnimationInterfaceFragment</item>
+        <item>animations.AnimationControlsFragment</item>
+        <item>notification.BreathingNotificationsFragment</item>
+        <item>notification.NotificationColorFragment</item>
+        <item>statusbar.BatteryStyleFragment</item>
+        <item>statusbar.CarrierLabelFragment</item>
+        <item>statusbar.StatusBarClockFragment</item>
+        <item>statusbar.StatusBarGreetingFragment</item>
+        <item>statusbar.StatusBarNetworkStatusIconsFragment</item>
+        <item>statusbar.NetworkTrafficFragment</item>
+        <item>statusbar.StatusBarNotificationIconsFragment</item>
+        <item>statusbar.StatusBarRandomFragment</item>
+        <item>statusbar.StatusLogoFragment</item>
+        <item>statusbar.StatusBarWeatherFragment</item>
+        <item>statusbar.StatusBarBatteryStatusFragment</item>
+        <item>statusbar.BatteryBarFragment</item>
+        <item>statusbar.StatusBarExpandedHeaderFragment</item>
+        <item>statusbar.ExpandedHeaderBatteryFragment</item>
+        <item>statusbar.ExpandedHeaderNetworkIconsFragment</item>
+        <item>NavigationBarButtonAdvanced</item>
+        <item>qs.QSColors</item>
+        <item>qs.QSTiles</item>
+        <item>VolumeStepsFragment</item>
+        <item>recents.RecentsPanelFragment</item>
+        <item>recents.SlimRecentsSettings</item>
+        <item>pie.PieButtonStyleSettings</item>
+        <item>pie.PieStyleSettings</item>
+        <item>pie.PieTriggerSettings</item>
+        <!-- <item>LockscreenFragment</item> --> <!-- Nav Drawer Menu Items -->
+        <item>FloatingWindowsFragment</item>
+        <item>QuickSettingsFragment</item>
+        <item>RecentsFragment</item>
+        <item>StatusBarFragment</item>
+        <item>HardwareKeysFragment</item>
+        <item>NavigationBarFragment</item>
+        <item>PieControlFragment</item>
+        <item>PowerMenuFragment</item>
+        <item>MasterAnimationControlFragment</item>
+        <item>NotificationFragment</item>
+        <item>ThemesFragment</item>
+        <item>DeviceFragment</item>
+        <item>WeatherControlFragment</item>
+        <item>AboutFragment</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <!-- Also note that icons for items not in navdrawer won't be shown -->
+    <array name="nav_drawer_icons" translatable="false">
+        <!-- <item>null</item> -->
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+    </array>
+
+ <!-- Example sliding tab titles -->
+    <string-array name="app_pick_items" translatable="false">
+        <item>@string/apppick_custom</item>
+        <item>@string/apppick_apps</item>
+        <item>@string/apppick_shortcuts</item>
+    </string-array>
+
+    <!-- Example sildingtab Fragment names-->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="apppick_tab_fragments" translatable="false">
+        <item>AppPickerCustomFragment</item>
+        <item>AppPickerAppFragment</item>
+        <item>AppPickerShortFragment</item>
+    </string-array>
+
+    <!-- Titles for custom items to apppicker -->
+    <string-array name="apppicker_extras" translatable="false">
+        <item>@string/donothing</item>
+        <item>@string/app_name</item>
+        <item>@string/screen_off</item>
+    </string-array>
+
+    <!-- Icons for custom items to apppicker -->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="apppicker_icons_extras" translatable="false">
+        <item>@drawable/ic_launcher_donothing</item>
+        <item>@drawable/ic_launcher_apps</item>
+        <item>@drawable/ic_launcher_screenoff</item>
+    </string-array>
+
+    <!-- Keys for custom items to apppicker -->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="apppicker_keys_extras" translatable="false">
+        <item>donothingintent</item>
+        <item>null</item>
+        <item>screenoffintent</item>
+    </string-array>
+
+    <!-- Titles for custom items to apppicker -->
+    <string-array name="apppicker_2_extras" translatable="false">
+        <item>@string/donothing</item>
+        <item>@string/app_name</item>
+    </string-array>
+
+    <!-- Icons for custom items to apppicker -->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="apppicker_2_icons_extras" translatable="false">
+        <item>@drawable/ic_launcher_donothing</item>
+        <item>@drawable/ic_launcher_apps</item>
+    </string-array>
+
+    <!-- Keys for custom items to apppicker -->
+    <!-- Keep them in order as the titles are in -->
+    <string-array name="apppicker_2_keys_extras" translatable="false">
+        <item>donothingintent</item>
+        <item>null</item>
+    </string-array>
+
+    <!-- Color picker -->
+    <array name="color_picker_panel_view_buttons">
+        <item>@id/panel_view_button_1</item>
+        <item>@id/panel_view_button_2</item>
+        <item>@id/panel_view_button_3</item>
+        <item>@id/panel_view_button_4</item>
+        <item>@id/panel_view_button_5</item>
+        <item>@id/panel_view_button_6</item>
+        <item>@id/panel_view_button_7</item>>
+        <item>@id/panel_view_button_8</item>
+    </array>
+
+    <array name="color_picker_vrtoxin_palette">
+        <item>@color/black</item>
+        <item>@color/material_blue_grey</item>
+        <item>@color/holo_blue_light</item>
+        <item>@color/material_deep_teal_500</item>
+        <item>@color/white</item>
+        <item>@color/material_indigo_500</item>
+        <item>@color/material_red_500</item>>
+        <item>@color/material_purple_500</item>
+    </array>
+
+    <array name="color_picker_material_palette">
+        <item>@color/material_red_500</item>
+        <item>@color/material_green_500</item>
+        <item>@color/material_blue_500</item>
+        <item>@color/material_deep_teal_500</item>
+        <item>@color/material_indigo_500</item>
+        <item>@color/material_purple_500</item>
+        <item>@color/material_yellow_500</item>>
+        <item>@color/material_orange_500</item>
+    </array>
+
+    <array name="color_picker_rgb_palette">
+        <item>@color/black</item>
+        <item>@color/red</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/white</item>
+        <item>@color/purple</item>
+        <item>@color/yellow</item>>
+        <item>@color/orange</item>
+    </array>
+
+  <!-- Recents -->
+    <!-- clear all recents button location -->
+    <string-array name="recents_clear_all_location_entries">
+        <item>@string/recents_clear_all_location_top_right</item>
+        <item>@string/recents_clear_all_location_top_left</item>
+        <item>@string/recents_clear_all_location_top_center</item>
+        <item>@string/recents_clear_all_location_bottom_right</item>
+        <item>@string/recents_clear_all_location_bottom_left</item>
+        <item>@string/recents_clear_all_location_bottom_center</item>
+    </string-array>
+
+    <string-array name="recents_clear_all_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+  <!-- Shortcut picker. -->
+    <!-- Icon type for lockscreen shorcut. -->
+    <string-array name="icon_types">
+        <item>@string/shortcuts_icon_default</item>
+        <item>@string/shortcuts_icon_presets</item>
+        <item>@string/shortcuts_icon_custom</item>
+    </string-array>
+
+    <string-array name="shortcut_icon_picker_labels">
+        <item>@string/shortcuts_icon_picker_alarm</item>
+        <item>@string/shortcuts_icon_picker_andy</item>
+        <item>@string/shortcuts_icon_picker_battery</item>
+        <item>@string/shortcuts_icon_picker_browser</item>
+        <item>@string/shortcuts_icon_picker_calendar</item>
+        <item>@string/shortcuts_icon_picker_camera</item>
+        <item>@string/shortcuts_icon_picker_cloud</item>
+        <item>@string/shortcuts_icon_picker_contact</item>
+        <item>@string/shortcuts_icon_picker_directdial</item>
+        <item>@string/shortcuts_icon_picker_directmessage</item>
+        <item>@string/shortcuts_icon_picker_drive</item>
+        <item>@string/shortcuts_icon_picker_dropbox</item>
+        <item>@string/shortcuts_icon_picker_email</item>
+        <item>@string/shortcuts_icon_picker_email2</item>
+        <item>@string/shortcuts_icon_picker_evernote</item>
+        <item>@string/shortcuts_icon_picker_facebook</item>
+        <item>@string/shortcuts_icon_picker_favorite</item>
+        <item>@string/shortcuts_icon_picker_file_browser</item>
+        <item>@string/shortcuts_icon_picker_file_browser2</item>
+        <item>@string/shortcuts_icon_picker_fitness</item>
+        <item>@string/shortcuts_icon_picker_gallery</item>
+        <item>@string/shortcuts_icon_picker_gears</item>
+        <item>@string/shortcuts_icon_picker_google_small</item>
+        <item>@string/shortcuts_icon_picker_gplus</item>
+        <item>@string/shortcuts_icon_picker_gtalk</item>
+        <item>@string/shortcuts_icon_picker_help</item>
+        <item>@string/shortcuts_icon_picker_joystick</item>
+        <item>@string/shortcuts_icon_picker_key</item>
+        <item>@string/shortcuts_icon_picker_laptop</item>
+        <item>@string/shortcuts_icon_picker_luggage</item>
+        <item>@string/shortcuts_icon_picker_maps</item>
+        <item>@string/shortcuts_icon_picker_market</item>
+        <item>@string/shortcuts_icon_picker_movie</item>
+        <item>@string/shortcuts_icon_picker_music</item>
+        <item>@string/shortcuts_icon_picker_nav</item>
+        <item>@string/shortcuts_icon_picker_notes</item>
+        <item>@string/shortcuts_icon_picker_package</item>
+        <item>@string/shortcuts_icon_picker_phone</item>
+        <item>@string/shortcuts_icon_picker_pinterest</item>
+        <item>@string/shortcuts_icon_picker_play</item>
+        <item>@string/shortcuts_icon_picker_pocket</item>
+        <item>@string/shortcuts_icon_picker_quicksettings</item>
+        <item>@string/shortcuts_icon_picker_rss</item>
+        <item>@string/shortcuts_icon_picker_sdcard</item>
+        <item>@string/shortcuts_icon_picker_search</item>
+        <item>@string/shortcuts_icon_picker_sms</item>
+        <item>@string/shortcuts_icon_picker_tasks</item>
+        <item>@string/shortcuts_icon_picker_terminal</item>
+        <item>@string/shortcuts_icon_picker_transit</item>
+        <item>@string/shortcuts_icon_picker_tv</item>
+        <item>@string/shortcuts_icon_picker_twitter</item>
+        <item>@string/shortcuts_icon_picker_unlock</item>
+        <item>@string/airplay</item>
+        <item>@string/android</item>
+        <item>@string/badoo</item>
+        <item>@string/battery</item>
+        <item>@string/bluetooth</item>
+        <item>@string/bookmarks</item>
+        <item>@string/browser</item>
+        <item>@string/browser2</item>
+        <item>@string/calculator</item>
+        <item>@string/calendar</item>
+        <item>@string/calls</item>
+        <item>@string/camera</item>
+        <item>@string/chrome</item>
+        <item>@string/clock</item>
+        <item>@string/cnn</item>
+        <item>@string/deezer</item>
+        <item>@string/deezer2</item>
+        <item>@string/dolphin2</item>
+        <item>@string/downloads</item>
+        <item>@string/dropbox</item>
+        <item>@string/ebay</item>
+        <item>@string/email</item>
+        <item>@string/evernote</item>
+        <item>@string/explorer</item>
+        <item>@string/falcon</item>
+        <item>@string/fb</item>
+        <item>@string/flipboard</item>
+        <item>@string/foursquare</item>
+        <item>@string/firefox</item>
+        <item>@string/googlebuzz</item>
+        <item>@string/googledocs</item>
+        <item>@string/googlewallet</item>
+        <item>@string/line</item>
+        <item>@string/meebo</item>
+        <item>@string/mic</item>
+        <item>@string/newyorktimes</item>
+        <item>@string/rootexplorer</item>
+        <item>@string/sim</item>
+        <item>@string/teamviewer</item>
+        <item>@string/totalcommander</item>
+        <item>@string/weather</item>
+        <item>@string/golocker</item>
+        <item>@string/googlecurrents</item>
+        <item>@string/googletalk</item>
+        <item>@string/gosms</item>
+        <item>@string/maps2</item>
+        <item>@string/memorycleaner</item>
+        <item>@string/navigation</item>
+        <item>@string/pulse</item>
+        <item>@string/shazam</item>
+        <item>@string/swiftkey</item>
+        <item>@string/tmobile</item>
+        <item>@string/trash</item>
+        <item>@string/games</item>
+        <item>@string/gmail</item>
+        <item>@string/docs</item>
+        <item>@string/googledrive</item>
+        <item>@string/googleearth</item>
+        <item>@string/googlehangouts</item>
+        <item>@string/googlekeep</item>
+        <item>@string/googleplay</item>
+        <item>@string/googletranslate</item>
+        <item>@string/google</item>
+        <item>@string/googleplus</item>
+        <item>@string/imdb</item>
+        <item>@string/instagram</item>
+        <item>@string/lastfm</item>
+        <item>@string/maps</item>
+        <item>@string/messages</item>
+        <item>@string/music</item>
+        <item>@string/mxplayer</item>
+        <item>@string/notepad</item>
+        <item>@string/opera</item>
+        <item>@string/paint</item>
+        <item>@string/paypal</item>
+        <item>@string/phone</item>
+        <item>@string/picasa</item>
+        <item>@string/pictures2</item>
+        <item>@string/player_pro</item>
+        <item>@string/playstation</item>
+        <item>@string/reddit</item>
+        <item>@string/settings</item>
+        <item>@string/skype</item>
+        <item>@string/soundscloud</item>
+        <item>@string/spotifiy</item>		
+        <item>@string/tapatalk</item>
+        <item>@string/tunein</item>
+        <item>@string/twitter</item>
+        <item>@string/viber</item>
+        <item>@string/videocamera</item>
+        <item>@string/whatsapp</item>
+        <item>@string/wifi</item>
+        <item>@string/xda</item>
+        <item>@string/yahoo</item>
+        <item>@string/youtube</item>
+        <item>@string/zedge</item>
+    </string-array>
+
+    <string-array name="shortcut_icon_picker_icons" translatable="false">
+        <item>@*android:drawable/ic_shortcut_alarm</item>
+        <item>@*android:drawable/ic_shortcut_andy</item>
+        <item>@*android:drawable/ic_shortcut_battery</item>
+        <item>@*android:drawable/ic_shortcut_browser</item>
+        <item>@*android:drawable/ic_shortcut_calendar</item>
+        <item>@*android:drawable/ic_shortcut_camera</item>
+        <item>@*android:drawable/ic_shortcut_cloud</item>
+        <item>@*android:drawable/ic_shortcut_contact</item>
+        <item>@*android:drawable/ic_shortcut_directdial</item>
+        <item>@*android:drawable/ic_shortcut_directmessage</item>
+        <item>@*android:drawable/ic_shortcut_drive</item>
+        <item>@*android:drawable/ic_shortcut_dropbox</item>
+        <item>@*android:drawable/ic_shortcut_email</item>
+        <item>@*android:drawable/ic_shortcut_email2</item>
+        <item>@*android:drawable/ic_shortcut_evernote</item>
+        <item>@*android:drawable/ic_shortcut_facebook</item>
+        <item>@*android:drawable/ic_shortcut_favorite</item>
+        <item>@*android:drawable/ic_shortcut_file_browser</item>
+        <item>@*android:drawable/ic_shortcut_file_browser2</item>
+        <item>@*android:drawable/ic_shortcut_fitness</item>
+        <item>@*android:drawable/ic_shortcut_gallery</item>
+        <item>@*android:drawable/ic_shortcut_gear</item>
+        <item>@*android:drawable/ic_shortcut_google_small</item>
+        <item>@*android:drawable/ic_shortcut_gplus</item>
+        <item>@*android:drawable/ic_shortcut_gtalk</item>
+        <item>@*android:drawable/ic_shortcut_help</item>
+        <item>@*android:drawable/ic_shortcut_joystick</item>
+        <item>@*android:drawable/ic_shortcut_key</item>
+        <item>@*android:drawable/ic_shortcut_laptop</item>
+        <item>@*android:drawable/ic_shortcut_luggage</item>
+        <item>@*android:drawable/ic_shortcut_maps</item>
+        <item>@*android:drawable/ic_shortcut_market</item>
+        <item>@*android:drawable/ic_shortcut_movie</item>
+        <item>@*android:drawable/ic_shortcut_music</item>
+        <item>@*android:drawable/ic_shortcut_nav</item>
+        <item>@*android:drawable/ic_shortcut_notes</item>
+        <item>@*android:drawable/ic_shortcut_package</item>
+        <item>@*android:drawable/ic_shortcut_phone</item>
+        <item>@*android:drawable/ic_shortcut_pinterest</item>
+        <item>@*android:drawable/ic_shortcut_play</item>
+        <item>@*android:drawable/ic_shortcut_pocket</item>
+        <item>@*android:drawable/ic_shortcut_quicksettings</item>
+        <item>@*android:drawable/ic_shortcut_rss</item>
+        <item>@*android:drawable/ic_shortcut_sdcard</item>
+        <item>@*android:drawable/ic_shortcut_search</item>
+        <item>@*android:drawable/ic_shortcut_sms</item>
+        <item>@*android:drawable/ic_shortcut_tasks</item>
+        <item>@*android:drawable/ic_shortcut_terminal</item>
+        <item>@*android:drawable/ic_shortcut_transit</item>
+        <item>@*android:drawable/ic_shortcut_tv</item>
+        <item>@*android:drawable/ic_shortcut_twitter</item>
+        <item>@*android:drawable/ic_shortcut_unlock</item>
+        <item>@*android:drawable/airplay</item>
+        <item>@*android:drawable/android</item>
+        <item>@*android:drawable/badoo</item>
+        <item>@*android:drawable/battery</item>
+        <item>@*android:drawable/bluetooth</item>
+        <item>@*android:drawable/bookmarks</item>
+        <item>@*android:drawable/browser</item>
+        <item>@*android:drawable/browser2</item>
+        <item>@*android:drawable/calculator</item>
+        <item>@*android:drawable/calendar</item>
+        <item>@*android:drawable/calls</item>
+        <item>@*android:drawable/camera</item>
+        <item>@*android:drawable/chrome</item>
+        <item>@*android:drawable/clock</item>
+        <item>@*android:drawable/cnn</item>
+        <item>@*android:drawable/deezer</item>
+        <item>@*android:drawable/deezer2</item>
+        <item>@*android:drawable/dolphin2</item>
+        <item>@*android:drawable/downloads</item>
+        <item>@*android:drawable/dropbox</item>
+        <item>@*android:drawable/ebay</item>
+        <item>@*android:drawable/email</item>
+        <item>@*android:drawable/evernote</item>
+        <item>@*android:drawable/explorer</item>
+        <item>@*android:drawable/falcon</item>
+        <item>@*android:drawable/fb</item>
+        <item>@*android:drawable/flipboard</item>
+        <item>@*android:drawable/foursquare</item>
+        <item>@*android:drawable/firefox</item>
+        <item>@*android:drawable/googlebuzz</item>
+        <item>@*android:drawable/googledocs</item>
+        <item>@*android:drawable/googlewallet</item>
+        <item>@*android:drawable/line</item>
+        <item>@*android:drawable/meebo</item>
+        <item>@*android:drawable/mic</item>
+        <item>@*android:drawable/newyorktimes</item>
+        <item>@*android:drawable/rootexplorer</item>
+        <item>@*android:drawable/sim</item>
+        <item>@*android:drawable/teamviewer</item>
+        <item>@*android:drawable/totalcommander</item>
+        <item>@*android:drawable/weather</item>
+        <item>@*android:drawable/golocker</item>
+        <item>@*android:drawable/googlecurrents</item>
+        <item>@*android:drawable/googletalk</item>
+        <item>@*android:drawable/gosms</item>
+        <item>@*android:drawable/maps2</item>
+        <item>@*android:drawable/memorycleaner</item>
+        <item>@*android:drawable/navigation</item>
+        <item>@*android:drawable/pulse</item>
+        <item>@*android:drawable/shazam</item>
+        <item>@*android:drawable/swiftkey</item>
+        <item>@*android:drawable/tmobile</item>
+        <item>@*android:drawable/trash</item>
+        <item>@*android:drawable/games</item>
+        <item>@*android:drawable/gmail</item>
+        <item>@*android:drawable/docs</item>
+        <item>@*android:drawable/googledrive</item>
+        <item>@*android:drawable/googleearth</item>
+        <item>@*android:drawable/googlehangouts</item>
+        <item>@*android:drawable/googlekeep</item>
+        <item>@*android:drawable/googleplay</item>
+        <item>@*android:drawable/googletranslate</item>
+        <item>@*android:drawable/google</item>
+        <item>@*android:drawable/googleplus</item>
+        <item>@*android:drawable/imdb</item>
+        <item>@*android:drawable/instagram</item>
+        <item>@*android:drawable/lastfm</item>
+        <item>@*android:drawable/maps</item>
+        <item>@*android:drawable/messages</item>
+        <item>@*android:drawable/music</item>
+        <item>@*android:drawable/mxplayer</item>
+        <item>@*android:drawable/notepad</item>
+        <item>@*android:drawable/opera</item>
+        <item>@*android:drawable/paint</item>
+        <item>@*android:drawable/paypal</item>
+        <item>@*android:drawable/phone</item>
+        <item>@*android:drawable/picasa</item>
+        <item>@*android:drawable/pictures2</item>
+        <item>@*android:drawable/player_pro</item>
+        <item>@*android:drawable/playstation</item>
+        <item>@*android:drawable/reddit</item>
+        <item>@*android:drawable/settings</item>
+        <item>@*android:drawable/skype</item>
+        <item>@*android:drawable/soundscloud</item>
+        <item>@*android:drawable/spotifiy</item>		
+        <item>@*android:drawable/tapatalk</item>
+        <item>@*android:drawable/tunein</item>
+        <item>@*android:drawable/twitter</item>
+        <item>@*android:drawable/viber</item>
+        <item>@*android:drawable/videocamera</item>
+        <item>@*android:drawable/whatsapp</item>
+        <item>@*android:drawable/wifi</item>
+        <item>@*android:drawable/xda</item>
+        <item>@*android:drawable/yahoo</item>
+        <item>@*android:drawable/youtube</item>
+        <item>@*android:drawable/zedge</item>
+    </string-array>
+
+    <string-array name="shortcut_action_entries">
+        <item>@string/shortcut_action_back</item>-
+        <item>@string/shortcut_action_app</item>-
+        <item>@string/shortcut_action_floating_windows</item>
+        <item>@string/shortcut_action_home</item>-
+        <item>@string/shortcut_action_menu</item>
+        <item>@string/shortcut_action_ime</item>
+        <item>@string/shortcut_action_power_menu</item>
+        <item>@string/shortcut_action_recent</item>
+        <item>@string/shortcut_action_power</item>
+        <item>@string/shortcut_action_search</item>
+        <item>@string/shortcut_action_torch</item>
+        <item>@string/shortcut_action_lastapp</item>
+        <item>@string/shortcut_action_kill</item>
+        <item>@string/shortcut_action_screenshot</item>
+        <item>@string/shortcut_action_now_on_tap</item>
+        <item>@string/shortcut_action_none</item>
+    </string-array>
+
+    <string-array name="shortcut_action_values" translatable="false">
+        <item>**back**</item>
+        <item>**app**</item>
+        <item>**floating_windows**</item>
+        <item>**home**</item>
+        <item>**menu_big**</item>
+        <item>**ime**</item>
+        <item>**power_menu**</item>
+        <item>**recents**</item>
+        <item>**power**</item>
+        <item>**search**</item>
+        <item>**torch**</item>
+        <item>**lastapp**</item>
+        <item>**kill**</item>
+        <item>**screenshot**</item>
+        <item>**now_on_tap**</item>
+        <item>**null**</item>
+    </string-array>
+
+    <!-- Hide notifications arrays -->
+    <string-array name="number_of_notifications_entries">
+        <item>@string/always_title</item>
+        <item>@string/number_of_notifications_two_title</item>
+        <item>@string/number_of_notifications_three_title</item>
+        <item>@string/number_of_notifications_four_title</item>
+        <item>@string/number_of_notifications_five_title</item>
+        <item>@string/number_of_notifications_six_title</item>
+    </string-array>
+
+    <string-array name="number_of_notifications_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="lock_screen_number_of_notifications_entries">
+        <item>@string/lock_screen_number_of_notifications_always_title</item>
+        <item>@string/lock_screen_number_of_notifications_two_title</item>
+        <item>@string/lock_screen_number_of_notifications_three_title</item>
+        <item>@string/lock_screen_number_of_notifications_four_title</item>
+        <item>@string/lock_screen_number_of_notifications_five_title</item>
+        <item>@string/lock_screen_number_of_notifications_six_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_number_of_notifications_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <!-- Power Menu -->
+    <string-array name="power_menu_action_entries">
+        <item>@string/shortcut_action_power_off</item>
+        <item>@string/shortcut_action_reboot</item>
+        <item>@string/shortcut_action_onthego</item>
+        <item>@string/shortcut_action_restartui</item>
+        <item>@string/shortcut_action_screenrecord</item>
+        <item>@string/shortcut_action_airplane_mode</item>
+        <item>@string/shortcut_action_users</item>
+        <item>@string/shortcut_action_system_settings</item>
+        <item>@string/shortcut_action_lock_down</item>
+        <item>@string/shortcut_action_expanded_desktop</item>
+        <item>@string/shortcut_action_pie</item>
+        <item>@string/shortcut_action_appcirclebar</item>
+        <item>@string/shortcut_action_appsidebar</item>
+        <item>@string/shortcut_action_gesture_anywhere</item>
+        <item>@string/shortcut_action_floating_windows</item>
+        <item>@string/shortcut_action_screenshot</item>
+        <item>@string/shortcut_action_sound</item>
+    </string-array>
+
+    <string-array name="power_menu_action_values" translatable="false">
+        <item>**poweroff**</item>
+        <item>**reboot**</item>
+        <item>**onthego**</item>
+        <item>**restartui**</item>
+        <item>**screenrecord**</item>
+        <item>**airplane**</item>
+        <item>**users**</item>
+        <item>**system_settings**</item>
+        <item>**lock_down**</item>
+        <item>**expanded_desktop**</item>
+        <item>**pie**</item>
+        <item>**appcirclebar**</item>
+        <item>**appsidebar**</item>
+        <item>**gesture_anywhere**</item>
+        <item>**floating_windows**</item>
+        <item>**screenshot**</item>
+        <item>**sound**</item>
+    </string-array>
+
+    <!-- Power menu Animations  -->
+    <string-array name="power_menu_animations_entries">
+        <item>@string/power_menu_animation_aosp</item>
+        <item>@string/power_menu_animation_bottom</item>
+        <item>@string/power_menu_animation_grow</item>
+        <item>@string/power_menu_animation_left</item>
+        <item>@string/power_menu_animation_right</item>
+        <item>@string/power_menu_animation_rotate</item>
+        <item>@string/power_menu_animation_top</item>
+    </string-array>
+
+    <string-array name="power_menu_animations_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+  <!-- Pie control -->
+    <string-array name="icon_color_mode_entries">
+        <item>@string/icon_color_mode_all_icons</item>
+        <item>@string/icon_color_mode_system_icons</item>
+        <item>@string/icon_color_mode_system_custom_icons</item>
+        <item>@string/disabled</item>
+    </string-array>
+
+    <string-array name="icon_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+  <!-- Navigation bar settings -->
+    <string-array name="navigation_bar_height_entries">
+        <item>@string/navigation_bar_size_48_dp_default</item>
+        <item>@string/navigation_bar_size_44_dp</item>
+        <item>@string/navigation_bar_size_42_dp</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+
+    <string-array name="navigation_bar_height_values" translatable="false">
+        <item>48</item>
+        <item>44</item>
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="navigation_bar_height_landscape_entries">
+        <item>@string/navigation_bar_size_48_dp_default</item>
+        <item>@string/navigation_bar_size_44_dp</item>
+        <item>@string/navigation_bar_size_42_dp</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+
+    <string-array name="navigation_bar_height_landscape_values" translatable="false">
+        <item>48</item>
+        <item>44</item>
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="navigation_bar_width_entries">
+        <item>@string/navigation_bar_size_42_dp_default</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+
+    <string-array name="navigation_bar_width_values" translatable="false">
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="navigation_bar_menu_visibility_entries">
+        <item>@string/navigation_bar_menu_visibility_request_title</item>
+        <item>@string/navigation_bar_menu_visibility_always_title</item>
+        <item>@string/navigation_bar_menu_visibility_never_title</item>
+    </string-array>
+
+    <string-array name="navigation_bar_menu_visibility_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="navigation_bar_menu_location_entries">
+        <item>@string/navigation_bar_menu_location_right_title</item>
+        <item>@string/navigation_bar_menu_location_left_title</item>
+        <item>@string/navigation_bar_menu_location_both_title</item>
+    </string-array>
+
+    <string-array name="navigation_bar_menu_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="navigation_bar_icon_color_mode_entries">
+        <item>@string/never_title</item>
+        <item>@string/icon_is_greyscale_title</item>
+        <item>@string/always_title</item>
+    </string-array>
+
+    <string-array name="navigation_bar_icon_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="navigation_bar_button_ripple_color_mode_entries">
+        <item>@string/navigation_bar_button_ripple_color_mode_auto_title</item>
+        <item>@string/navigation_bar_button_ripple_color_mode_custom_title</item>
+        <item>@string/navigation_bar_button_ripple_color_mode_never_title</item>
+    </string-array>
+
+    <string-array name="navigation_bar_button_ripple_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Navigation bar visibility -->
+    <string-array name="pref_menu_display_entries">
+        <item>@string/navigation_menu_always_show</item>
+        <item>@string/navigation_menu_never_show</item>
+        <item>@string/navigation_menu_default_jb_behavior</item>
+    </string-array>
+
+    <string-array name="pref_menu_display_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+  <!-- Slim recents -->
+    <string-array name="slim_recents_expanded_mode_entries">
+        <item>@string/slim_recents_mode_auto</item>
+        <item>@string/slim_recents_expanded_mode_always</item>
+        <item>@string/slim_recents_expanded_mode_never</item>
+    </string-array>
+
+    <string-array name="slim_recents_popup_theme_mode_entries">
+        <item>@string/slim_recents_mode_auto</item>
+        <item>@string/slim_recents_popup_theme_mode_dark</item>
+        <item>@string/slim_recents_popup_theme_mode_light</item>
+    </string-array>
+
+    <string-array name="slim_recents_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+  <!-- Quick Settings -->
+    <!-- QS Tiles Columns -->
+    <string-array name="qs_num_columns_values" translatable="false">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="qs_num_columns_entries">
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+    </string-array>
+
+    <!-- QS Type -->
+    <string-array name="qs_type_entries">
+        <item>@string/qs_type_panel</item>
+        <item>@string/qs_type_bar</item>
+        <item>@string/hidden_title</item>
+    </string-array>
+
+    <string-array name="qs_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- QS Bar -->
+    <string-array name="qab_button_entries">
+        <item>@string/qab_button_airplane_mode</item>
+        <item>@string/qab_button_ambient_display</item>
+        <item>@string/qab_button_appcirclebar</item>
+        <item>@string/qab_button_appsidebar</item>
+        <item>@string/qab_button_bluetooth</item>
+        <item>@string/qab_button_display_inversion</item>
+        <item>@string/qab_button_display_rotation</item>
+        <item>@string/qab_button_flashlight</item>
+        <item>@string/qs_tile_floating_windows</item>
+        <item>@string/qab_button_gesture_anywhere</item>
+        <item>@string/qab_button_hotspot</item>
+        <item>@string/qab_button_hwkeys</item>
+        <item>@string/qab_button_location</item>
+        <item>@string/qab_button_mobile_data</item>
+        <item>@string/qab_button_navbar</item>
+        <item>@string/qab_button_powermenu</item>
+        <item>@string/qab_button_systemui_restart</item>
+        <item>@string/qab_button_screen_off</item>
+        <item>@string/qs_tile_slim_floats</item>
+        <item>@string/qab_button_slimpie</item>
+        <item>@string/qab_button_themes</item>
+        <item>@string/qab_button_vrtoxin</item>
+        <item>@string/qab_button_wifi</item>
+    </string-array>
+
+    <string-array name="qab_button_values" translatable="false">
+        <item>airplane</item>
+        <item>ambient</item>
+        <item>appcirclebar</item>
+        <item>appsidebar</item>
+        <item>bt</item>
+        <item>inversion</item>
+        <item>rotation</item>
+        <item>flashlight</item>
+        <item>floating_windows</item>
+        <item>gestureanywhere</item>
+        <item>hotspot</item>
+        <item>hwkeys</item>
+        <item>location</item>
+        <item>data</item>
+        <item>navbar</item>
+        <item>powermenu</item>
+        <item>restartui</item>
+        <item>screenoff</item>
+        <item>slim_floats</item>
+        <item>slimpie</item>
+        <item>themes</item>
+        <item>vrtoxin</item>
+        <item>wifi</item>
+    </string-array>
+
+    <!-- Quick pulldown -->
+    <string-array name="quick_pulldown_entries" translatable="false">
+        <item>@string/quick_pulldown_off</item>
+        <item>@string/quick_pulldown_right</item>
+        <item>@string/quick_pulldown_left</item>
+    </string-array>
+
+    <string-array name="quick_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Smart pulldown -->
+    <string-array name="smart_pulldown_entries" translatable="false">
+        <item>@string/smart_pulldown_off</item>
+        <item>@string/smart_pulldown_dismissable</item>
+        <item>@string/smart_pulldown_persistent</item>
+        <item>@string/smart_pulldown_all</item>
+    </string-array>
+
+    <string-array name="smart_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- SlimSizer -->
+    <string-array name="slimsizer_profile_array">
+        <item >Load Profile</item>
+        <item >Save Profile</item>
+    </string-array>
+
+    <!-- Battery Bar -->
+    <string-array name="battery_bar_entries">
+        <item>Hide</item>
+        <item>Statusbar</item>
+        <item>Top of navbar</item>
+        <item>Bottom of navbar</item>
+    </string-array>
+
+    <string-array name="battery_bar_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="battery_bar_style_entries">
+        <item>Regular</item>
+        <item>Center-mirrored</item>
+    </string-array>
+
+    <string-array name="battery_bar_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+
+    <string-array name="battery_bar_thickness_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- VRToxin logo -->
+    <string-array name="vrtoxin_logo_entries">
+        <item>@string/show_logo_disabled</item>
+        <item>@string/show_logo_keyguard</item>
+        <item>@string/show_logo_statusbar</item>
+        <item>@string/show_logo_enabled</item>
+    </string-array>
+
+    <string-array name="vrtoxin_logo_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- VRToxin logo position-->
+    <string-array name="status_bar_logo_position_entries" translatable="false">
+        <item>@string/status_bar_logo_position_left</item>
+        <item>@string/status_bar_logo_position_right</item>
+    </string-array>
+
+    <string-array name="status_bar_logo_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Statusbar font styles -->
+    <string-array name="status_bar_font_style_entries">
+        <item>@string/status_bar_weather_font_normal</item>
+        <item>@string/status_bar_weather_font_italic</item>
+        <item>@string/status_bar_weather_font_bold</item>
+        <item>@string/status_bar_weather_font_bold_italic</item>
+        <item>@string/status_bar_weather_font_light</item>
+        <item>@string/status_bar_weather_font_light_italic</item>
+        <item>@string/status_bar_weather_font_thin</item>
+        <item>@string/status_bar_weather_font_thin_italic</item>
+        <item>@string/status_bar_weather_font_condensed</item>
+        <item>@string/status_bar_weather_font_condensed_italic</item>
+        <item>@string/status_bar_weather_font_condensed_bold</item>
+        <item>@string/status_bar_weather_font_condensed_bold_italic</item>
+        <item>@string/status_bar_weather_font_medium</item>
+        <item>@string/status_bar_weather_font_medium_italic</item>
+    </string-array>
+
+    <string-array name="status_bar_font_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+
+    <!-- Battery expanded header -->
+    <string-array name="battery_status_icon_indicator_entries" translatable="false">
+        <item>@string/battery_status_icon_indicator_battery_portrait</item>
+        <item>@string/battery_status_icon_indicator_battery_landscape</item>
+        <item>@string/battery_status_icon_indicator_circle</item>
+        <item>@string/hidden_title</item>
+    </string-array>
+
+    <string-array name="battery_status_icon_indicator_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="battery_status_circle_dot_entries">
+        <item>@string/battery_status_circle_dot_no_dot</item>
+        <item>@string/battery_status_circle_dot_1</item>
+        <item>@string/battery_status_circle_dot_2</item>
+        <item>@string/battery_status_circle_dot_3</item>
+        <item>@string/battery_status_circle_dot_4</item>
+        <item>@string/battery_status_circle_dot_5</item>
+        <item>@string/battery_status_circle_dot_6</item>
+        <item>@string/battery_status_circle_dot_7</item>
+        <item>@string/battery_status_circle_dot_8</item>
+        <item>@string/battery_status_circle_dot_9</item>
+        <item>@string/battery_status_circle_dot_10</item>
+    </string-array>
+
+    <string-array name="battery_status_circle_dot_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- Status bar clock -->
+    <string-array name="status_bar_clock_style_entries" translatable="false">
+        <item>@string/status_bar_clock_style_right</item>
+        <item>@string/status_bar_clock_style_center</item>
+        <item>@string/status_bar_clock_style_left</item>
+        <item>@string/status_bar_clock_style_hidden</item>
+    </string-array>
+
+    <string-array name="status_bar_clock_style_entries_rtl" translatable="false">
+        <item>@string/status_bar_clock_style_left</item>
+        <item>@string/status_bar_clock_style_center</item>
+        <item>@string/status_bar_clock_style_right</item>
+        <item>@string/status_bar_clock_style_hidden</item>
+    </string-array>
+
+    <string-array name="status_bar_clock_style_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="status_bar_am_pm_entries" translatable="false">
+        <item>@string/status_bar_am_pm_normal</item>
+        <item>@string/status_bar_am_pm_small</item>
+        <item>@string/status_bar_am_pm_hidden</item>
+    </string-array>
+
+    <string-array name="status_bar_am_pm_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_position_entries">
+        <item>@string/position_right_title</item>
+        <item>@string/position_centered_title</item>
+        <item>@string/hidden_title</item>
+    </string-array>
+
+    <!-- Statusbar date -->
+    <string-array name="status_bar_date_entries">
+        <item>@string/status_bar_date_none</item>
+        <item>@string/status_bar_date_small</item>
+        <item>@string/status_bar_date_normal</item>
+    </string-array>
+
+    <string-array name="status_bar_date_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="status_bar_date_style_entries">
+        <item>@string/status_bar_date_style_normal</item>
+        <item>@string/status_bar_date_style_lowercase</item>
+        <item>@string/status_bar_date_style_uppercase</item>
+    </string-array>
+
+    <string-array name="status_bar_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="status_bar_date_format_entries_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>dd.MM.yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE dd.MM.</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE dd. MMMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEE dd.MMMM</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE dd.MM.</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/status_bar_date_format_custom</item>
+    </string-array>
+
+    <string-array name="clock_date_position_entries" translatable="false">
+        <item>@string/clock_date_left</item>
+        <item>@string/clock_date_right</item>
+    </string-array>
+
+    <string-array name="clock_date_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Status bar clock font sizes -->
+    <string-array name="clock_font_size_entries" translatable="false">
+        <item>@string/clock_font_size_4</item>
+        <item>@string/clock_font_size_5</item>
+        <item>@string/clock_font_size_6</item>
+        <item>@string/clock_font_size_7</item>
+        <item>@string/clock_font_size_8</item>
+        <item>@string/clock_font_size_9</item>
+        <item>@string/clock_font_size_10</item>
+        <item>@string/clock_font_size_11</item>
+        <item>@string/clock_font_size_12</item>
+        <item>@string/clock_font_size_13</item>
+        <item>@string/clock_font_size_14</item>
+        <item>@string/clock_font_size_15</item>
+        <item>@string/clock_font_size_16</item>
+        <item>@string/clock_font_size_17</item>
+        <item>@string/clock_font_size_18</item>
+        <item>@string/clock_font_size_19</item>
+        <item>@string/clock_font_size_20</item>
+        <item>@string/clock_font_size_21</item>
+        <item>@string/clock_font_size_22</item>
+        <item>@string/clock_font_size_23</item>
+    </string-array>
+
+    <string-array name="clock_font_size_values" translatable="false">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+    <!-- Network Traffic Display States -->
+    <string-array name="show_network_traffic_state_entries" translatable="false">
+        <item>@string/show_network_traffic_disable</item>
+        <item>@string/show_network_traffic_up</item>
+        <item>@string/show_network_traffic_down</item>
+        <item>@string/show_network_traffic_all</item>
+    </string-array>
+
+    <string-array name="show_network_traffic_state_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- Network Traffic Display Unit -->
+    <string-array name="show_network_traffic_unit_entries" translatable="false">
+        <item>@string/show_network_traffic_bit</item>
+        <item>@string/show_network_traffic_byte</item>
+    </string-array>
+
+    <string-array name="show_network_traffic_unit_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Network Traffic Period -->
+    <string-array name="show_network_traffic_frequency_entries" translatable="false">
+        <item>@string/show_network_traffic_500</item>
+        <item>@string/show_network_traffic_1000</item>
+        <item>@string/show_network_traffic_1500</item>
+        <item>@string/show_network_traffic_2000</item>
+    </string-array>
+
+    <string-array name="show_network_traffic_frequency_values" translatable="false">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+    </string-array>
+
+    <!-- Statusbar Greeting -->
+    <string-array name="greeting_show_greeting_entries">
+        <item>@string/always_title</item>
+        <item>@string/greeting_show_greeting_once_title</item>
+        <item>@string/never_title</item>
+    </string-array>
+
+    <string-array name="greeting_show_greeting_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Status bar temperature -->
+    <string-array name="status_bar_temperature_entries" translatable="false">
+        <item>@string/status_bar_temperature_hidden</item>
+        <item>@string/status_bar_temperature_show_scale</item>
+        <item>@string/status_bar_temperature_hide_scale</item>
+    </string-array>
+
+    <string-array name="status_bar_temperature_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Status bar temperature location-->
+    <string-array name="status_bar_temperature_location_entries" translatable="false">
+        <item>@string/status_bar_temperature_location_right</item>
+        <item>@string/status_bar_temperature_location_left</item>
+    </string-array>
+
+    <string-array name="status_bar_temperature_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- IME animations -->
+    <string-array name="anim_controls_entries">
+        <item>@string/animation_default</item>
+        <item>@string/animation_fade</item>
+        <item>@string/animation_slide_right</item>
+        <item>@string/animation_slide_left</item>
+        <item>@string/animation_slide_right_no_fade</item>
+        <item>@string/animation_slide_left_no_fade</item>
+        <item>@string/animation_slide_up</item>
+        <item>@string/animation_slide_down</item>
+        <item>@string/animation_translucent</item>
+        <item>@string/animation_grow_shrink</item>
+        <item>@string/animation_grow_shrink_center</item>
+        <item>@string/animation_grow_shrink_bottom</item>
+        <item>@string/animation_grow_shrink_left</item>
+        <item>@string/animation_grow_shrink_right</item>
+        <item>@string/animation_random</item>
+    </string-array>
+
+    <string-array name="anim_controls_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+
+    <!-- Toast Animations -->
+    <string-array name="toast_animation_entries">
+        <item>@string/toast_none_animation</item>
+        <item>@string/toast_default_animation</item>
+        <item>@string/toast_fade_animation</item>
+        <item>@string/toast_SlideRight_animation</item>
+        <item>@string/toast_SlideLeft_animation</item>
+        <item>@string/toast_Xylon_animation</item>
+        <item>@string/toast_Toko_animation</item>
+        <item>@string/toast_Tn_animation</item>
+        <item>@string/toast_Honami_animation</item>
+        <item>@string/toast_FastFade_animation</item>
+        <item>@string/toast_GrowFade_animation</item>
+        <item>@string/toast_GrowFadeCenter_animation</item>
+        <item>@string/toast_GrowFadeBottom_animation</item>
+        <item>@string/toast_Translucent_animation</item>
+        <item>@string/toast_SlideLeftRight_animation</item>
+		<item>@string/toast_SlideRightLeft_animation</item>
+    </string-array>
+
+    <string-array name="toast_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <!-- Listview animation -->
+    <string-array name="listview_animation_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_wave_left</item>
+        <item>@string/listview_wave_right</item>
+        <item>@string/listview_scale</item>
+        <item>@string/listview_alpha</item>
+        <item>@string/listview_stack_top</item>
+        <item>@string/listview_stack_bottom</item>
+        <item>@string/listview_unfold</item>
+        <item>@string/listview_fold</item>
+        <item>@string/listview_translate_left</item>
+        <item>@string/listview_translate_right</item>
+    </string-array>
+
+    <string-array name="listview_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- Listview Interpolator -->
+    <string-array name="listview_interpolator_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_accelerate_interpolator</item>
+        <item>@string/listview_decelerate_interpolator</item>
+        <item>@string/listview_accelerate_decelerate_interpolator</item>
+        <item>@string/listview_anticipate_interpolator</item>
+        <item>@string/listview_overshoot_interpolator</item>
+        <item>@string/listview_anticipate_overshoot_interpolator</item>
+        <item>@string/listview_bounce_interpolator</item>
+    </string-array>
+
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <!-- Scrolling Cache -->
+    <string-array name="entries_scrollingcache" translatable="false">
+        <item>@string/pref_scrollingcache_force_enable</item>
+        <item>@string/pref_scrollingcache_default_enable</item>
+        <item>@string/pref_scrollingcache_default_disable</item>
+        <item>@string/pref_scrollingcache_force_disable</item>
+    </string-array>
+
+    <string-array name="values_scrollingcache" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- Volume key cursor control -->
+    <string-array name="volbtn_cursor_control_entries" translatable="false">
+        <item>@string/volbtn_cursor_control_off</item>
+        <item>@string/volbtn_cursor_control_on</item>
+        <item>@string/volbtn_cursor_control_on_reverse</item>
+    </string-array>
+
+    <string-array name="volbtn_cursor_control_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Volume step options. -->
+    <string-array name="volume_steps_entries" translatable="false">
+        <item>60</item>
+        <item>45</item>
+        <item>30</item>
+        <item>15</item>
+        <item>7</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- DayNight Theming. -->
+    <string-array name="night_mode_entries" translatable="false">
+        <item>@string/night_mode_no</item>
+        <item>@string/night_mode_yes</item>
+        <item>@string/night_mode_blackout</item>
+    </string-array>
+
+    <string-array name="night_mode_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- DayNight Automatic mode -->
+    <string-array name="night_auto_mode_entries">
+        <item>@string/night_auto_mode_off</item>
+        <item>@string/night_auto_mode_lightsensor</item>
+        <item>@string/night_auto_mode_twilight</item>
+    </string-array>
+
+    <string-array name="night_auto_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Notification colors  -->
+    <string-array name="notification_icons_color_mode_entries" >
+        <item>@string/notification_color_mode_never_title</item>
+        <item>@string/notification_icon_color_mode_greyscale_title</item>
+        <item>@string/notification_color_mode_always_title</item>
+    </string-array>
+
+    <string-array name="notification_bg_mode_entries" >
+        <item>@string/notification_color_mode_never_title</item>
+        <item>@string/notification_bg_color_mode_no_color_title</item>
+        <item>@string/notification_color_mode_always_title</item>
+    </string-array>
+
+    <string-array name="notification_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>

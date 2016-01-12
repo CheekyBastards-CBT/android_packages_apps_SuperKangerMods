@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The VRToxin Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fadingEdgeLength="@dimen/card_fade_edge"
+    android:requiresFadingEdge="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/logo_card"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo"
+                    android:contentDescription="@string/desc_list_item_icon" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vrtoxin_links"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <!-- Website -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/link1_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/website"
+                    android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/vrtoxin_website"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Google Plus -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/link2_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/gplus"
+                    android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/vrtoxin_gplus"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Twitter -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/link3_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/twitter"
+                    android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/vrtoxin_twit"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Donate -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/link4_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/donate"
+                    android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/donate"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lead_dev"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <!-- Dev card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_blackdragon"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Dev card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView  android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_brettrogers"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contribute"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <!-- Contributors card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_quirin"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/quirin_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/action_items">
+        <item
+            android:id="@+id/action_home"
+            android:title="@string/action_home"
+            android:orderInCategory="5"
+            vrtoxin:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/action_discard"
+            android:title="@string/cancelprop"
+            android:orderInCategory="10"
+            vrtoxin:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/action_delete"
+            android:title="@string/deleteprop"
+            android:orderInCategory="15"
+            vrtoxin:showAsAction="never" />
+        <item
+            android:id="@+id/action_search"
+            android:title="@string/action_search"
+            vrtoxin:actionViewClass="android.support.v7.widget.SearchView"
+            vrtoxin:showAsAction="always|collapseActionView"/>
+        <item
+            android:id="@+id/action_backup"
+            android:title="@string/editprop_backup"
+            android:orderInCategory="20"
+            vrtoxin:showAsAction="never" />
+        <item
+            android:id="@+id/action_restore"
+            android:title="@string/editprop_restore"
+            android:orderInCategory="25"
+            vrtoxin:showAsAction="never" />
+        <item
+            android:id="@+id/action_fabhide"
+            android:title="@string/action_fabhide"
+            android:orderInCategory="30"
+            android:checkable="true"
+            vrtoxin:showAsAction="never" />
+        <item
+            android:id="@+id/action_launchhide"
+            android:title="@string/action_launchhide"
+            android:orderInCategory="35"
+            android:checkable="true"
+            vrtoxin:showAsAction="never" />
+    </group>
+</menu>
+
