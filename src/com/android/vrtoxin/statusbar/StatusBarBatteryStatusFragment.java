@@ -164,12 +164,12 @@ public class StatusBarBatteryStatusFragment extends PreferenceFragment implement
                     mCircleDotLength.setSummary(mCircleDotLength.getEntry());
                     mCircleDotLength.setOnPreferenceChangeListener(this);
                 } else {
-                    prefSet.removePreference(mCircleDotLength);
+                    mCatCircleDotted.removePreference(findPreference("battery_status_circle_dot_length"));
                 }
             } else {
-                prefSet.removePreference(mCircleDotInterval);
-                prefSet.removePreference(mCircleDotLength);
-                prefSet.removePreference(mCatCircleDotted);
+                mCatCircleDotted.removePreference(findPreference("battery_status_circle_dot_interval"));
+                mCatCircleDotted.removePreference(findPreference("battery_status_circle_dot_length"));
+                prefSet.removePreference(findPreference("battery_status_cat_circle_dotted"));
             }
 
             mCutOutText = (SwitchPreference) findPreference(PREF_CUT_OUT_TEXT);
@@ -199,15 +199,15 @@ public class StatusBarBatteryStatusFragment extends PreferenceFragment implement
             mTextColorDarkMode.setDefaultColors(TRANSLUCENT_BLACK, TRANSLUCENT_WHITE);
             mTextColorDarkMode.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mShowText);
-            prefSet.removePreference(mCircleDotInterval);
-            prefSet.removePreference(mCircleDotLength);
-            prefSet.removePreference(mCutOutText);
-            prefSet.removePreference(mShowChargeAnimation);
-            prefSet.removePreference(mTextColor);
-            prefSet.removePreference(mTextColorDarkMode);
-            prefSet.removePreference(mCatTextChargeIcon);
-            prefSet.removePreference(mCatChargeAnimation);
+            mCatIcon.removePreference(findPreference("battery_status_show_text"));
+            mCatCircleDotted.removePreference(findPreference("battery_status_circle_dot_interval"));
+            mCatCircleDotted.removePreference(findPreference("battery_status_circle_dot_length"));
+            mCatTextChargeIcon.removePreference(findPreference("battery_status_cut_out_text"));
+            mCatColor.removePreference(findPreference("battery_status_text_color"));
+            mCatColor.removePreference(findPreference("battery_status_text_color_dark_mode"));
+            prefSet.removePreference(findPreference("battery_status_cat_circle_dotted"));
+            prefSet.removePreference(findPreference("battery_status_cat_text_charge_icon"));
+            prefSet.removePreference(findPreference("battery_status_cat_charge_animation"));
         }
 
         if (showBatteryIcon) {
@@ -240,9 +240,8 @@ public class StatusBarBatteryStatusFragment extends PreferenceFragment implement
         }
 
         if (!showBatteryIcon) {
-            prefSet.removePreference(mShowChargeAnimation);
-            prefSet.removePreference(mBatteryColor);
-            prefSet.removePreference(mBatteryColorDarkMode);
+            mCatColor.removePreference(findPreference("battery_status_battery_color"));
+            mCatColor.removePreference(findPreference("battery_status_battery_color_dark_mode"));
             prefSet.removePreference(mCatChargeAnimation);
             prefSet.removePreference(mCatColor);
         }

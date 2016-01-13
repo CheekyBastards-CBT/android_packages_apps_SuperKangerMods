@@ -153,12 +153,12 @@ public class ExpandedHeaderBatteryFragment extends PreferenceFragment implements
                     mCircleDotLength.setSummary(mCircleDotLength.getEntry());
                     mCircleDotLength.setOnPreferenceChangeListener(this);
                 } else {
-                    prefSet.removePreference(mCircleDotLength);
+                    mCatCircleDotted.removePreference(findPreference("header_battery_circle_dot_length"));
                 }
             } else {
-                prefSet.removePreference(mCircleDotInterval);
-                prefSet.removePreference(mCircleDotLength);
-                prefSet.removePreference(mCatCircleDotted);
+                mCatCircleDotted.removePreference(findPreference("header_battery_circle_dot_interval"));
+                mCatCircleDotted.removePreference(findPreference("header_battery_circle_dot_length"));
+                prefSet.removePreference(findPreference("header_battery_cat_circle_dotted"));
             }
 
             mCutOutText = (SwitchPreference) findPreference(PREF_CUT_OUT_TEXT);
@@ -182,16 +182,14 @@ public class ExpandedHeaderBatteryFragment extends PreferenceFragment implements
             mTextColor.setOnPreferenceChangeListener(this);
 
         } else {
-            prefSet.removePreference(mShowText);
-            prefSet.removePreference(mCircleDotInterval);
-            prefSet.removePreference(mCircleDotLength);
-            prefSet.removePreference(mCutOutText);
-            prefSet.removePreference(mShowChargeAnimation);
-            prefSet.removePreference(mTextColor);
-            prefSet.removePreference(mCatCircleDotted);
-            prefSet.removePreference(mCatTextChargeIcon);
-            prefSet.removePreference(mCatChargeAnimation);
-            prefSet.removePreference(mCatColor);
+            mCatIcon.removePreference(findPreference("header_battery_show_text"));
+            mCatCircleDotted.removePreference(findPreference("header_battery_circle_dot_interval"));
+            mCatCircleDotted.removePreference(findPreference("header_battery_circle_dot_length"));
+            mCatTextChargeIcon.removePreference(findPreference("header_battery_cut_out_text"));
+            mCatColor.removePreference(findPreference("header_battery_text_color"));
+            prefSet.removePreference(findPreference("header_battery_cat_circle_dotted"));
+            prefSet.removePreference(findPreference("header_battery_cat_text_charge_icon"));
+            prefSet.removePreference(findPreference("header_battery_cat_charge_animation"));
         }
 
         setHasOptionsMenu(true);

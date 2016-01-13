@@ -149,11 +149,11 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
 
             updateCustomTextPreference();
         } else {
-            prefSet.removePreference(mCustomText);
-            prefSet.removePreference(mTimeOut);
-            prefSet.removePreference(mPreview);
-            prefSet.removePreference(mColor);
-            prefSet.removePreference(mColorDarkMode);
+            prefSet.removePreference(findPreference("greeting_custom_text"));
+            prefSet.removePreference(findPreference("greeting_timeout"));
+            prefSet.removePreference(findPreference("greeting_preview"));
+            prefSet.removePreference(findPreference("greeting_color"));
+            prefSet.removePreference(findPreference("greeting_color_dark_mode"));
         }
 
         updateShowGreetingSummary(showGreeting);

@@ -185,8 +185,8 @@ public class CarrierLabelFragment extends PreferenceFragment implements
                     prefSet.removePreference(mNumberOfNotificationIcons);
                 }
             } else {
-                prefSet.removePreference(mHideLabel);
-                prefSet.removePreference(mNumberOfNotificationIcons);
+                prefSet.removePreference(findPreference("carrier_label_hide_label"));
+                prefSet.removePreference(findPreference("carrier_label_number_of_notification_icons"));
                 prefSet.removePreference(mNotifIcoCat);
             }
 
@@ -200,16 +200,16 @@ public class CarrierLabelFragment extends PreferenceFragment implements
             mColor.setSummary(hexColor);
             mColor.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mUseCustom);
-            prefSet.removePreference(mCustomLabel);
-            prefSet.removePreference(mHideLabel);
-            prefSet.removePreference(mNumberOfNotificationIcons);
-            prefSet.removePreference(mColor);
+            prefSet.removePreference(findPreference("carrier_label_use_custom"));
+            prefSet.removePreference(findPreference("carrier_label_custom_label"));
+            prefSet.removePreference(findPreference("carrier_label_hide_label"));
+            prefSet.removePreference(findPreference("carrier_label_number_of_notification_icons"));
+            prefSet.removePreference(findPreference("carrier_label_color"));
             prefSet.removePreference(mNotifIcoCat);
             prefSet.removePreference(mColorCat);
-            prefSet.removePreference(mStatusBarCarrierSize);
-            prefSet.removePreference(mStatusBarCarrierFontStyle);
-            prefSet.removePreference(mStatusBarCarrierSpot);
+            prefSet.removePreference(findPreference("status_bar_carrier_font_size"));
+            prefSet.removePreference(findPreference("status_bar_carrier_font_style"));
+            prefSet.removePreference(findPreference("status_bar_carrier_spot"));
         }
         setHasOptionsMenu(true);
     }

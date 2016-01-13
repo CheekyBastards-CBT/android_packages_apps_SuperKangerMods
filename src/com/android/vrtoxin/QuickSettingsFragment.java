@@ -110,9 +110,9 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
         mResolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mQsTiles = prefSet.findPreference(QS_ORDER);
-        mQsBar = prefSet.findPreference(QS_BAR);
-        mQsColor = prefSet.findPreference(QS_COLOR);
+        mQsTiles = findPreference(QS_ORDER);
+        mQsBar = findPreference(QS_BAR);
+        mQsColor = findPreference(QS_COLOR);
         mMainTiles = (SwitchPreference) findPreference(PREF_MAIN_TILES);
         mLocationAdvanced = (SwitchPreference) findPreference(PREF_LOCATION_ADVANCED);
         mCollapsePanel = (SwitchPreference) findPreference(PREF_COLLAPSE_PANEL);
@@ -138,21 +138,21 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
             DraggableGridView.setColumnCount(numColumns);
 
         } else {
-            prefSet.removePreference(mNumColumns);
+            prefSet.removePreference(findPreference("sysui_qs_num_columns"));
         }
 
         if (qsType == QS_TYPE_BAR || qsType == QS_TYPE_HIDDEN) {
-            prefSet.removePreference(mQsTiles);
+            prefSet.removePreference(findPreference("qs_panel_tiles"));
             prefSet.removePreference(mNumColumns);
-            prefSet.removePreference(mMainTiles);
-            prefSet.removePreference(mLocationAdvanced);
-            prefSet.removePreference(mCollapsePanel);
-            prefSet.removePreference(mWifiDetail);
-            prefSet.removePreference(mVibrate);
+            prefSet.removePreference(findPreference("sysui_qs_main_tiles"));
+            prefSet.removePreference(findPreference("qs_location_advanced"));
+            prefSet.removePreference(findPreference("quick_settings_collapse_panel"));
+            prefSet.removePreference(findPreference("qs_wifi_detail"));
+            prefSet.removePreference(findPreference("quick_settings_vibrate"));
         }
 
         if (qsType == QS_TYPE_PANEL || qsType == QS_TYPE_HIDDEN) {
-            prefSet.removePreference(mQsBar);
+            prefSet.removePreference(findPreference("qs_bar_buttons"));
         }
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
@@ -177,7 +177,7 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1) == 1);
             mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mBlockOnSecureKeyguard);
+            prefSet.removePreference(findPreference("block_on_secure_keyguard"));
         }
     }
 

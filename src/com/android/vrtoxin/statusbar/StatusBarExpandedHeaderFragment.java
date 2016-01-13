@@ -108,7 +108,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
                     Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION, 1) == 1);
             mShowLocation.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mShowLocation);
+            prefSet.removePreference(findPreference("expanded_header_show_weather_location"));
         }
 
         mStatusBarHeaderFontStyle = (ListPreference) findPreference(STATUS_BAR_HEADER_FONT_STYLE);
