@@ -54,9 +54,7 @@ public class PowerMenuFragment extends PreferenceFragment implements
 
     private Preference mPowerActions;
 
-    private static final String ADVANCED_REBOOT_KEY =
-            "advanced_reboot";
-    private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
+    private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
     private static final String PREF_BG_COLOR = "power_menu_bg_color";
     private static final String PREF_ICON_NORMAL_COLOR = "power_menu_icon_normal_color";
@@ -73,7 +71,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
     private static final int DLG_RESET = 0;
 
     private SwitchPreference mAdvancedReboot;
-    private SwitchPreference mOnTheGoPowerMenu;
     private SlimSeekBarPreference mOnTheGoAlphaPref;
 
     private ColorPickerPreference mBgColor;
@@ -110,11 +107,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
         mAdvancedReboot.setChecked(Settings.System.getInt(mResolver,
             Settings.System.ADVANCED_REBOOT, 1) == 1);
         mAdvancedReboot.setOnPreferenceChangeListener(this);
-
-        mOnTheGoPowerMenu = (SwitchPreference) findPreference(POWER_MENU_ONTHEGO_ENABLED);
-        mOnTheGoPowerMenu.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1);
-        mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
 
         mOnTheGoAlphaPref = (SlimSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
         mOnTheGoAlphaPref.setDefault(50);
@@ -228,10 +220,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
                     Settings.System.ADVANCED_REBOOT,
             (Boolean) newValue ? 1 : 0);
             return true;
-        } else if (preference == mOnTheGoPowerMenu) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(mResolver, Settings.System.POWER_MENU_ONTHEGO_ENABLED, value ? 1 : 0);
-            return true;
         } else if (preference == mOnTheGoAlphaPref) {
             float val = Float.parseFloat((String) newValue);
             Settings.System.putFloat(mResolver, Settings.System.ON_THE_GO_ALPHA,
@@ -323,8 +311,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.ADVANCED_REBOOT, 1);
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0);
-                            Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.POWER_MENU_BG_COLOR,
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
@@ -349,8 +335,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.ADVANCED_REBOOT, 1);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.POWER_MENU_BG_COLOR,
                                     0x00000000);
