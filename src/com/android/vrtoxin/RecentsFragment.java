@@ -19,6 +19,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.ContentResolver;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
@@ -70,6 +71,8 @@ public class RecentsFragment extends PreferenceFragment implements
     private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
     private static final String RECENTS_EMPTY_VRTOXIN_LOGO = "recents_empty_vrtoxin_logo";
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
+    public static final String KEY_SCREEN_PINNING_PACKAGE_NAME = "com.android.settings";
+    public static final String KEY_SCREEN_PINNING_CLASS_NAME = "com.android.settings.Settings$ScreenPinningSettingsActivity";
     private static final String RECENTS_FULL_SCREEN_CAT_OPTIONS = "recents_full_screen_cat_options";
     private static final String RECENTS_FULL_SCREEN = "recents_full_screen";
     private static final String RECENTS_FULL_SCREEN_CLOCK_COLOR = "recents_full_screen_clock_color";
@@ -93,7 +96,7 @@ public class RecentsFragment extends PreferenceFragment implements
     private ColorPickerPreference mMemTextColor;
     private ColorPickerPreference mMemBarColor;
     private ColorPickerPreference mMemBarUsedColor;
-    private PreferenceScreen mScreenPinning;
+    private Preference mScreenPinning;
     private SwitchPreference mRecentsUseOmniSwitch;
     private Preference mOmniSwitchSettings;
     private boolean mOmniSwitchInitCalled;
@@ -132,6 +135,7 @@ public class RecentsFragment extends PreferenceFragment implements
                 (PreferenceCategory) findPreference(PREF_CAT_CLEAR_ALL);
 
         mSlimRecents = (Preference)findPreference(SLIM_RECENTS);
+        mScreenPinning = (Preference)findPreference(KEY_SCREEN_PINNING);
 
         mRecentsStyle = (SwitchPreference) prefSet.findPreference(RECENTS_EMPTY_VRTOXIN_LOGO);
         mRecentsStyle.setChecked(Settings.System.getInt(mResolver,
@@ -310,6 +314,16 @@ public class RecentsFragment extends PreferenceFragment implements
 
             return true;
         }
+
+        if (preference == mScreenPinning) {
+            Intent action = new Intent(Intent.ACTION_MAIN);
+            ComponentName cn = new ComponentName(KEY_SCREEN_PINNING_PACKAGE_NAME, KEY_SCREEN_PINNING_CLASS_NAME);
+            action.setComponent(cn);
+            startActivity(action);
+
+            return true;
+        }
+
          return super.onPreferenceTreeClick(preferenceScreen, preference);
      }
 
