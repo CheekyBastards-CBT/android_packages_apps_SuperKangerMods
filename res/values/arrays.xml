@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>36</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>37</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
         <item>4</item>
         <item>3</item>
@@ -60,6 +60,7 @@
         <item>@string/status_bar_weather_temperature_title</item>
         <item>@string/status_bar_battery_style</item>
         <item>@string/battery_bar</item>
+        <item>@string/ticker_frag_title</item>
         <item>@string/status_bar_expanded_header_settings_title</item>
         <item>@string/expanded_header_battery_status_settings_title</item>
         <item>@string/expanded_header_network_icons_settings_title</item>
@@ -116,6 +117,7 @@
         <item>statusbar.StatusBarWeatherFragment</item>
         <item>statusbar.StatusBarBatteryStatusFragment</item>
         <item>statusbar.BatteryBarFragment</item>
+        <item>statusbar.StatusBarTickerFragment</item>
         <item>statusbar.StatusBarExpandedHeaderFragment</item>
         <item>statusbar.ExpandedHeaderBatteryFragment</item>
         <item>statusbar.ExpandedHeaderNetworkIconsFragment</item>
@@ -150,6 +152,7 @@
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
         <!-- <item>null</item> -->
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
