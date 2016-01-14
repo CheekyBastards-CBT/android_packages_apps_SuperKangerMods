@@ -30,6 +30,17 @@
         android:title="@string/greeting_custom_text_title"
         android:dialogMessage="@string/greeting_custom_text_dlg_message" />
 
+    <ListPreference
+        android:key="status_bar_greeting_font_style"
+        android:entries="@array/status_bar_font_style_entries"
+        android:entryValues="@array/status_bar_font_style_values"
+        android:title="@string/status_bar_weather_font_style_title" />
+
+    <Preference
+        android:key="greeting_preview"
+        android:title="@string/greeting_preview_title"
+        android:summary="@string/greeting_preview_summary" />
+
     <com.android.vrtoxin.preferences.SeekBarPreference
         android:key="greeting_timeout"
         android:title="@string/greeting_timeout_title"
@@ -40,11 +51,6 @@
         vrtoxin:interval="500"
         vrtoxin:isSeconds="true"
         android:persistent="false" />
-
-    <Preference
-        android:key="greeting_preview"
-        android:title="@string/greeting_preview_title"
-        android:summary="@string/greeting_preview_summary" />
 
      <com.android.vrtoxin.preferences.ColorPickerPreference
         android:key="greeting_color"

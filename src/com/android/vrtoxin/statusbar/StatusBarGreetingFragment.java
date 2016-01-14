@@ -56,6 +56,8 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             "greeting_color";
     private static final String PREF_COLOR_DARK_MODE =
             "greeting_color_dark_mode";
+    private static final String STATUS_BAR_GREETING_FONT_STYLE =
+            "status_bar_greeting_font_style";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -71,6 +73,7 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
     private Preference mPreview;
     private ColorPickerPreference mColor;
     private ColorPickerPreference mColorDarkMode;
+    private ListPreference mStatusBarGreetingFontStyle;
 
     private ContentResolver mResolver;
 
@@ -108,6 +111,12 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             mCustomText.setDialogMessage(getString(R.string.greeting_custom_text_dlg_message,
                     GreetingTextHelper.getDefaultGreetingText(getActivity())));
             mCustomText.setOnPreferenceChangeListener(this);
+
+            mStatusBarGreetingFontStyle = (ListPreference) findPreference(STATUS_BAR_GREETING_FONT_STYLE);
+            mStatusBarGreetingFontStyle.setOnPreferenceChangeListener(this);
+            mStatusBarGreetingFontStyle.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                    Settings.System.STATUS_BAR_GREETING_FONT_STYLE, 0)));
+            mStatusBarGreetingFontStyle.setSummary(mStatusBarGreetingFontStyle.getEntry());
 
             mTimeOut =
                     (SeekBarPreference) findPreference(PREF_TIMEOUT);
@@ -194,6 +203,13 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             Settings.System.putString(mResolver,
                     Settings.System.STATUS_BAR_GREETING_CUSTOM_TEXT, text);
             updateCustomTextPreference();
+        } else if (preference == mStatusBarGreetingFontStyle) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mStatusBarGreetingFontStyle.findIndexOfValue((String) newValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.STATUS_BAR_GREETING_FONT_STYLE, val);
+            mStatusBarGreetingFontStyle.setSummary(mStatusBarGreetingFontStyle.getEntries()[index]);
+            return true;
         } else if (preference == mTimeOut) {
             int timeout = (Integer) newValue;
             Settings.System.putInt(mResolver,
@@ -287,6 +303,9 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
                                     Settings.System.STATUS_BAR_GREETING_TIMEOUT,
                                     400);
                             Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_GREETING_FONT_STYLE,
+                                    0);
+                            Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_GREETING_COLOR,
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
@@ -300,6 +319,9 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_GREETING_SHOW_GREETING, 2);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_GREETING_FONT_STYLE,
+                                    3);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_GREETING_TIMEOUT,
                                     1000);
