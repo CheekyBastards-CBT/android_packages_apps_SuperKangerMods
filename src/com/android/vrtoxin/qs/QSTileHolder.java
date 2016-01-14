@@ -202,6 +202,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_floating_on";
                 stringId = R.string.qs_tile_slim_floats;
                 break;
+            case QSConstants.TILE_KERNEL_ADIUTOR:
+                resourceName = "ic_qs_kernel";
+                stringId = R.string.qs_tile_kernel_adiutor;
+                break;
             default:
                 return null;
         }

@@ -993,6 +993,7 @@
         <item>@string/qab_button_hotspot</item>
         <item>@string/qab_button_hwkeys</item>
         <item>@string/qab_button_location</item>
+        <item>@string/qab_button_kernel_adiutor</item>
         <item>@string/qab_button_mobile_data</item>
         <item>@string/qab_button_navbar</item>
         <item>@string/qab_button_powermenu</item>
@@ -1019,6 +1020,7 @@
         <item>hotspot</item>
         <item>hwkeys</item>
         <item>location</item>
+        <item>kernel_adiutor</item>
         <item>data</item>
         <item>navbar</item>
         <item>powermenu</item>

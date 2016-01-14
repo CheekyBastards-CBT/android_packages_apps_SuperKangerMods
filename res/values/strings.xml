@@ -787,6 +787,7 @@
     <string name="qab_button_slimpie">SlimPie</string>
     <string name="qab_button_themes">Themes</string>
     <string name="qab_button_vrtoxin">VRToxinMods</string>
+    <string name="qab_button_kernel_adiutor">Kernel Adiutor</string>
 
     <!-- Tiles -->
     <string name="accessibility_display_inversion_preference_title">Color inversion</string>
@@ -825,6 +826,7 @@
     <string name="qs_tile_appcirclebar">AppCircleBar</string>
     <string name="qs_tile_floating_windows">Floating Windows</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
+    <string name="qs_tile_kernel_adiutor">Kernel Adiutor</string>
 
     <!-- Location tile mode -->
     <string name="qs_advanced_location_title">Advanced Location Detail</string>
