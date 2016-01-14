@@ -1069,10 +1069,14 @@
     <string name="status_bar_weather_font_thin_italic">Thin Italic</string>
     <string name="status_bar_weather_font_condensed">Condensed</string>
     <string name="status_bar_weather_font_condensed_italic">Condensed Italic</string>
+    <string name="status_bar_weather_font_condensed_light">Condensed Light</string>
+    <string name="status_bar_weather_font_condensed_light_italic">Condensed Light Italic</string>
     <string name="status_bar_weather_font_condensed_bold">Condensed Bold</string>
     <string name="status_bar_weather_font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="status_bar_weather_font_medium">Medium</string>
     <string name="status_bar_weather_font_medium_italic">Medium Italic</string>
+    <string name="status_bar_weather_font_black">Black</string>
+    <string name="status_bar_weather_font_black_italic">Black Italic</string>
     <string name="weather_cat_notification_icons_title">Notification Icons</string>
     <string name="weather_hide_weather_title">Hide</string>
     <string name="weather_hide_weather_summary">Enable to choose a number of visible notification icons to hide the weather temperature on the status bar</string>
