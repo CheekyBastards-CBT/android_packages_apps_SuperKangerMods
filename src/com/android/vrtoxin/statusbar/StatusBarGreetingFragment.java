@@ -58,6 +58,8 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             "greeting_color_dark_mode";
     private static final String STATUS_BAR_GREETING_FONT_STYLE =
             "status_bar_greeting_font_style";
+    private static final String STATUS_BAR_GREETING_FONT_SIZE  =
+            "status_bar_greeting_font_size";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -74,6 +76,7 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
     private ColorPickerPreference mColor;
     private ColorPickerPreference mColorDarkMode;
     private ListPreference mStatusBarGreetingFontStyle;
+    private SeekBarPreference mStatusBarGreetingFontSize;
 
     private ContentResolver mResolver;
 
@@ -117,6 +120,12 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             mStatusBarGreetingFontStyle.setValue(Integer.toString(Settings.System.getInt(mResolver,
                     Settings.System.STATUS_BAR_GREETING_FONT_STYLE, 0)));
             mStatusBarGreetingFontStyle.setSummary(mStatusBarGreetingFontStyle.getEntry());
+
+            mStatusBarGreetingFontSize =
+                    (SeekBarPreference) findPreference(STATUS_BAR_GREETING_FONT_SIZE);
+            mStatusBarGreetingFontSize.setValue(Settings.System.getInt(mResolver,
+                    Settings.System.STATUS_BAR_GREETING_FONT_SIZE, 14));
+            mStatusBarGreetingFontSize.setOnPreferenceChangeListener(this);
 
             mTimeOut =
                     (SeekBarPreference) findPreference(PREF_TIMEOUT);
@@ -209,6 +218,11 @@ public class StatusBarGreetingFragment extends PreferenceFragment implements
             Settings.System.putInt(mResolver,
                     Settings.System.STATUS_BAR_GREETING_FONT_STYLE, val);
             mStatusBarGreetingFontStyle.setSummary(mStatusBarGreetingFontStyle.getEntries()[index]);
+            return true;
+        } else if (preference == mStatusBarGreetingFontSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(mResolver,
+                    Settings.System.STATUS_BAR_GREETING_FONT_SIZE, width);
             return true;
         } else if (preference == mTimeOut) {
             int timeout = (Integer) newValue;

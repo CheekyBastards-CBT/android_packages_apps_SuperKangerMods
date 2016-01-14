@@ -36,6 +36,15 @@
         android:entryValues="@array/status_bar_font_style_values"
         android:title="@string/status_bar_weather_font_style_title" />
 
+    <com.android.vrtoxin.preferences.SeekBarPreference
+        android:key="status_bar_greeting_font_size"
+        android:title="@string/greeting_font_size_title"
+        android:defaultValue="14"
+        android:max="23"
+        vrtoxin:minimum="4"
+        vrtoxin:unitsLeft=""
+        vrtoxin:unitsRight="dp" />
+
     <Preference
         android:key="greeting_preview"
         android:title="@string/greeting_preview_title"
