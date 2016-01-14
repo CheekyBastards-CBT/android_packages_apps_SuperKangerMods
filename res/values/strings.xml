@@ -587,23 +587,17 @@
     <string name="advanced_reboot_summary">When unlocked, include quick reboot, reboot into recovery and bootloader options.</string>
 
     <!-- Power menu Animations  -->
-    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_title">Animation</string>
     <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
     <string name="power_menu_animation_dialog_title">Select power menu animation</string>
     <string name="power_menu_animation_aosp">AOSP (default)</string>
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_grow">Grow/Shrink</string>
-    <string name="power_menu_animation_top">Top</string>
     <string name="power_menu_animation_left">Left</string>
     <string name="power_menu_animation_right">Right</string>
     <string name="power_menu_animation_rotate">Rotate</string>
-    <string name="power_menu_animation_xylon">Fly</string>
-    <string name="power_menu_animation_slide">Slide</string>
+    <string name="power_menu_animation_top">Top</string>
     <string name="power_menu_animation_turn">Turn</string>
-    <string name="power_menu_animation_fly">Glow</string>
-    <string name="power_menu_animation_card">3D</string>
-    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
-    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
     <!-- On-The-Go -->
     <string name="onthego_alpha_title">On-The-Go Alpha Settings</string>
