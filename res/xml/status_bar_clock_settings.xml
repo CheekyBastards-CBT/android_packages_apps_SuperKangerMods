@@ -82,4 +82,22 @@
         android:defaultValue="false"
         android:dependency="status_bar_clock" />
 
+    <PreferenceCategory
+        android:key="center_clock_cat_notification_icons"
+        android:title="@string/center_clock_cat_notification_icons_title">
+
+        <SwitchPreference
+            android:key="center_clock_hide"
+            android:title="@string/center_clock_hide_title"
+            android:summary="@string/center_clock_hide_summary"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="center_clock_number_of_notification_icons"
+            android:title="@string/center_clock_number_of_notification_icons_title"
+            android:entries="@array/number_of_notifications_entries"
+            android:entryValues="@array/number_of_notifications_values" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

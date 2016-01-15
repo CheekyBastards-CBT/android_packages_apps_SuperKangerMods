@@ -1525,4 +1525,10 @@
     <string name="ticker_screen_summary">Customize the ticker style</string>
     <string name="ticker_summary">Enable the old status bar ticker</string>
 
+    <!-- Center Clock: Hide when reached a custom number of notification icons -->
+    <string name="center_clock_cat_notification_icons_title">Notification Icons</string>
+    <string name="center_clock_hide_title">Hide</string>
+    <string name="center_clock_hide_summary">Enable to choose a number of visible notification icons to hide the center clock on the status bar</string>
+    <string name="center_clock_number_of_notification_icons_title">Number of notification icons</string>
+
 </resources>

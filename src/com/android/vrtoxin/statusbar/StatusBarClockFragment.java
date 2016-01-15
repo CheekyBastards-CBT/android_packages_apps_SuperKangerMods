@@ -70,6 +70,8 @@ public class StatusBarClockFragment extends PreferenceFragment
     private static final String PREF_COLOR_PICKER = "clock_color";
     private static final String PREF_FONT_STYLE = "statusbar_clock_font_style";
     private static final String PREF_STATUS_BAR_CLOCK_FONT_SIZE  = "statusbar_clock_font_size";
+    private static final String PREF_CENTER_CLOCK = "center_clock_hide";
+    private static final String PREF_NUMBER_OF_NOTIFICATION_ICONS = "center_clock_number_of_notification_icons";
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
@@ -93,6 +95,8 @@ public class StatusBarClockFragment extends PreferenceFragment
     private ListPreference mFontStyle;
     private ListPreference mStatusBarClockFontSize;
     private ColorPickerPreference mColorPicker;
+    private SwitchPreference mHideCenterClock;
+    private ListPreference mNumberOfNotificationIcons;
 
     private boolean mCheckPreferences;
 
@@ -110,7 +114,6 @@ public class StatusBarClockFragment extends PreferenceFragment
         }
         addPreferencesFromResource(R.xml.status_bar_clock_settings);
 
-        PreferenceCategory mCategory = (PreferenceCategory) findPreference("status_bar");
         ContentResolver resolver = getActivity().getContentResolver();
 
         PackageManager pm = getActivity().getPackageManager();
@@ -122,11 +125,21 @@ public class StatusBarClockFragment extends PreferenceFragment
             return null;
         }
 
+        PreferenceCategory catNotificationIcons =
+                (PreferenceCategory) findPreference("center_clock_cat_notification_icons");
+        PreferenceCategory mCategory = (PreferenceCategory) findPreference("status_bar");
+
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
         mStatusBarDate = (ListPreference) findPreference(STATUS_BAR_DATE);
         mStatusBarDateStyle = (ListPreference) findPreference(STATUS_BAR_DATE_STYLE);
         mStatusBarDateFormat = (ListPreference) findPreference(STATUS_BAR_DATE_FORMAT);
+
+        final boolean show = Settings.System.getInt(resolver,
+               Settings.System.STATUS_BAR_CLOCK, 1) == 1;
+        final boolean hideCenterClock = Settings.System.getInt(resolver,
+               Settings.System.STATUS_BAR_CENTER_CLOCK_HIDE, 1) == 1;
+        final boolean isHidden = !show;
 
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_CLOCK, 1);
@@ -201,6 +214,28 @@ public class StatusBarClockFragment extends PreferenceFragment
                 14)));
         mStatusBarClockFontSize.setSummary(mStatusBarClockFontSize.getEntry());
 
+        if (isHidden) {
+            mHideCenterClock =
+                    (SwitchPreference) findPreference(PREF_CENTER_CLOCK);
+            mHideCenterClock.setChecked(hideCenterClock);
+            mHideCenterClock.setOnPreferenceChangeListener(this);
+            if (hideCenterClock) {
+                mNumberOfNotificationIcons =
+                        (ListPreference) findPreference(PREF_NUMBER_OF_NOTIFICATION_ICONS);
+                int numberOfNotificationIcons = Settings.System.getInt(resolver,
+                       Settings.System.STATUS_BAR_CENTER_CLOCK_NUMBER_OF_NOTIFICATION_ICONS, 1);
+                mNumberOfNotificationIcons.setValue(String.valueOf(numberOfNotificationIcons));
+                mNumberOfNotificationIcons.setSummary(mNumberOfNotificationIcons.getEntry());
+                mNumberOfNotificationIcons.setOnPreferenceChangeListener(this);
+            } else {
+                catNotificationIcons.removePreference(findPreference("center_clock_number_of_notification_icons"));
+            }
+        } else {
+            catNotificationIcons.removePreference(findPreference("center_clock_hide"));
+            catNotificationIcons.removePreference(findPreference("center_clock_number_of_notification_icons"));
+            prefSet.removePreference(findPreference("center_clock_cat_notification_icons"));
+        }
+
         setHasOptionsMenu(true);
         mCheckPreferences = true;
         return prefSet;
@@ -231,6 +266,7 @@ public class StatusBarClockFragment extends PreferenceFragment
             Settings.System.putInt(
                     resolver, STATUS_BAR_CLOCK_STYLE, clockStyle);
             mStatusBarClock.setSummary(mStatusBarClock.getEntries()[index]);
+            createCustomView();
             return true;
         } else if (preference == mStatusBarAmPm) {
             int statusBarAmPm = Integer.valueOf((String) newValue);
@@ -326,6 +362,21 @@ public class StatusBarClockFragment extends PreferenceFragment
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_FONT_SIZE, val);
             mStatusBarClockFontSize.setSummary(mStatusBarClockFontSize.getEntries()[index]);
+            return true;
+        } else if (preference == mHideCenterClock) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CENTER_CLOCK_HIDE,
+                    value ? 1 : 0);
+            createCustomView();
+            return true;
+        } else if (preference == mNumberOfNotificationIcons) {
+            int intValue = Integer.valueOf((String) newValue);
+            int index = mNumberOfNotificationIcons.findIndexOfValue((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CENTER_CLOCK_NUMBER_OF_NOTIFICATION_ICONS,
+                    intValue);
+            preference.setSummary(mNumberOfNotificationIcons.getEntries()[index]);
             return true;
         }
         return false;
