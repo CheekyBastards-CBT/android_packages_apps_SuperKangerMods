@@ -79,11 +79,14 @@
             android:summary="@string/recents_font_style"
             android:title="@string/status_bar_weather_font_style_title" />
 
-        <SwitchPreference
-            android:key="recents_full_screen"
-            android:title="@string/recents_show_fullscreen"
-            android:summaryOn="@string/recents_fullscreen_summary_enabled"
-            android:summaryOff="@string/recents_fullscreen_summary_disabled" />
+         <ListPreference
+            android:key="immersive_recents"
+            android:title="@string/immersive_recents_title"
+            android:dialogTitle="@string/immersive_recents_dialog_title"
+            android:entries="@array/immersive_recents_entries"
+            android:entryValues="@array/immersive_recents_values"
+            android:summary="@string/power_menu_animation_summary"
+            android:persistent="false" />
 
         <!-- Shake to clear recents -->
         <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
@@ -134,8 +137,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="recents_full_screen_cat_options"
-        android:title="@string/recents_full_screen_cat_options">
+        android:key="immersive_recents_cat_options"
+        android:title="@string/immersive_recents_cat_options">
 
         <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
             android:key="recents_full_screen_clock"

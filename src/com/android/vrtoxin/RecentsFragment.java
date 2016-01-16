@@ -73,8 +73,8 @@ public class RecentsFragment extends PreferenceFragment implements
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
     public static final String KEY_SCREEN_PINNING_PACKAGE_NAME = "com.android.settings";
     public static final String KEY_SCREEN_PINNING_CLASS_NAME = "com.android.settings.Settings$ScreenPinningSettingsActivity";
-    private static final String RECENTS_FULL_SCREEN_CAT_OPTIONS = "recents_full_screen_cat_options";
-    private static final String RECENTS_FULL_SCREEN = "recents_full_screen";
+    private static final String IMMERSIVE_RECENTS_CAT_OPTIONS = "immersive_recents_cat_options";
+    private static final String IMMERSIVE_RECENTS = "immersive_recents";
     private static final String RECENTS_FULL_SCREEN_CLOCK_COLOR = "recents_full_screen_clock_color";
     private static final String RECENTS_FULL_SCREEN_DATE_COLOR = "recents_full_screen_date_color";
     private static final String SLIM_RECENTS = "slim_recents_settings";
@@ -102,7 +102,7 @@ public class RecentsFragment extends PreferenceFragment implements
     private boolean mOmniSwitchInitCalled;
     private PreferenceCategory mOmniSwitch;
     private SwitchPreference mRecentsStyle;
-    private SwitchPreference mRecentsFullScreen;
+    private ListPreference mImmersiveRecents;
     private ColorPickerPreference mClockColor;
     private ColorPickerPreference mDateColor;
     private PreferenceCategory mMemColors;
@@ -247,14 +247,20 @@ public class RecentsFragment extends PreferenceFragment implements
             prefs.removePreference(mOmniSwitch);
         }
 
-        boolean enableRecentsFullScreen = Settings.System.getInt(mResolver,
-                Settings.System.RECENTS_FULL_SCREEN, 0) == 1;
-        mRecentsFullScreen = (SwitchPreference) findPreference(RECENTS_FULL_SCREEN);
-        mRecentsFullScreen.setChecked(enableRecentsFullScreen);
-        mRecentsFullScreen.setOnPreferenceChangeListener(this);
+        int immersiveRecents = Settings.System.getInt(mResolver,
+                Settings.System.IMMERSIVE_RECENTS, 0);
+        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+                mResolver, Settings.System.IMMERSIVE_RECENTS, 0)));
+        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+        mImmersiveRecents.setOnPreferenceChangeListener(this);
 
-        mRecentsOptions = (PreferenceCategory) findPreference(RECENTS_FULL_SCREEN_CAT_OPTIONS);
-        if (enableRecentsFullScreen) {
+        mRecentsOptions = (PreferenceCategory) findPreference(IMMERSIVE_RECENTS_CAT_OPTIONS);
+        if (immersiveRecents == 0) {
+            prefSet.removePreference(mRecentsOptions);
+        } else if (immersiveRecents == 2) {
+            prefSet.removePreference(mRecentsOptions);
+        } else {
             mClockColor =
                     (ColorPickerPreference) findPreference(RECENTS_FULL_SCREEN_CLOCK_COLOR);
             intColor = Settings.System.getInt(mResolver,
@@ -272,8 +278,6 @@ public class RecentsFragment extends PreferenceFragment implements
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mDateColor.setSummary(hexColor);
             mDateColor.setOnPreferenceChangeListener(this);
-        } else {
-            prefSet.removePreference(mRecentsOptions);
         }
 
         mRecentsFontStyle = (ListPreference) findPreference(RECENTS_FONT_STYLE);
@@ -337,12 +341,12 @@ public class RecentsFragment extends PreferenceFragment implements
             return true;
         } else if (preference == mRecentsClearAll) {
             boolean show = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
+            Settings.System.putIntForUser(mResolver,
                     Settings.System.SHOW_CLEAR_ALL_RECENTS, show ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mRecentsClearAllLocation) {
             int location = Integer.valueOf((String) objValue);
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
+            Settings.System.putIntForUser(mResolver,
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             updateRecentsLocation(location);
             refreshSettings();
@@ -412,15 +416,15 @@ public class RecentsFragment extends PreferenceFragment implements
             return true;
         } else if (preference == mRecentsStyle) {
             boolean show = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.RECENTS_EMPTY_VRTOXIN_LOGO, show ? 1 : 0);
             Helpers.restartSystemUI();
             return true;
-        } else if (preference == mRecentsFullScreen) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(mResolver,
-                    Settings.System.RECENTS_FULL_SCREEN,
-                    value ? 1 : 0);
+        } else if (preference == mImmersiveRecents) {
+            Settings.System.putInt(mResolver, Settings.System.IMMERSIVE_RECENTS,
+                    Integer.valueOf((String) objValue));
+            mImmersiveRecents.setValue(String.valueOf(objValue));
+            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
             refreshSettings();
             return true;
         } else if (preference == mClockColor) {
@@ -549,7 +553,7 @@ public class RecentsFragment extends PreferenceFragment implements
                                     Settings.System.RECENTS_EMPTY_VRTOXIN_LOGO, 0);
                                     Helpers.restartSystemUI();
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.RECENTS_FULL_SCREEN, 0);
+                                    Settings.System.IMMERSIVE_RECENTS, 0);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.RECENTS_FULL_SCREEN_CLOCK_COLOR,
                                     WHITE);
@@ -592,7 +596,7 @@ public class RecentsFragment extends PreferenceFragment implements
                                     Settings.System.RECENTS_EMPTY_VRTOXIN_LOGO, 1);
                                     Helpers.restartSystemUI();
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.RECENTS_FULL_SCREEN, 1);
+                                    Settings.System.IMMERSIVE_RECENTS, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.RECENTS_FULL_SCREEN_CLOCK_COLOR,
                                     VRTOXIN_BLUE);

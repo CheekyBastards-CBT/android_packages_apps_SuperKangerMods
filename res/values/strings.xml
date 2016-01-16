@@ -226,11 +226,15 @@
     <!-- widget strings -->
     <string name="widget_title_info">Pick a target</string>
 
-    <!-- Recents Fullscreen -->
-    <string name="recents_full_screen_cat_options">Fullscreen Recents Options</string>
-    <string name="recents_show_fullscreen">Fullscreen Recents</string>
-    <string name="recents_fullscreen_summary_enabled">Recents in fullscreen is enabled</string>
-    <string name="recents_fullscreen_summary_disabled">Recents in fullscreen is disabled</string>
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_cat_options">Immersive Recents Options</string>
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_dialog_title">Select recents view</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
     <string name="recents_full_screen_clock_title">Show clock</string>
     <string name="recents_full_screen_clock_summary">Shows clock at the top while in fullscreen</string>
     <string name="recents_full_screen_date_title">Show date</string>
