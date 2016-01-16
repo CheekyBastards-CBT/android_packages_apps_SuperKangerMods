@@ -139,7 +139,7 @@ public class QSTileHolder {
                 stringId = R.string.qs_tile_volume_panel;
                 break;
             case QSConstants.TILE_VRTOXIN:
-                resourceName = "ic_qs_cyanide_on";
+                resourceName = "ic_qs_vrtoxin";
                 stringId = R.string.qs_tile_vrtoxin;
                 break;
             case QSConstants.TILE_WIFI:
