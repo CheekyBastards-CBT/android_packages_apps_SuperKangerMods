@@ -1533,4 +1533,8 @@
     <string name="heads_up_notifications">Heads Up</string>
     <string name="heads_up_summary">Customize several aspects of the heads up view</string>
 
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+
 </resources>

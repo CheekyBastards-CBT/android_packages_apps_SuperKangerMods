@@ -16,8 +16,10 @@
 
 package com.android.vrtoxin;
 
+import android.content.Context;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -29,10 +31,15 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.support.annotation.NonNull;
 
+import com.android.vrtoxin.preferences.SystemSettingSwitchPreference;
+
 public class NotificationFragment extends PreferenceFragment implements
          OnPreferenceChangeListener {
 
     public NotificationFragment(){}
+
+    private FingerprintManager mFingerprintManager;
+    private SystemSettingSwitchPreference mFingerprintVib;
 
     public static final String KEY_NOTIFICATION_ACTIVITY_PACKAGE_NAME = "com.android.settings";
     public static final String KEY_NOTIF_BATTERY_LIGHT_CLASS_NAME = "com.android.settings.Settings$BatteryLightSettingsActivity";
@@ -63,6 +70,7 @@ public class NotificationFragment extends PreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.notification_fragment);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
         final PreferenceCategory notification = (PreferenceCategory)
                 findPreference(KEY_NOTIFICATION);
@@ -78,6 +86,12 @@ public class NotificationFragment extends PreferenceFragment implements
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
         mCameraSounds.setOnPreferenceChangeListener(this);
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SystemSettingSwitchPreference) prefScreen.findPreference("fingerprint_success_vib");
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefScreen.removePreference(mFingerprintVib);
+        }
     }
 
     private void initPulse(PreferenceCategory parent) {
