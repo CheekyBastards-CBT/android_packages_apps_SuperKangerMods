@@ -274,6 +274,7 @@
     <!-- Slim recents options -->
     <string name="slim_recents_scale_title">Size</string>
     <string name="slim_recents_expanded_mode_title">Expanded mode</string>
+    <string name="slim_recents_colors_title">Colors</string>
     <string name="slim_recents_mode_auto">Auto</string>
     <string name="slim_recents_expanded_mode_always">Always</string>
     <string name="slim_recents_expanded_mode_never">Never</string>

@@ -23,11 +23,10 @@
         android:key="slim_recents_cat_appearance"
         android:title="@string/cat_appearance_title">
 
-        <PreferenceScreen
+        <Preference
             android:key="slim_recents_color_settings"
-            android:title="@string/colors_title"
-            android:summary="@string/category_colors_title"
-            android:fragment="com.android.settings.vrtoxin.recents.SlimRecentsColorSettings" />
+            android:title="@string/slim_recents_colors_title"
+            android:summary="@string/category_colors_title" />
 
         <SlimSeekBarPreference
             android:key="slim_recents_scale"

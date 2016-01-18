@@ -38,10 +38,10 @@ import com.android.vrtoxin.R;
 
 import com.android.vrtoxin.preferences.ColorPickerPreference;
 
-public class SlimRecentsColorSettings extends PreferenceFragment implements
+public class SlimRecentsColorFragment extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    public SlimRecentsColorSettings(){}
+    public SlimRecentsColorFragment(){}
 
     private static final String PREF_CAT_COLORS =
             "slim_recents_cat_colors";
@@ -94,7 +94,7 @@ public class SlimRecentsColorSettings extends PreferenceFragment implements
             prefs.removeAll();
         }
 
-        addPreferencesFromResource(R.xml.slim_recents_color_settings);
+        addPreferencesFromResource(R.xml.slim_recents_color_fragment);
         mResolver = getActivity().getContentResolver();
 
         int intColor = 0xffffffff;
@@ -292,8 +292,8 @@ public class SlimRecentsColorSettings extends PreferenceFragment implements
             return frag;
         }
 
-        SlimRecentsColorSettings getOwner() {
-            return (SlimRecentsColorSettings) getTargetFragment();
+        SlimRecentsColorFragment getOwner() {
+            return (SlimRecentsColorFragment) getTargetFragment();
         }
 
         @Override

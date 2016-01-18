@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>37</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>38</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
         <item>4</item>
         <item>3</item>
@@ -69,6 +69,7 @@
         <item>@string/qs_order_title</item>
         <item>@string/volume_steps_fragment_title</item>
         <item>@string/slim_recent_category</item>
+        <item>@string/slim_recents_colors_title</item>
         <item>@string/slim_recents_settings_title</item>
         <item>@string/pie_button_style</item>
         <item>@string/pie_style</item>
@@ -126,6 +127,7 @@
         <item>qs.QSTiles</item>
         <item>VolumeStepsFragment</item>
         <item>recents.RecentsPanelFragment</item>
+        <item>recents.SlimRecentsColorFragment</item>
         <item>recents.SlimRecentsSettings</item>
         <item>pie.PieButtonStyleSettings</item>
         <item>pie.PieStyleSettings</item>
@@ -152,6 +154,7 @@
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
         <!-- <item>null</item> -->
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>

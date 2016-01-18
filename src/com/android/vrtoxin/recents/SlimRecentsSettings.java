@@ -25,11 +25,14 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.SlimSeekBarPreference;
+import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.view.Gravity;
 
 import com.android.vrtoxin.R;
+import com.android.vrtoxin.VRToxinActivity;
 
 public class SlimRecentsSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -50,6 +53,8 @@ public class SlimRecentsSettings extends PreferenceFragment implements
             "slim_recents_show_topmost";
     private static final String PREF_MAX_APPS =
             "slim_recents_max_apps";
+    private static final String PREF_COLOR_FRAG =
+            "slim_recents_color_settings";
 
     private SlimSeekBarPreference mScale;
     private ListPreference mPopupThemeMode;
@@ -58,6 +63,7 @@ public class SlimRecentsSettings extends PreferenceFragment implements
     private SwitchPreference mOnlyShowRunningTasks;
     private SwitchPreference mShowTopmost;
     private SlimSeekBarPreference mMaxApps;
+    private Preference mColors;
 
     private ContentResolver mResolver;
 
@@ -67,6 +73,8 @@ public class SlimRecentsSettings extends PreferenceFragment implements
 
         addPreferencesFromResource(R.xml.slim_recents_settings);
         mResolver = getActivity().getContentResolver();
+
+        mColors = (Preference)findPreference(PREF_COLOR_FRAG);
 
         mScale =
                 (SlimSeekBarPreference) findPreference(PREF_SCALE);
@@ -120,6 +128,17 @@ public class SlimRecentsSettings extends PreferenceFragment implements
         mMaxApps.disablePercentageValue(true);
         mMaxApps.setOnPreferenceChangeListener(this);
 
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
+        if (pref == mColors) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.slim_recents_colors_title));
+
+            return true;
+        }
+
+        return false;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

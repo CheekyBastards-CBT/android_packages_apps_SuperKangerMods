@@ -15,8 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:vrtoxin="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/recent_panel_category">
+                  xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
 
     <SlimSeekBarPreference
             android:key="recent_app_sidebar_scale"

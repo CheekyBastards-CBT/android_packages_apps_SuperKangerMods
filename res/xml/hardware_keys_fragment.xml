@@ -16,7 +16,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:pure="http://schemas.android.com/apk/res-auto" >
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto" >
 
     <com.android.vrtoxin.preferences.SecureSettingSwitchPreference
         android:key="volume_keys_control_ring_stream"
