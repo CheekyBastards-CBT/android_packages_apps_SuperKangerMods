@@ -45,6 +45,7 @@
 
   <!-- About Fragment -->
     <string name="about_frag_title">About</string>
+    <string name="about_frag_summary">Read all about us, links to VRToxin social media and website</string>
     <string name="home_frag_title">Home</string>
     <string name="vrtoxin_site" translatable="false">http://vrtoxin.net</string>
     <string name="gplus_data" translatable="false">https://plus.google.com/communities/108303487813436381401</string>

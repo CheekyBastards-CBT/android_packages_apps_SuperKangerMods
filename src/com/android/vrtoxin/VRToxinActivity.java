@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Pure Nexus Project
+ * Copyright (C) 2016 The VRToxin Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -498,7 +499,7 @@ public class VRToxinActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_vrtoxin, menu);
-        menu.findItem(R.id.action_launchhide).setChecked(!isLauncherIconEnabled());
+//        menu.findItem(R.id.action_launchhide).setChecked(!isLauncherIconEnabled());
 
         return true;
     }
@@ -547,13 +548,15 @@ public class VRToxinActivity extends AppCompatActivity {
             boolean iseditprop = (mItemPosition == 2);
             boolean isapppicker = (mItemPosition == 3);
             boolean isfiswitch = (mItemPosition == 4);
+            boolean isHome =  (mItemPosition == 0);
+            boolean subFrags =  (mItemPosition >= 6);
             menu.findItem(R.id.action_backup).setVisible(isbuildprop);
             menu.findItem(R.id.action_restore).setVisible(isbuildprop);
             menu.findItem(R.id.action_search).setVisible(isbuildprop);
             menu.findItem(R.id.action_discard).setVisible(iseditprop);
             menu.findItem(R.id.action_delete).setVisible(iseditprop);
             menu.findItem(R.id.action_fabhide).setVisible(isfiswitch);
-            menu.findItem(R.id.action_launchhide).setVisible(!(isbuildprop || iseditprop || isapppicker ||isfiswitch));
+            menu.findItem(R.id.action_launchhide).setVisible(!(isbuildprop || iseditprop || isapppicker ||isfiswitch ||isHome ||subFrags));
             menu.findItem(R.id.action_home).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch));
         } else {
             menu.setGroupVisible(R.id.action_items, false);

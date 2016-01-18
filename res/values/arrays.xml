@@ -27,11 +27,11 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>38</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>39</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
         <item>4</item>
         <item>3</item>
-        <item>3</item>  <!-- Total: 12 -->
+        <item>2</item>  <!-- Total: 12 -->
     </integer-array>
 
   <!-- Nav Drawer Menu Items -->
@@ -40,9 +40,10 @@
         <item>@string/buildprop_frag_title</item>
         <item>@string/buildprop_frag_title2</item>
         <item>@string/apppicker_frag_title</item>
+        <item>@string/fiswitch_frag_title</item>
+        <item>@string/about_frag_title</item>
         <item>@string/sizer_frag_title</item>
         <item>@string/wakelock_frag_title</item>
-        <item>@string/fiswitch_frag_title</item>
         <item>@string/ime_animation_title</item>
         <item>@string/scrolling_title</item>
         <item>@string/title_animation_controls</item>
@@ -88,7 +89,6 @@
         <item>@string/theme_frag_title</item>
         <item>@string/toolinfo_frag_title</item>
         <item>@string/weather_control_master_title</item>
-        <item>@string/about_frag_title</item>
     </string-array>
 
     <!-- Nav Drawer Fragment names-->
@@ -98,9 +98,10 @@
         <item>BuildPropFragment</item>
         <item>EditPropFragment</item>
         <item>AppPickerFragment</item>
+        <item>FiSwitchFragment</item>
+        <item>AboutFragment</item>
         <item>SlimSizerFragment</item>
         <item>WakelockBlockerFragment</item>
-        <item>FiSwitchFragment</item>
         <item>animations.KeyboardAnimationInterfaceFragment</item>
         <item>animations.ScrollAnimationInterfaceFragment</item>
         <item>animations.AnimationControlsFragment</item>
@@ -146,7 +147,6 @@
         <item>ThemesFragment</item>
         <item>DeviceFragment</item>
         <item>WeatherControlFragment</item>
-        <item>AboutFragment</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->

@@ -73,6 +73,7 @@ public class HomeFragment extends Fragment {
         LinearLayout kernelAdiutor = (LinearLayout)v.findViewById(R.id.kernel_adiutor_card);
         LinearLayout restartSystemUI = (LinearLayout)v.findViewById(R.id.restart_systemui_card);
         LinearLayout powerMenu = (LinearLayout)v.findViewById(R.id.power_menu_card);
+        LinearLayout aboutFrag = (LinearLayout)v.findViewById(R.id.about_card);
 
         fullScreen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,6 +138,13 @@ public class HomeFragment extends Fragment {
                     windowManagerService.toggleGlobalMenu();
                 } catch (RemoteException e) {
                 }
+            }
+        });
+
+        aboutFrag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.about_frag_title));
             }
         });
 
