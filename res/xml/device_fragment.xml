@@ -35,7 +35,7 @@
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.fuelgauge.PowerUsageSummary" />
     </Preference>
-
+<!--
     <Preference
         android:title="@string/title_usage_statistics"
         android:key="usage_statistics_settings"
@@ -44,7 +44,7 @@
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.UsageStatsActivity" />
     </Preference>
-
+-->
     <Preference
         android:title="@string/wifi_title"
         android:summary="@string/wifi_summary">
