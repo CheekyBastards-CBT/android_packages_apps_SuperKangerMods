@@ -20,8 +20,10 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
@@ -40,6 +42,7 @@ public class NotificationFragment extends PreferenceFragment implements
 
     private static final String NOTIF_BREATHING = "breathing_notifications";
     private static final String NOTIF_COLOR = "notification_colors";
+    private static final String KEY_NOTIFICATION = "notification";
     private static final String NOTIF_BATTERY_LIGHT = "battery_light";
     private static final String NOTIF_LIGHT = "notification_light";
     private static final String NOTIF_MANAGER = "notification_manager";
@@ -61,6 +64,10 @@ public class NotificationFragment extends PreferenceFragment implements
 
         addPreferencesFromResource(R.xml.notification_fragment);
 
+        final PreferenceCategory notification = (PreferenceCategory)
+                findPreference(KEY_NOTIFICATION);
+        initPulse(notification);
+
         mBreathing = (Preference)findPreference(NOTIF_BREATHING);
         mColor = (Preference)findPreference(NOTIF_COLOR);
         mBatteryLight = (Preference)findPreference(NOTIF_BATTERY_LIGHT);
@@ -71,6 +78,18 @@ public class NotificationFragment extends PreferenceFragment implements
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
         mCameraSounds.setOnPreferenceChangeListener(this);
+    }
+
+    private void initPulse(PreferenceCategory parent) {
+        if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_intrusiveNotificationLed)) {
+            parent.removePreference(parent.findPreference("notification_light"));
+        }
+        if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_intrusiveBatteryLed)
+                || UserHandle.myUserId() != UserHandle.USER_OWNER) {
+            parent.removePreference(parent.findPreference("battery_light"));
+        }
     }
 
     @Override
