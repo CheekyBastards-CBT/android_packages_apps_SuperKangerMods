@@ -36,6 +36,7 @@ public class NotificationFragment extends PreferenceFragment implements
     public static final String KEY_NOTIF_BATTERY_LIGHT_CLASS_NAME = "com.android.settings.Settings$BatteryLightSettingsActivity";
     public static final String KEY_NOTIF_LIGHT_CLASS_NAME = "com.android.settings.Settings$NotificationLightSettingsActivity";
     public static final String KEY_NOTIF_MANAGER_CLASS_NAME = "com.android.settings.Settings$NotificationManagerSettingsActivity";
+    public static final String KEY_NOTIF_HEADS_UP_CLASS_NAME = "com.android.settings.Settings$HeadsUpSettingsActivity";
 
     private static final String NOTIF_BREATHING = "breathing_notifications";
     private static final String NOTIF_COLOR = "notification_colors";
@@ -44,6 +45,7 @@ public class NotificationFragment extends PreferenceFragment implements
     private static final String NOTIF_MANAGER = "notification_manager";
     private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
+    private static final String NOTIF_HEADS_UP = "heads_up_notif";
 
     private Preference mBreathing;
     private Preference mColor;
@@ -51,6 +53,7 @@ public class NotificationFragment extends PreferenceFragment implements
     private Preference mNotifLight;
     private Preference mNotifManager;
     private SwitchPreference mCameraSounds;
+    private Preference mHeadsUp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,7 @@ public class NotificationFragment extends PreferenceFragment implements
         mBatteryLight = (Preference)findPreference(NOTIF_BATTERY_LIGHT);
         mNotifLight = (Preference)findPreference(NOTIF_LIGHT);
         mNotifManager = (Preference)findPreference(NOTIF_MANAGER);
+        mHeadsUp = (Preference)findPreference(NOTIF_HEADS_UP);
 
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
@@ -104,6 +108,15 @@ public class NotificationFragment extends PreferenceFragment implements
         if (pref == mNotifManager) {
             Intent action = new Intent(Intent.ACTION_MAIN);
             ComponentName cn = new ComponentName(KEY_NOTIFICATION_ACTIVITY_PACKAGE_NAME, KEY_NOTIF_MANAGER_CLASS_NAME);
+            action.setComponent(cn);
+            startActivity(action);
+
+            return true;
+        }
+
+        if (pref == mHeadsUp) {
+            Intent action = new Intent(Intent.ACTION_MAIN);
+            ComponentName cn = new ComponentName(KEY_NOTIFICATION_ACTIVITY_PACKAGE_NAME, KEY_NOTIF_HEADS_UP_CLASS_NAME);
             action.setComponent(cn);
             startActivity(action);
 

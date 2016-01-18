@@ -63,11 +63,10 @@
             android:summary="@string/force_expanded_notifications_summary" />
 
         <!-- Heads up -->
-        <com.android.vrtoxin.preferences.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
+        <Preference
+            android:key="heads_up_notif"
             android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled" />
+            android:summary="@string/heads_up_summary" />
 
         <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
             android:key="disable_immersive_message"
