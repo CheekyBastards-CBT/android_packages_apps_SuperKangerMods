@@ -20,8 +20,8 @@
   <!-- Nav Drawer categories -->
     <!-- keep in the order they will appear! -->
     <string-array name="nav_drawer_cats" translatable="false">
-        <item>@string/interface_cat_title</item>
         <item>@string/button_cat_title</item>
+        <item>@string/interface_cat_title</item>
         <item>@string/system_cat_title</item>
         <item>@string/util_cat_title</item>
     </string-array>
@@ -76,14 +76,14 @@
         <item>@string/pie_style</item>
         <item>@string/pie_control_trigger_positions</item>
         <!-- <item>@string/lockscreen_frag_title</item> --> <!-- Nav Drawer Menu Items -->
-        <item>@string/floating_windows_frag_title</item>
-        <item>@string/qs_frag_title</item>
-        <item>@string/recents_frag_title</item>
-        <item>@string/status_bar_frag_title</item>
         <item>@string/hw_keys_frag_title</item>
         <item>@string/navigation_bar_settings_title</item>
         <item>@string/pie_control_frag_title</item>
         <item>@string/powermenu_frag_title</item>
+        <item>@string/floating_windows_frag_title</item>
+        <item>@string/qs_frag_title</item>
+        <item>@string/recents_frag_title</item>
+        <item>@string/status_bar_frag_title</item>
         <item>@string/vrtoxin_animations_settings</item>
         <item>@string/notif_frag_title</item>
         <item>@string/theme_frag_title</item>
@@ -134,14 +134,14 @@
         <item>pie.PieStyleSettings</item>
         <item>pie.PieTriggerSettings</item>
         <!-- <item>LockscreenFragment</item> --> <!-- Nav Drawer Menu Items -->
-        <item>FloatingWindowsFragment</item>
-        <item>QuickSettingsFragment</item>
-        <item>RecentsFragment</item>
-        <item>StatusBarFragment</item>
         <item>HardwareKeysFragment</item>
         <item>NavigationBarFragment</item>
         <item>PieControlFragment</item>
         <item>PowerMenuFragment</item>
+        <item>FloatingWindowsFragment</item>
+        <item>QuickSettingsFragment</item>
+        <item>RecentsFragment</item>
+        <item>StatusBarFragment</item>
         <item>MasterAnimationControlFragment</item>
         <item>NotificationFragment</item>
         <item>ThemesFragment</item>
