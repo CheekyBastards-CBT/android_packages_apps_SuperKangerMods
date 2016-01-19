@@ -66,6 +66,40 @@ public class AboutFragment extends Fragment {
         LinearLayout link3 = (LinearLayout)v.findViewById(R.id.link3_card);
         //Donate
         LinearLayout link4 = (LinearLayout)v.findViewById(R.id.link4_card);
+        //Stephan
+        LinearLayout stephan = (LinearLayout)v.findViewById(R.id.stephan_card);
+        //Brett
+        LinearLayout brett = (LinearLayout)v.findViewById(R.id.brett_card);
+        //Akhil
+        LinearLayout akhil = (LinearLayout)v.findViewById(R.id.akhil_card);
+        //Aniket
+        LinearLayout aniket = (LinearLayout)v.findViewById(R.id.aniket_card);
+        //Dustin
+        LinearLayout dustin = (LinearLayout)v.findViewById(R.id.dustin_card);
+        //fizban
+        LinearLayout fizban = (LinearLayout)v.findViewById(R.id.fizban_card);
+        //Josh
+        LinearLayout josh = (LinearLayout)v.findViewById(R.id.josh_card);
+        //Mario
+        LinearLayout mario = (LinearLayout)v.findViewById(R.id.mario_card);
+        //Michael
+        LinearLayout michael = (LinearLayout)v.findViewById(R.id.michael_card);
+        //Quirin
+        LinearLayout quirin = (LinearLayout)v.findViewById(R.id.quirin_card);
+        //Punk
+        LinearLayout punk = (LinearLayout)v.findViewById(R.id.punk_card);
+        //Reven
+        LinearLayout reven = (LinearLayout)v.findViewById(R.id.reven_card);
+        //Rodman01
+        LinearLayout rodman = (LinearLayout)v.findViewById(R.id.rodman_card);
+        //Sri
+        LinearLayout sri = (LinearLayout)v.findViewById(R.id.sri_card);
+        //Tommy
+        LinearLayout tommy = (LinearLayout)v.findViewById(R.id.tommy_card);
+        //Ujwal
+        LinearLayout ujwal = (LinearLayout)v.findViewById(R.id.ujwal_card);
+        //Vyt
+        LinearLayout vyt = (LinearLayout)v.findViewById(R.id.vyt_card);
 
         link1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +148,274 @@ public class AboutFragment extends Fragment {
             public void onClick(View v) {
                 Intent link = new Intent(Intent.ACTION_VIEW);
                 Uri url = Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CDAAXFJCLA43A");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        stephan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/109705439686346848248/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        stephan.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://github.com/NL-BlackDragon");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+                return true;
+            }
+        });
+
+        brett.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/+BrettRogersDipDro420/posts/p/pub");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        brett.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://github.com/rogersb11");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+                return true;
+            }
+        });
+
+        akhil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+AkhilNarang/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        aniket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+AniketLamba/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        dustin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+DustinRinne/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        fizban.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/107234820742650236470/posts");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        josh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/102661408293205133053/posts");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        mario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/102792209253885577594/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        michael.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+MichaelIfland314/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        quirin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+QuirinG%C3%B6tz/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        punk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/+BryanHocking/posts");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        reven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/106285148036011828697/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        rodman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+J%C3%B6rnLiske/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        sri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/+SriHarsha-srisurya95/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        tommy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/u/0/107505173068165970676/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        ujwal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/112381138897217340780/about");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        vyt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("https://plus.google.com/113793881359227887277/posts");
                 link.setData(url);
                 try {
                     startActivity(link);

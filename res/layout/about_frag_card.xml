@@ -237,7 +237,7 @@
             android:gravity="center"
             android:layout_gravity="center"/>
 
-        <!-- Dev card -->
+        <!-- Stephan card -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
@@ -249,6 +249,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
+                android:id="@+id/stephan_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/cardview_padding"
@@ -274,7 +275,7 @@
 
         </android.support.v7.widget.CardView>
 
-        <!-- Dev card -->
+        <!-- Brett card -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
@@ -286,6 +287,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
+                android:id="@+id/brett_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/cardview_padding"
@@ -318,7 +320,7 @@
             android:gravity="center"
             android:layout_gravity="center"/>
 
-        <!-- Contributors card -->
+        <!-- Akhil card -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
@@ -330,6 +332,273 @@
 
             <LinearLayout
                 android:orientation="vertical"
+                android:id="@+id/akhil_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_akhil"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/akhil_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Aniket card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/aniket_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_aniket"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/aniket_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Dustin card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/dustin_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_dustin"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/dustin_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- fizban card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/fizban_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_fizban"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/fizban_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Josh card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/josh_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_josh"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/josh_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Mario card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/mario_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_mario"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/mario_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Michael card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/michael_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_michael"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/michael_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Quirin card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/quirin_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/cardview_padding"
@@ -349,6 +618,272 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="@string/quirin_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Punk card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/punk_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_punk"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/punk_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Reven card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/reven_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_reven"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/reven_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Rodman01 card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/rodman_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_rodman"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/rodman_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Sri card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/sri_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_sri"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/sri_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Tommy card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/tommy_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_tommy"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/tommy_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Ujwal card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ujwal_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_ujwal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ujwal_sum"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Vyt card -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/vyt_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vrtoxin_vyt"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/vyt_sum"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="top" />
             </LinearLayout>
