@@ -557,7 +557,7 @@ public class VRToxinActivity extends AppCompatActivity {
             menu.findItem(R.id.action_delete).setVisible(iseditprop);
             menu.findItem(R.id.action_fabhide).setVisible(isfiswitch);
             menu.findItem(R.id.action_launchhide).setVisible(!(isbuildprop || iseditprop || isapppicker ||isfiswitch ||isHome ||subFrags));
-            menu.findItem(R.id.action_home).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch));
+            menu.findItem(R.id.action_home).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch || isHome));
         } else {
             menu.setGroupVisible(R.id.action_items, false);
         }
