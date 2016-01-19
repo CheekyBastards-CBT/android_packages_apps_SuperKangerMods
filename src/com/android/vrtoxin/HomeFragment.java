@@ -101,7 +101,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.setClassName("com.android.settings",
-                    "com.android.settings.Settings$StatusBarSettingsSettingsActivity");
+                    "com.android.settings.Settings$PowerMenuSettingsActivity");
                 startActivity(intent);
             }
         });
@@ -125,6 +125,17 @@ public class HomeFragment extends Fragment {
                     windowManagerService.toggleGlobalMenu();
                 } catch (RemoteException e) {
                 }
+            }
+        });
+
+        powerMenu.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setClassName("com.android.settings",
+                    "com.android.settings.Settings$StatusBarSettingsSettingsActivity");
+                startActivity(intent);
+                return true;
             }
         });
 
