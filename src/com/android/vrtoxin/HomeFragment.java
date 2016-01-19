@@ -46,8 +46,6 @@ public class HomeFragment extends Fragment {
     Context context;
     private int clickCount;
 
-    public static final String KEY_KERNEL_ADIUTOR_PACKAGE_NAME = "com.grarak.kerneladiutor";
-
     public HomeFragment() {
     }
 
@@ -70,7 +68,7 @@ public class HomeFragment extends Fragment {
         final LinearLayout logo = (LinearLayout)v.findViewById(R.id.logo_card);
         LinearLayout fullScreen = (LinearLayout)v.findViewById(R.id.full_screen_card);
         LinearLayout overviewSettings = (LinearLayout)v.findViewById(R.id.overview_settings_card);
-        LinearLayout kernelAdiutor = (LinearLayout)v.findViewById(R.id.kernel_adiutor_card);
+        LinearLayout statusBarSettings = (LinearLayout)v.findViewById(R.id.status_bar_card);
         LinearLayout restartSystemUI = (LinearLayout)v.findViewById(R.id.restart_systemui_card);
         LinearLayout powerMenu = (LinearLayout)v.findViewById(R.id.power_menu_card);
         LinearLayout aboutFrag = (LinearLayout)v.findViewById(R.id.about_card);
@@ -98,24 +96,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        kernelAdiutor.setOnClickListener(new View.OnClickListener() {
+        statusBarSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            boolean kernelAdiutorInstalled;
-
-                try {
-                    PackageInfo pi = getActivity().getPackageManager().getPackageInfo(KEY_KERNEL_ADIUTOR_PACKAGE_NAME, 0);
-                    kernelAdiutorInstalled = pi.applicationInfo.enabled;
-                } catch (PackageManager.NameNotFoundException e) {
-                    kernelAdiutorInstalled = false;
-                }
-                if (kernelAdiutorInstalled) {
-                    Intent intent = new Intent(Intent.ACTION_MAIN);
-                    intent.setClassName("com.grarak.kerneladiutor",
-                        "com.grarak.kerneladiutor.MainActivity");
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setClassName("com.android.settings",
+                    "com.android.settings.Settings$StatusBarSettingsSettingsActivity");
+                startActivity(intent);
             }
         });
 

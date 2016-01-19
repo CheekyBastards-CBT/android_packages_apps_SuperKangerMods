@@ -54,46 +54,6 @@
 
         </android.support.v7.widget.CardView>
 
-        <!-- Full screen mode button -->
-        <android.support.v7.widget.CardView
-            android:layout_gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/cardview_pref_height"
-            vrtoxin:cardUseCompatPadding="true"
-            vrtoxin:cardElevation="@dimen/cardview_elevate"
-            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
-            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/full_screen_card"
-                android:clickable="true"
-                android:background="?android:selectableItemBackground"
-                android:paddingTop="@dimen/cardview_padding"
-                android:paddingBottom="@dimen/cardview_padding"
-                android:paddingStart="@dimen/cardview_pref_padding"
-                android:paddingEnd="@dimen/cardview_padding">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/full_screen_view_title"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/cardview_pref_title"
-                    android:gravity="bottom" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/full_screen_view_summary"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:gravity="top" />
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
         <!-- Show all VRToxin settings -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
@@ -134,7 +94,7 @@
 
         </android.support.v7.widget.CardView>
 
-        <!-- Kernel Adiutor -->
+        <!-- Full screen mode button -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
@@ -148,7 +108,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/kernel_adiutor_card"
+                android:id="@+id/full_screen_card"
                 android:clickable="true"
                 android:background="?android:selectableItemBackground"
                 android:paddingTop="@dimen/cardview_padding"
@@ -159,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/kernel_adiutor_title"
+                    android:text="@string/full_screen_view_title"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/cardview_pref_title"
                     android:gravity="bottom" />
@@ -167,7 +127,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/kernel_adiutor_summary"
+                    android:text="@string/full_screen_view_summary"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="top" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- PowerMenu button -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/power_menu_card"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:paddingTop="@dimen/cardview_padding"
+                android:paddingBottom="@dimen/cardview_padding"
+                android:paddingStart="@dimen/cardview_pref_padding"
+                android:paddingEnd="@dimen/cardview_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/power_menu_button_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/cardview_pref_title"
+                    android:gravity="bottom" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/power_menu_button_summary"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="top" />
             </LinearLayout>
@@ -214,7 +214,7 @@
 
         </android.support.v7.widget.CardView>
 
-        <!-- PowerMenu button -->
+        <!-- StatusBar -->
         <android.support.v7.widget.CardView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
@@ -228,7 +228,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/power_menu_card"
+                android:id="@+id/status_bar_card"
                 android:clickable="true"
                 android:background="?android:selectableItemBackground"
                 android:paddingTop="@dimen/cardview_padding"
@@ -239,7 +239,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/power_menu_button_title"
+                    android:text="@string/stat_settings_title"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/cardview_pref_title"
                     android:gravity="bottom" />
@@ -247,7 +247,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/power_menu_button_summary"
+                    android:text="@string/stat_settings_summary"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="top" />
             </LinearLayout>

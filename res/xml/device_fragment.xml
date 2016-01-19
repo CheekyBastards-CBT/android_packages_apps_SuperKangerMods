@@ -48,10 +48,20 @@
     <Preference
         android:title="@string/wifi_title"
         android:summary="@string/wifi_summary">
-        <intent android:targetPackage="com.android.settings"
+        <intent android:targetPackage="com.grarak.kerneladiutor"
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.android.settings.wifi.WifiInfo" />
+            android:targetClass="com.grarak.kerneladiutor.MainActivity" />
     </Preference>
+
+    <Preference
+        android:title="@string/kernel_adiutor_title"
+        android:key="fiswitch"
+        android:summary="@string/kernel_summary" />
+
+    <Preference
+        android:title="@string/stweaks_title"
+        android:key="fiswitch"
+        android:summary="@string/kernel_summary" />
 
     <Preference
         android:title="@string/buildproptitle"

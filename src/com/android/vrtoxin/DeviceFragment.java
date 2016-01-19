@@ -32,11 +32,15 @@ public class DeviceFragment extends PreferenceFragment {
     private static final String FISWITCH = "fiswitch";
     private static final String SIZER = "slim_sizer";
     private static final String WAKELOCK = "wakelock_blocker";
+    private static final String KERNEL_ADUITOR = "kernel_aduitor";
+    private static final String STWEAKS = "stweaks";
 
     private Preference mBuildProp;
     private Preference mFiSwitch;
     private Preference mSizer;
     private Preference mWakeLock;
+    private Preference mKernel;
+    private Preference mStweaks;
 
     public DeviceFragment(){}
 
@@ -53,6 +57,8 @@ public class DeviceFragment extends PreferenceFragment {
         mFiSwitch = (Preference)findPreference(FISWITCH);
         mSizer = (Preference)findPreference(SIZER);
         mWakeLock = (Preference)findPreference(WAKELOCK);
+        mKernel = (Preference)findPreference(KERNEL_ADUITOR);
+        mStweaks = (Preference)findPreference(STWEAKS);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -96,6 +102,18 @@ public class DeviceFragment extends PreferenceFragment {
 
         if (pref == mWakeLock) {
             ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.wakelock_frag_title));
+
+            return true;
+        }
+
+        if (pref == mKernel) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.kernel_adiutor_title));
+
+            return true;
+        }
+
+        if (pref == mStweaks) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.stweaks_title));
 
             return true;
         }

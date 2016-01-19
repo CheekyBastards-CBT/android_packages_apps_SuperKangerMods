@@ -75,16 +75,21 @@
 
   <!--Home fragment shortcuts-->
     <!--Full screen VRToxinMods -->
-    <string name="full_screen_view_title">Toggle Fullscreen</string>
+    <string name="full_screen_view_title">Full Screen VRToxinMods</string>
     <string name="full_screen_view_summary">Shows VRToxinMods in Expanded desktop mode</string>
 
     <!--Show all settings -->
-    <string name="overview_settings_title">Reveal All Settings</string>
-    <string name="overview_settings_summary">This will show all VRToxin settings</string>
+    <string name="overview_settings_title">Full Option Settings</string>
+    <string name="overview_settings_summary">This will show the Slider Tabs settings</string>
 
-    <!--Kernel Adiutor button -->
+    <!--Status Bar button -->
+    <string name="stat_settings_title">Status Bar</string>
+    <string name="stat_settings_summary">Many customizations are located here, click for a quick start to awesomeness</string>
+
+    <!--Kernel Apps -->
     <string name="kernel_adiutor_title">Kernel Adiutor</string>
-    <string name="kernel_adiutor_summary">Warning: Wrong usage of kernel settings can result in device damage</string>
+    <string name="stweaks_title">STweaks</string>
+    <string name="kernel_summary">Warning: Wrong usage of kernel settings can result in device damage</string>
 
     <!--Restart SytemUI button -->
     <string name="restart_systemui_title">Restart SytemUI</string>
