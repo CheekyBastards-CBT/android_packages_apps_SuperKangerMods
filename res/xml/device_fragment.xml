@@ -55,12 +55,12 @@
 
     <Preference
         android:title="@string/kernel_adiutor_title"
-        android:key="fiswitch"
+        android:key="kernel_aduitor"
         android:summary="@string/kernel_summary" />
 
     <Preference
         android:title="@string/stweaks_title"
-        android:key="fiswitch"
+        android:key="stweaks"
         android:summary="@string/kernel_summary" />
 
     <Preference

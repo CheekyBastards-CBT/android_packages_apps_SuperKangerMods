@@ -17,6 +17,8 @@
 
 package com.android.vrtoxin;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -27,6 +29,11 @@ import android.preference.PreferenceScreen;
 import android.support.annotation.NonNull;
 
 public class DeviceFragment extends PreferenceFragment {
+    public static final String KEY_KERNEL_ACTIVITY_PACKAGE_NAME = "com.grarak.kerneladiutor";
+    public static final String KEY_KERNEL_CLASS_NAME = "com.grarak.kerneladiutor.MainActivity";
+    public static final String KEY_STWEAKS_ACTIVITY_PACKAGE_NAME = "com.gokhanmoral.stweaks.app";
+    public static final String KEY_STWEAKS_CLASS_NAME = "com.gokhanmoral.stweaks.app.MainActivity";
+
     private static final String RADIO_INFO = "radioinfo";
     private static final String BUILDPROPEDITOR = "buildpropeditor";
     private static final String FISWITCH = "fiswitch";
@@ -48,6 +55,8 @@ public class DeviceFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         boolean FiAppInstalled;
+        boolean KernelAduitorInstalled;
+        boolean STweaksInstalled;
 
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.device_fragment);
@@ -75,8 +84,32 @@ public class DeviceFragment extends PreferenceFragment {
             FiAppInstalled = false;
         }
 
+        // check if Kernel Aduitor app installed
+        try {
+            PackageInfo pi = getActivity().getPackageManager().getPackageInfo(KEY_KERNEL_ACTIVITY_PACKAGE_NAME, 0);
+            KernelAduitorInstalled = pi.applicationInfo.enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            KernelAduitorInstalled = false;
+        }
+
+        // check if STweaks app installed
+        try {
+            PackageInfo pi = getActivity().getPackageManager().getPackageInfo(KEY_STWEAKS_ACTIVITY_PACKAGE_NAME, 0);
+            STweaksInstalled = pi.applicationInfo.enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            STweaksInstalled = false;
+        }
+
         if (!FiAppInstalled) {
             prefScreen.removePreference(mFiSwitch);
+        }
+
+        if (!KernelAduitorInstalled) {
+            prefScreen.removePreference(mKernel);
+        }
+
+        if (!STweaksInstalled) {
+            prefScreen.removePreference(mStweaks);
         }
     }
 
@@ -107,13 +140,19 @@ public class DeviceFragment extends PreferenceFragment {
         }
 
         if (pref == mKernel) {
-            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.kernel_adiutor_title));
+            Intent action = new Intent(Intent.ACTION_MAIN);
+            ComponentName cn = new ComponentName(KEY_KERNEL_ACTIVITY_PACKAGE_NAME, KEY_KERNEL_CLASS_NAME);
+            action.setComponent(cn);
+            startActivity(action);
 
             return true;
         }
 
         if (pref == mStweaks) {
-            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.stweaks_title));
+            Intent action = new Intent(Intent.ACTION_MAIN);
+            ComponentName cn = new ComponentName(KEY_STWEAKS_ACTIVITY_PACKAGE_NAME, KEY_STWEAKS_CLASS_NAME);
+            action.setComponent(cn);
+            startActivity(action);
 
             return true;
         }
