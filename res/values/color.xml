@@ -66,7 +66,7 @@
     <color name="fab_ripple">#ffb3e5fc</color>
     <color name="transcol">#00000000</color>
     <color name="cardview_pref_title">#ffffffff</color>
-    <color name="navdrawer_cat_text">#ffeeeeee</color>
+    <color name="navdrawer_cat_text">#ffffffff</color>
     <color name="navdrawer_cat_border">#ffeeeeee</color>
     <color name="navdrawer_cat_bg">@color/material_blue_grey_950</color>
     <color name="buildprop_desc_color">#ff0288d1</color>

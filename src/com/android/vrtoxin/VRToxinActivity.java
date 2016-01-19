@@ -183,7 +183,7 @@ public class VRToxinActivity extends AppCompatActivity {
                 total += navMenuCatCounts[j];
                 // format submenu headings
                 SpannableString strcat= new SpannableString(navMenuCats[j]);
-                strcat.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.alphawhite)), 0, strcat.length(),0);
+                strcat.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.navdrawer_cat_text)), 0, strcat.length(),0);
                 strcat.setSpan(new RelativeSizeSpan(0.85f), 0, strcat.length(), 0);
                 strcat.setSpan(new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER), 0, strcat.length(), 0);
                 // is the 10 * (j + 1) bit needed...? Maybe not... meh
