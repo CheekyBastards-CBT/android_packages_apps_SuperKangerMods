@@ -69,7 +69,7 @@
     <string name="vrtoxin_akhil">Akhil Narang</string>
     <string name="akhil_sum">Bullhead (Nexus 5p)/Bacon(OnePlusOne) Maintainer</string>
     <string name="vrtoxin_aniket">Aniket Lamba</string>
-    <string name="aniket_sum">Armani (Redmi 1S)/Cancro(Xiaomi Mi3)/i9100(Galaxy S2 Intl Maintainer</string>
+    <string name="aniket_sum">Armani (Redmi 1S)/Cancro (Xiaomi Mi3)/i9100 (Galaxy S2 Intl) Maintainer</string>
     <string name="vrtoxin_dustin">Dustin Rinne</string>
     <string name="dustin_sum">Angler (Nexus 6p) Maintainer</string>
     <string name="vrtoxin_fizban">Fizban Rapper</string>
@@ -77,7 +77,7 @@
     <string name="vrtoxin_josh">Josh Carey Sr.</string>
     <string name="josh_sum">HTC One M8 Maintainer</string>
     <string name="vrtoxin_mario">Marabou57</string>
-    <string name="mario_sum">Flo (Nexus 7)/MondrianWifi(Galaxy Tab Pro 8.4) Maintainer</string>
+    <string name="mario_sum">Flo (Nexus 7)/MondrianWifi (Galaxy Tab Pro 8.4) Maintainer</string>
     <string name="vrtoxin_michael">Michael Ifland</string>
     <string name="michael_sum">Shamu (Nexus 6) Maintainer</string>
     <string name="vrtoxin_punk">Punk Unity</string>
@@ -87,9 +87,9 @@
     <string name="vrtoxin_reven">Reven Tech</string>
     <string name="reven_sum">Comedic Relief</string>
     <string name="vrtoxin_rodman">Rodman01</string>
-    <string name="rodman_sum">Mako (Nexus 4)/i9305(Galaxy S3 Intl) Maintainer</string>
+    <string name="rodman_sum">Mako (Nexus 4)/i9305 (Galaxy S3 Intl) Maintainer</string>
     <string name="vrtoxin_sri">Sri Harsha</string>
-    <string name="sri_sum">Falcon (Moto G)/jfvelte(Galaxy S4 Eur) Maintainer</string>
+    <string name="sri_sum">Falcon (Moto G)/jfvelte (Galaxy S4 Eur) Maintainer</string>
     <string name="vrtoxin_tommy">Tommy Bray</string>
     <string name="tommy_sum">KLTESPR (Galaxy S5 Sprint) Maintainer</string>
     <string name="vrtoxin_ujwal">Ujwal P</string>
