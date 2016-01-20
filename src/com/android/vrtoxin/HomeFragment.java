@@ -99,10 +99,7 @@ public class HomeFragment extends Fragment {
         statusBarSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setClassName("com.android.settings",
-                    "com.android.settings.Settings$PowerMenuSettingsActivity");
-                startActivity(intent);
+                ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.status_bar_frag_title));
             }
         });
 
@@ -131,10 +128,7 @@ public class HomeFragment extends Fragment {
         powerMenu.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setClassName("com.android.settings",
-                    "com.android.settings.Settings$StatusBarSettingsSettingsActivity");
-                startActivity(intent);
+                ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.powermenu_frag_title));
                 return true;
             }
         });
