@@ -194,7 +194,7 @@ public class VRToxinActivity extends AppCompatActivity {
             if (total > 0) {
                 // format menu item title
                 SpannableString stritem= new SpannableString(navMenuTitles[i]);
-                stritem.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.alphawhite)), 0, stritem.length(),0);
+                stritem.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.navdrawer_title_text)), 0, stritem.length(),0);
                 // group id is j, i is item id and order..., then title - includes logic for conditional entries
                 if ( cLockInstalled || !(navMenuTitles[i].equals("cLock")) ) {
                     // an attempt to add icon if included...
