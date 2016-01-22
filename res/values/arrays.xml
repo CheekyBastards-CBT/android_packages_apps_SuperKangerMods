@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>39</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>40</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
         <item>4</item>
         <item>3</item>
@@ -48,6 +48,7 @@
         <item>@string/scrolling_title</item>
         <item>@string/title_animation_controls</item>
         <item>@string/breathing_notifications_frag_title</item>
+        <item>@string/volume_dialog_frag_title</item>
         <item>@string/notification_color_frag_title</item>
         <item>@string/status_bar_battery_status_settings_title</item>
         <item>@string/status_bar_carrier_label_settings_title</item>
@@ -106,6 +107,7 @@
         <item>animations.ScrollAnimationInterfaceFragment</item>
         <item>animations.AnimationControlsFragment</item>
         <item>notification.BreathingNotificationsFragment</item>
+        <item>notification.VolumeDialogFragment</item>
         <item>notification.NotificationColorFragment</item>
         <item>statusbar.BatteryStyleFragment</item>
         <item>statusbar.CarrierLabelFragment</item>
@@ -154,6 +156,7 @@
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
         <!-- <item>null</item> -->
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -1660,6 +1663,33 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+    </string-array>
+
+    <!-- Less Notifications -->
+    <string-array name="less_notification_sounds_entries">
+        <item>@string/less_notification_sounds_default</item>
+        <item>@string/less_notification_sounds_3s</item>
+        <item>@string/less_notification_sounds_5s</item>
+        <item>@string/less_notification_sounds_10s</item>
+        <item>@string/less_notification_sounds_15s</item>
+        <item>@string/less_notification_sounds_30s</item>
+        <item>@string/less_notification_sounds_45s</item>
+        <item>@string/less_notification_sounds_1m</item>
+        <item>@string/less_notification_sounds_2m</item>
+        <item>@string/less_notification_sounds_5m</item>
+    </string-array>
+
+    <string-array name="less_notification_sounds_values" translatable="false">
+        <item>0</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>30000</item>
+        <item>45000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
     </string-array>
 
 </resources>

@@ -1578,4 +1578,48 @@
     <string name="center_clock_hide_summary">Enable to choose a number of visible notification icons to hide the center clock on the status bar</string>
     <string name="center_clock_number_of_notification_icons_title">Number of notification icons</string>
 
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_volume_title">Safe Headset Volume</string>
+    <string name="safe_headset_volume_summary">Prevent loud volume levels when headset is first plugged in</string>
+    <string name="safe_headset_volume_warning_dialog_text">Listening at high volume for long periods may damage your hearing. Disable it with caution.</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot Sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
+    <!-- Less Notification sounds -->
+    <string name="notifications_category_title">Notifications</string>
+    <string name="less_notification_sounds_title">Less frequent notification sounds</string>
+    <string name="less_notification_sounds_summary">Limit the notification sounds of each app to only play once per set time period</string>
+    <string name="less_notification_sounds_default">Default Behaviour</string>
+    <string name="less_notification_sounds_3s">3 seconds</string>
+    <string name="less_notification_sounds_5s">5 seconds</string>
+    <string name="less_notification_sounds_10s">10 seconds</string>
+    <string name="less_notification_sounds_15s">15 seconds</string>
+    <string name="less_notification_sounds_30s">30 seconds</string>
+    <string name="less_notification_sounds_45s">45 seconds</string>
+    <string name="less_notification_sounds_1m">1 minute</string>
+    <string name="less_notification_sounds_2m">2 minutes</string>
+    <string name="less_notification_sounds_5m">5 minutes</string>
+
+    <!-- Volume Dialog Colors -->
+    <string name="volume_dialog_frag_title">Volume Dialog Colors</string>
+    <string name="volume_dialog_summary">Customize the volume dialog background, icon and slider colors</string>
+    <string name="volume_dialog_slider">Slider</string>
+    <string name="volume_dialog_slider_inactive">Inactive Slider</string>
+
+    <!-- Category title for Charging sounds (Power state change) specific Settings.
+         [CHAR LIMIT=40] -->
+    <string name="power_notifications_category_title">Charging sounds</string>
+
+    <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">Enable</string>
+    <string name="power_notifications_enable_summary">Play a sound when connecting or disconnecting the charger</string>
+    <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">Vibrate</string>
+    <!-- Sound settings, Charging sounds ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">Notification sound</string>
+    <!-- Sound settings, charging sounds label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">Silent</string>
+
 </resources>

@@ -22,10 +22,36 @@
         android:title="@string/media_category" >
 
         <SwitchPreference
+            android:key="safe_headset_volume"
+            android:title="@string/safe_headset_volume_title"
+            android:summary="@string/safe_headset_volume_summary"
+            android:persistent="false"
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="volume_dialog_frag"
+            android:title="@string/volume_dialog_frag_title"
+            android:summary="@string/volume_dialog_summary" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="screenshot_sound"
+            android:title="@string/screenshot_sound_title"
+            android:summary="@string/screenshot_sound_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
             android:key="camera_sounds"
             android:title="@string/camera_sounds_title"
             android:summary="@string/camera_sounds_summary"
             android:defaultValue="true" />
+
+        <ListPreference
+            android:key="less_notification_sounds"
+            android:title="@string/less_notification_sounds_title"
+            android:summary="@string/less_notification_sounds_summary"
+            android:entries="@array/less_notification_sounds_entries"
+            android:entryValues="@array/less_notification_sounds_values"
+            android:persistent="false" />
 
         <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
             android:key="battery_saver_notification"
@@ -38,6 +64,26 @@
             android:title="@string/battery_low_notif_title"
             android:summary="@string/battery_low_notif_summary"
             android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="power_notifications"
+            android:title="@string/power_notifications_enable_title"
+            android:summary="@string/power_notifications_enable_summary"
+            android:defaultValue="false"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="power_notifications_vibrate"
+            android:title="@string/power_notifications_vibrate_title"
+            android:defaultValue="false"
+            android:dependency="power_notifications"
+            android:persistent="false" />
+
+        <Preference
+            android:key="power_notifications_ringtone"
+            android:title="@string/power_notifications_ringtone_title"
+            android:dependency="power_notifications"
+            android:persistent="false" />
 
     </PreferenceCategory>
 
