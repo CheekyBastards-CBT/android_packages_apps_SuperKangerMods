@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 DarkKat
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="colors_cat_buttons_bar"
+        android:title="@string/lock_screen_buttons_settings_title">
+
+        <ListPreference
+             android:key="colors_buttons_bar_icon_color_mode"
+             android:title="@string/colors_buttons_bar_icon_color_mode_title"
+             android:dialogTitle="@string/colors_buttons_bar_icon_color_mode_dialog_title"
+             android:entries="@array/lock_screen_colors_buttons_bar_icon_color_mode_entries"
+             android:entryValues="@array/lock_screen_colors_buttons_bar_icon_color_mode_values" />
+
+        <ListPreference
+             android:key="colors_buttons_bar_ripple_color_mode"
+             android:title="@string/colors_buttons_bar_ripple_color_mode_title"
+             android:dialogTitle="@string/colors_buttons_bar_ripple_color_mode_dialog_title"
+             android:entries="@array/lock_screen_colors_buttons_bar_ripple_color_entries"
+             android:entryValues="@array/lock_screen_colors_buttons_bar_ripple_color_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lock_screen_colors_cat_colors"
+        android:title="@string/colors_title">
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="lockscreen_alarm_color"
+            android:title="@string/lockscreen_alarm_color"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="lockscreen_clock_color"
+            android:title="@string/lockscreen_clock_color"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="lockscreen_clock_date_color"
+            android:title="@string/lockscreen_clock_date_color"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="lockscreen_indication_text_color"
+            android:title="@string/lockscreen_indication_text_color"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="colors_icon_color"
+            android:title="@string/icons_title"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="lockscreen_owner_info_color"
+            android:title="@string/lockscreen_owner_info_color"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="colors_buttons_bar_ripple_color"
+            android:title="@string/colors_buttons_bar_ripple_color_title"
+            android:defaultValue="0xffffffff" />
+
+        <com.android.vrtoxin.preferences.ColorPickerPreference
+            android:key="colors_text_color"
+            android:title="@string/weather_text_title"
+            android:defaultValue="0xffffffff" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

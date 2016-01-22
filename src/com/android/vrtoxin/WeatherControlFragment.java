@@ -25,17 +25,24 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.support.annotation.NonNull;
 
 import com.android.vrtoxin.R;
 import com.android.vrtoxin.Utils;
 
 public class WeatherControlFragment extends PreferenceFragment {
 
+    private static final String KEY_LOCK_SCREEN_WEATHER = "lock_screen_weather_settings";
+
+    private Preference mWeather;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.weather_control_fragment);
+
+        mWeather = (Preference)findPreference(KEY_LOCK_SCREEN_WEATHER);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -43,8 +50,14 @@ public class WeatherControlFragment extends PreferenceFragment {
         return false;
     }
 
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        boolean value;
- 		return super.onPreferenceTreeClick(preferenceScreen, preference);
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
+        if (pref == mWeather) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.lock_screen_weather_frag_title));
+
+            return true;
+        }
+
+        return false;
     }
 }

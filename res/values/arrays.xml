@@ -27,9 +27,9 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>40</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>45</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
-        <item>4</item>
+        <item>5</item>
         <item>4</item>
         <item>2</item>  <!-- Total: 12 -->
     </integer-array>
@@ -76,12 +76,17 @@
         <item>@string/pie_button_style</item>
         <item>@string/pie_style</item>
         <item>@string/pie_control_trigger_positions</item>
-        <!-- <item>@string/lockscreen_frag_title</item> --> <!-- Nav Drawer Menu Items -->
-        <item>@string/hw_keys_frag_title</item>
+        <item>@string/lock_screen_buttons_frag_title</item>
+        <item>@string/lock_clock_color_frag_title</item>
+        <item>@string/lock_screen_visualizer_frag_title</item>
+        <item>@string/lockscreen_wallpaper_frag_title</item>
+        <item>@string/lock_screen_weather_frag_title</item>
+        <item>@string/hw_keys_frag_title</item> <!-- Nav Drawer Menu Items -->
         <item>@string/navigation_bar_settings_title</item>
         <item>@string/pie_control_frag_title</item>
         <item>@string/powermenu_frag_title</item>
         <item>@string/floating_windows_frag_title</item>
+        <item>@string/lockscreen_frag_title</item>
         <item>@string/qs_frag_title</item>
         <item>@string/recents_frag_title</item>
         <item>@string/status_bar_frag_title</item>
@@ -136,12 +141,17 @@
         <item>pie.PieButtonStyleSettings</item>
         <item>pie.PieStyleSettings</item>
         <item>pie.PieTriggerSettings</item>
-        <!-- <item>LockscreenFragment</item> --> <!-- Nav Drawer Menu Items -->
-        <item>HardwareKeysFragment</item>
+        <item>lockscreen.LockscreenShortcutFragment</item>
+        <item>lockscreen.LockScreenColorSettings</item>
+        <item>lockscreen.LockScreenVisualizerSettings</item>
+        <item>lockscreen.LockscreenWallpaper</item>
+        <item>lockscreen.LockScreenWeatherSettings</item>
+        <item>HardwareKeysFragment</item> <!-- Nav Drawer Menu Items -->
         <item>NavigationBarFragment</item>
         <item>PieControlFragment</item>
         <item>PowerMenuFragment</item>
         <item>FloatingWindowsFragment</item>
+        <item>LockScreenFragment</item>
         <item>QuickSettingsFragment</item>
         <item>RecentsFragment</item>
         <item>StatusBarFragment</item>
@@ -157,7 +167,12 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
-        <!-- <item>null</item> -->
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -1693,6 +1708,78 @@
         <item>60000</item>
         <item>120000</item>
         <item>300000</item>
+    </string-array>
+
+    <string-array name="weather_condition_icon_entries">
+        <item>@string/weather_condition_icon_monochrome_title</item>
+        <item>@string/weather_condition_icon_colored_title</item>
+        <item>@string/weather_condition_icon_vclouds_title</item>
+    </string-array>
+
+    <string-array name="weather_condition_icon_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="lock_screen_hide_panel_bar_entries">
+        <item>@string/lock_screen_hide_panel_bar_auto_title</item>
+        <item>@string/lock_screen_hide_panel_bar_custom_title</item>
+        <item>@string/lock_screen_hide_panel_bar_never_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_hide_panel_bar_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="lock_screen_buttons_bar_launch_type_entries">
+        <item>@string/buttons_bar_launch_type_click_title</item>
+        <item>@string/buttons_bar_launch_type_double_click_title</item>
+        <item>@string/buttons_bar_launch_type_longpress_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_buttons_bar_launch_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="lock_screen_buttons_bar_icon_size_entries">
+        <item>@string/buttons_bar_icon_size_24_title</item>
+        <item>@string/buttons_bar_icon_size_36_title</item>
+        <item>@string/buttons_bar_icon_size_48_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_buttons_bar_icon_size_values" translatable="false">
+        <item>24</item>
+        <item>36</item>
+        <item>48</item>
+    </string-array>
+
+    <string-array name="lock_screen_colors_buttons_bar_icon_color_mode_entries">
+        <item>@string/notification_color_mode_never_title</item>
+        <item>@string/notification_icon_color_mode_greyscale_title</item>
+        <item>@string/notification_color_mode_always_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_colors_buttons_bar_icon_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="lock_screen_colors_buttons_bar_ripple_color_entries">
+        <item>@string/button_ripple_color_mode_auto_title</item>
+        <item>@string/button_ripple_color_mode_custom_title</item>
+        <item>@string/button_ripple_color_mode_never_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_colors_buttons_bar_ripple_color_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
 </resources>

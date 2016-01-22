@@ -1633,6 +1633,7 @@
     <string name="notification_ringtone_title">Default notification ringtone</string>
     <string name="vibrate_when_ringing_title">Vibrate For Calls</string>
     <string name="wifi_display_settings_title">Screen Cast/Mirroring</string>
+    <string name="lockscreen_targets_message">Bottom shortcuts</string>
 
     <!-- Media ducking -->
     <string name="interruptions_ignore_while_media_title">Prevent Audio Ducking</string>
@@ -1646,5 +1647,122 @@
     <string name="increasing_ring_volume_option_title">Increasing Ring Volume</string>
     <string name="increasing_ring_min_volume_title">Start volume</string>
     <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+
+  <!-- LockScreen fragment -->
+    <string name="lockscreen_frag_title">Lock Screen</string>
+    <string name="lock_screen_buttons_frag_title">Circle Shortcuts</string>
+    <string name="lock_clock_color_frag_title">Lock Screen Colors</string>
+    <string name="lock_screen_visualizer_frag_title">Music Visualizer</string>
+    <string name="lockscreen_wallpaper_frag_title">Wallpaper</string>
+    <string name="lock_screen_weather_frag_title">Lockscreen Weather</string>
+
+    <!-- Keyguard Circle Shortcuts and More -->
+    <string name="bottom_shortcuts_summary">Customize the shortcuts in the bottom corners of the lock screen</string>
+    <string name="lock_screen_buttons_settings_summary">Customize the additional buttons bar and the default buttons at the bottom</string>
+    <string name="button_ripple_color_mode_auto_title">Auto</string>
+    <string name="button_ripple_color_mode_custom_title">Custom Color</string>
+    <string name="button_ripple_color_mode_never_title">Don\`t Colorize</string>
+    <string name="buttons_actions_title">Customize</string>
+    <string name="buttons_bar_actions_summary">Arrange the order, and choose the shortcuts to display</string>
+    <string name="colors_buttons_bar_icon_color_mode_title">Colorize Icon</string>
+    <string name="colors_buttons_bar_icon_color_mode_dialog_title">Choose when to colorize the icon</string>
+    <string name="colors_buttons_bar_ripple_color_mode_title">Colorize Ripple Effect</string>
+    <string name="colors_buttons_bar_ripple_color_mode_dialog_title">Choose how to colorize the ripple effect</string>
+    <string name="colors_buttons_default_colorize_custom_icons_title">Colorize all icons</string>
+    <string name="colors_buttons_default_colorize_custom_icons_summary">Enable to colorize all icons, disable to colorize only default icons</string>
+    <string name="colors_buttons_bar_ripple_color_title">Ripple Effect</string>
+    <string name="buttons_bar_launch_type_title">Launch Type</string>
+    <string name="buttons_bar_launch_type_click_title">Single Tap</string>
+    <string name="buttons_bar_launch_type_double_click_title">Double Tap</string>
+    <string name="buttons_bar_launch_type_longpress_title">Longpress</string>
+    <string name="buttons_bar_icon_size_title">Icon Size</string>
+    <string name="buttons_bar_icon_size_24_title">24dp</string>
+    <string name="buttons_bar_icon_size_36_title">36dp</string>
+    <string name="buttons_bar_icon_size_48_title">48dp</string>
+    <string name="buttons_bar_hide_bar_title">Hide Shortcuts</string>
+    <string name="buttons_bar_hide_bar_dlg_title">Choose when the shortcuts should be hidden</string>
+    <string name="buttons_bar_hide_bar_auto_summary">The shortcuts will be hidden, when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
+    <string name="buttons_bar_hide_bar_custom_summary">The shotcuts will be hidden, when the visible notifications will reach the choosen number of notifications (%s)</string>
+    <string name="buttons_bar_hide_bar_never_summary">The shortcuts won/`t be hidden</string>
+    <string name="buttons_bar_number_of_notifications_dlg_title">Choose the number of notifications to hide the shortcuts</string>
+    <string name="vrtoxin_ls_shortcuts_title">Lock Screen Shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
+
+    <!-- Weather settings -->
+    <string name="lock_screen_buttons_settings_title">Buttons</string>
+    <string name="colors_weather_colorize_all_icons_title">Colorize all icons</string>
+    <string name="lock_screen_cat_notifications_title">Notifications</string>
+    <string name="colors_weather_colorize_all_icons_summary">Enable to colorize all icons, disable to colorize only the monochrome icons</string>
+    <string name="weather_control_master_title">Weather Control</string>
+    <string name="lock_screen_hide_panel_bar_auto_title">Auto</string>
+    <string name="lock_screen_hide_panel_bar_custom_title">Custom</string>
+    <string name="lock_screen_hide_panel_bar_never_title">Never</string>
+    <string name="lock_screen_number_of_notifications_title">Number of notifications</string>
+    <string name="lock_screen_number_of_notifications_always_title">Always</string>
+    <string name="lock_screen_number_of_notifications_two_title">2</string>
+    <string name="lock_screen_number_of_notifications_three_title">3</string>
+    <string name="lock_screen_number_of_notifications_four_title">4</string>
+    <string name="lock_screen_number_of_notifications_five_title">5</string>
+    <string name="lock_screen_number_of_notifications_six_title">6</string>
+    <string name="weather_cat_notifications_title">Notifications</string>
+    <string name="lock_screen_weather_settings_summary">Customize Lockscreen Weather Display</string>
+    <string name="lock_screen_color_settings_summary">Customize Colors</string>
+    <string name="weather_show_weather_title">Show Weather</string>
+    <string name="weather_show_weather_summary">Enable to show weather informations</string>
+    <string name="weather_show_location_title">Show Location</string>
+    <string name="weather_show_location_summary">Enable to show the location</string>
+    <string name="weather_condition_icon_title">Condition Icon</string>
+    <string name="weather_condition_icon_dlg_title">Coose an icon for displaying the weather condition</string>
+    <string name="weather_condition_icon_monochrome_title">Monochrome</string>
+    <string name="weather_condition_icon_colored_title">Colored</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="weather_hide_panel_title">Hide Weather Panel</string>
+    <string name="weather_hide_panel_dlg_title">Choose when the weather panel should be hidden</string>
+    <string name="weather_hide_panel_auto_summary">The weather panel will be hidden, when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
+    <string name="weather_hide_panel_custom_summary">The weather panel will be hidden, when the visible notifications will reach the choosen number of notifications (%s)</string>
+    <string name="weather_hide_panel_never_summary">The weather panel whon/`t be hidden</string>
+    <string name="weather_number_of_notifications_title">Number of notifications</string>
+    <string name="weather_number_of_notifications_dlg_title">Choose the number of notifications to hide the weather panel</string>
+    <string name="weather_number_of_notifications_always_title">Always</string>
+    <string name="weather_number_of_notifications_two_title">2</string>
+    <string name="weather_number_of_notifications_three_title">3</string>
+    <string name="weather_number_of_notifications_four_title">4</string>
+    <string name="weather_number_of_notifications_five_title">5</string>
+    <string name="weather_number_of_notifications_six_title">6</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Media Cover Art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">Power Button Torch</string>
+    <string name="keyguard_torch_summary">Long press power button while screen is off to activate flashlight</string>
+
+    <!-- Double tap to sleep -->
+    <string name="double_tap_to_sleep_title">DT2S on Statusbar</string>
+    <string name="double_tap_to_sleep_summary">Double tap status bar to put the device to sleep</string>
+    <string name="double_tap_sleep_nav_bar_title">DT2S on Navbar</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
+    <string name="double_tap_to_sleep_lockscreen_title">DT2S on Lockscreen</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
+
+    <!-- Lockscreen visualizer -->
+    <string name="lock_screen_visualizer_settings_summary">Customize the music visualizer</string>
+    <string name="visualizer_show_summary">Enable to show the music visualizer on the lock screen</string>
+    <string name="visualizer_use_custom_color_title">Customize the color</string>
+    <string name="visualizer_use_custom_color_summary">Enable to use a custom color, disable to create the color from the lock screen background automatically</string>
+
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper_title">Wallpaper</string>
+    <string name="lockscreen_wallpaper_summary">Customize the wallpaper</string>
+    <string name="lockscreen_wallpaper_set_title">Set lock screen wallpaper</string>
+    <string name="lockscreen_wallpaper_set_summary">Select a custom wallpaper to use on the lock screen</string>
+    <string name="lockscreen_wallpaper_clear_title">Clear lock screen wallpaper</string>
+    <string name="reset_lockscreen_wallpaper">Set to default</string>
+
+    <!-- Lockscreen see through -->
+    <string name="lockscreen_see_through_title">Lockscreen Blur</string>
+    <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen.</string>
+    <string name="lockscreen_blur_radius">Blur Effect Intensity</string>
 
 </resources>
