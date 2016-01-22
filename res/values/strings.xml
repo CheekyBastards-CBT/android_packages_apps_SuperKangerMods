@@ -1622,4 +1622,29 @@
     <!-- Sound settings, charging sounds label for ringtone == none -->
     <string name="power_notifications_ringtone_silent">Silent</string>
 
+  <!-- Sound fragment -->
+    <string name="sounds_frag_title">Sounds</string>
+    <string name="sound_settings">Sound</string>
+    <string name="alarm_volume_option_title">Alarm Volume</string>
+    <string name="media_volume_option_title">Media Volume</string>
+    <string name="ring_volume_option_title">Ring Volume</string>
+    <string name="notification_volume_option_title">Notification Volume</string>
+    <string name="ringtone_title">Phone Ringtone</string>
+    <string name="notification_ringtone_title">Default notification ringtone</string>
+    <string name="vibrate_when_ringing_title">Vibrate For Calls</string>
+    <string name="wifi_display_settings_title">Screen Cast/Mirroring</string>
+
+    <!-- Media ducking -->
+    <string name="interruptions_ignore_while_media_title">Prevent Audio Ducking</string>
+    <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Link Ring &amp; Notif Volumes</string>
+    <string name="notification_volume_option_title">Notification Volume</string>
+
+    <!-- Increasing ring tone volume -->
+    <string name="increasing_ring_volume_option_title">Increasing Ring Volume</string>
+    <string name="increasing_ring_min_volume_title">Start volume</string>
+    <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+
 </resources>
