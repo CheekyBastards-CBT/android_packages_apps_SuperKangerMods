@@ -1859,4 +1859,8 @@
     <!-- Power/reboot dialogs dim amount -->
     <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
 
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Device Policy Override</string>
+    <string name="device_policy_override_summary">Allow apps to force secure lock screen and override default settings</string>
+
 </resources>
