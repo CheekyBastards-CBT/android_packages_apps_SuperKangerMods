@@ -1855,4 +1855,7 @@
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
     <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
 
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
+
 </resources>

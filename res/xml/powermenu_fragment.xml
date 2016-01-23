@@ -42,6 +42,16 @@
         android:title="@string/onthego_alpha_title"
         android:summary="@string/onthego_alpha_summary" />
 
+
+    <com.android.vrtoxin.preferences.SeekBarPreference
+        android:key="transparent_power_dialog_dim"
+        android:title="@string/power_menu_dialog_dim"
+        android:max="100"
+        vrtoxin:minimum="0"
+        vrtoxin:unitsLeft=""
+        vrtoxin:unitsRight="%"
+        android:persistent="false" />
+
     <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
         android:key="power_menu_lockscreen"
         android:title="@string/powermenu_lockscreen_title"

@@ -40,6 +40,7 @@ import android.support.annotation.NonNull;
 
 import com.android.vrtoxin.R;
 import com.android.vrtoxin.preferences.ColorPickerPreference;
+import com.android.vrtoxin.preferences.SeekBarPreference;
 
 public class PowerMenuFragment extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -62,6 +63,7 @@ public class PowerMenuFragment extends PreferenceFragment implements
     private static final String PREF_RIPPLE_COLOR = "power_menu_ripple_color";
     private static final String PREF_TEXT_COLOR = "power_menu_text_color";
     private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
+    private static final String PREF_TRANSPARENT_POWER_DIALOG_DIM = "transparent_power_dialog_dim";
 
     private static final int WHITE = 0xffffffff;
     private static final int VRTOXIN_BLUE = 0xff33b5e5;
@@ -79,7 +81,7 @@ public class PowerMenuFragment extends PreferenceFragment implements
     private ColorPickerPreference mRippleColor;
     private ColorPickerPreference mTextColor;
     ListPreference mPowerMenuAnimations;
-
+    private SeekBarPreference mPowerDialogDim;
     private ContentResolver mResolver;
 
     @Override
@@ -168,6 +170,14 @@ public class PowerMenuFragment extends PreferenceFragment implements
         mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
         mPowerMenuAnimations.setOnPreferenceChangeListener(this);
 
+        // Power/reboot dialog dim
+        mPowerDialogDim =
+                (SeekBarPreference) findPreference(PREF_TRANSPARENT_POWER_DIALOG_DIM);
+        int powerDialogDim = Settings.System.getInt(mResolver,
+                Settings.System.TRANSPARENT_POWER_DIALOG_DIM, 50);
+        mPowerDialogDim.setValue(powerDialogDim / 1);
+        mPowerDialogDim.setOnPreferenceChangeListener(this);
+
         setHasOptionsMenu(true);
     }
 
@@ -212,6 +222,7 @@ public class PowerMenuFragment extends PreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        int alpha = (Integer) newValue;
         String hex;
         int intHex;
 
@@ -270,6 +281,10 @@ public class PowerMenuFragment extends PreferenceFragment implements
                     Integer.valueOf((String) newValue));
             mPowerMenuAnimations.setValue(String.valueOf(newValue));
             mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            return true;
+        } else if (preference == mPowerDialogDim) {
+            Settings.System.putInt(mResolver,
+                    Settings.System.TRANSPARENT_POWER_DIALOG_DIM, alpha * 1);
             return true;
         }
 
