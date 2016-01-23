@@ -31,6 +31,12 @@
             android:summary="@string/lockscreen_shortcuts_summary"
             android:fragment="com.android.settings.vrtoxin.fragments.LockscreenShortcutFragment" />
 
+        <om.android.vrtoxin.preferences.SecureSettingSwitchPreference
+            android:key="enable_device_policy_override"
+            android:title="@string/device_policy_override_title"
+            android:summary="@string/device_policy_override_summary"
+            android:defaultValue="true" />
+
         <Preference
             android:key="lock_screen_color_settings"
             android:title="@string/lock_clock_color_frag_title"
