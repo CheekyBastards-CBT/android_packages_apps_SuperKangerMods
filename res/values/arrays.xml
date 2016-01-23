@@ -27,9 +27,9 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>45</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>48</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items -->
-        <item>5</item>
+        <item>6</item>
         <item>4</item>
         <item>2</item>  <!-- Total: 12 -->
     </integer-array>
@@ -81,11 +81,15 @@
         <item>@string/lock_screen_visualizer_frag_title</item>
         <item>@string/lockscreen_wallpaper_frag_title</item>
         <item>@string/lock_screen_weather_frag_title</item>
+        <item>@string/app_circle_bar_frag_title</item>
+        <item>@string/app_sidebar_frag_title</item>
+        <item>@string/gesture_anywhere_frag_title</item>
         <item>@string/hw_keys_frag_title</item> <!-- Nav Drawer Menu Items -->
         <item>@string/navigation_bar_settings_title</item>
         <item>@string/pie_control_frag_title</item>
         <item>@string/powermenu_frag_title</item>
         <item>@string/floating_windows_frag_title</item>
+        <item>@string/gestures_frag_title</item>
         <item>@string/lockscreen_frag_title</item>
         <item>@string/qs_frag_title</item>
         <item>@string/recents_frag_title</item>
@@ -146,11 +150,15 @@
         <item>lockscreen.LockScreenVisualizerSettings</item>
         <item>lockscreen.LockscreenWallpaper</item>
         <item>lockscreen.LockScreenWeatherSettings</item>
+        <item>gestures.AppCircleBarFragment</item>
+        <item>gestures.AppSideBarFragment</item>
+        <item>gestures.gestureanywhere.GestureAnywhereFragment</item>
         <item>HardwareKeysFragment</item> <!-- Nav Drawer Menu Items -->
         <item>NavigationBarFragment</item>
         <item>PieControlFragment</item>
         <item>PowerMenuFragment</item>
         <item>FloatingWindowsFragment</item>
+        <item>GesturesFragment</item>
         <item>LockScreenFragment</item>
         <item>QuickSettingsFragment</item>
         <item>RecentsFragment</item>
@@ -167,6 +175,10 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -1780,6 +1792,28 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <!-- App sidebar -->
+    <string-array name="app_sidebar_position_entries" translatable="false">
+        <item>@string/app_sidebar_position_left</item>
+        <item>@string/app_sidebar_position_right</item>
+    </string-array>
+
+    <string-array name="app_sidebar_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Gesture Anywhere -->
+    <string-array name="gesture_anywhere_position_entries" translatable="false">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+
+    <string-array name="gesture_anywhere_position_values" translatable="false">
+        <item>3</item>
+        <item>5</item>
     </string-array>
 
 </resources>

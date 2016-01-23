@@ -39,7 +39,8 @@
         </activity>
 
         <activity android:name=".SlimSizerFragment" />
-
+        <activity android:name=".gestures.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".gestures.gestureanywhere.GestureAnywhereCreateGestureActivity" />
     </application>
 
 </manifest>

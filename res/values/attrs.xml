@@ -25,6 +25,7 @@
         <attr name="interval" format="integer" />
         <attr name="unitsLeft" format="string" />
         <attr name="unitsRight" format="string" />
+        <attr name="defaultValue" format="float" />
         <attr name="isSeconds" format="boolean" />
     </declare-styleable>
 
