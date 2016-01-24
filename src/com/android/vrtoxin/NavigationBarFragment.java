@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/*
 package com.android.vrtoxin;
 
 import android.app.AlertDialog;
@@ -309,4 +309,4 @@ public class NavigationBarFragment extends PreferenceFragment implements
 
         }
     }
-}
+}*/

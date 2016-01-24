@@ -64,7 +64,7 @@ import com.android.internal.util.vrtoxin.ActionHelper;
 import com.android.internal.util.vrtoxin.ActionUtils;
 import com.android.internal.util.vrtoxin.ActionUtils.FilteredDeviceFeaturesArray;
 import com.android.internal.util.vrtoxin.ImageHelper;
-import com.android.internal.util.vrtoxin.NavigationBarColorHelper;
+//import com.android.internal.util.vrtoxin.NavigationBarColorHelper;
 import com.android.internal.util.vrtoxin.LockScreenColorHelper;
 import com.android.internal.util.vrtoxin.PowerMenuColorHelper;
 import com.android.internal.util.vrtoxin.PowerMenuHelper;
@@ -679,7 +679,7 @@ public class ActionListViewSettings extends ListFragment implements
                     getResources().getString(R.string.shortcut_action_longpress)
                     + " " + getItem(position).getLongpressActionDescription());
             }
-
+/*
             if (mActionMode == NAV_BAR) {
                 d = ImageHelper.resize(
                         mActivity, ActionHelper.getActionIconImage(mActivity,
@@ -697,7 +697,7 @@ public class ActionListViewSettings extends ListFragment implements
                         holder.iconView.setColorFilter(iconColor, Mode.MULTIPLY);
                     }
                 }
-            } else if (mActionMode == LOCKSCREEN_BUTTONS_BAR) {
+            } else*/ if (mActionMode == LOCKSCREEN_BUTTONS_BAR) {
                 final int iconSize = Settings.System.getInt(mActivity.getContentResolver(),
                         Settings.System.LOCK_SCREEN_BUTTONS_BAR_ICON_SIZE, 36);
                 d = ImageHelper.resize(
@@ -1047,12 +1047,12 @@ public class ActionListViewSettings extends ListFragment implements
                 TextView tt = (TextView) iView.findViewById(android.R.id.text1);
                 tt.setText(labels[position]);
                 Drawable ic = ImageHelper.resize(getOwner().mActivity, (Drawable) getItem(position), 24);
-                if (getOwner().mActionMode == NAV_BAR) {
+/*                if (getOwner().mActionMode == NAV_BAR) {
                     int iconColor = NavigationBarColorHelper.getIconColor(getOwner().mActivity, ic);
                     if (NavigationBarColorHelper.getIconColorMode(getOwner().mActivity) != 0) {
                         ic.setTint(iconColor);
                     }
-                } else if (getOwner().mActionMode == LOCKSCREEN_BUTTONS_BAR) {
+                } else*/ if (getOwner().mActionMode == LOCKSCREEN_BUTTONS_BAR) {
                     final int iconSize = Settings.System.getInt(getOwner().mActivity.getContentResolver(),
                             Settings.System.LOCK_SCREEN_BUTTONS_BAR_ICON_SIZE, 36);
                     ic = ImageHelper.resize(getOwner().mActivity, (Drawable) getItem(position), iconSize);
