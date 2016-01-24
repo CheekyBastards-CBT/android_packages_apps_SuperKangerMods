@@ -28,6 +28,8 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
+import com.vrtoxin.util.DeviceUtils;
+
 import com.android.internal.view.RotationPolicy;
 import com.android.vrtoxin.R;
 import com.android.vrtoxin.Utils;
@@ -37,6 +39,7 @@ public class DisplayRotationFragment extends PreferenceFragment implements OnPre
 
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String LOCKSCREEN_ROTATION = "lockscreen_rotation";
+    private static final String KEY_DEFAULT_LANDSCAPE = "default_landscape_orientation";
     private static final String ROTATION_0_PREF = "display_rotation_0";
     private static final String ROTATION_90_PREF = "display_rotation_90";
     private static final String ROTATION_180_PREF = "display_rotation_180";
@@ -44,6 +47,7 @@ public class DisplayRotationFragment extends PreferenceFragment implements OnPre
 
     private SwitchPreference mAccelerometer;
     private SwitchPreference mLockScreenRotationPref;
+    private SwitchPreference mLandscape;
     private SwitchPreference mRotation0Pref;
     private SwitchPreference mRotation90Pref;
     private SwitchPreference mRotation180Pref;
@@ -76,6 +80,11 @@ public class DisplayRotationFragment extends PreferenceFragment implements OnPre
         mAccelerometer.setPersistent(false);
 
         mLockScreenRotationPref = (SwitchPreference) prefSet.findPreference(LOCKSCREEN_ROTATION);
+
+        mLandscape = (SwitchPreference) findPreference(KEY_DEFAULT_LANDSCAPE);
+        mLandscape.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.DEFAULT_LANDSCAPE_ORIENTATION, 0) == 1);
+
         mRotation0Pref = (SwitchPreference) prefSet.findPreference(ROTATION_0_PREF);
         mRotation90Pref = (SwitchPreference) prefSet.findPreference(ROTATION_90_PREF);
         mRotation180Pref = (SwitchPreference) prefSet.findPreference(ROTATION_180_PREF);
@@ -144,6 +153,9 @@ public class DisplayRotationFragment extends PreferenceFragment implements OnPre
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLock(getActivity(), !mAccelerometer.isChecked());
             return true;
+        } else if (preference == mLandscape) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DEFAULT_LANDSCAPE_ORIENTATION, mLandscape.isChecked() ? 1 : 0);
         } else if (preference == mRotation0Pref ||
                 preference == mRotation90Pref ||
                 preference == mRotation180Pref ||

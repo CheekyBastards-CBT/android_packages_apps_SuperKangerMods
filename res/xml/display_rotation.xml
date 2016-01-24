@@ -23,6 +23,11 @@
         android:title="@string/accelerometer_title" />
 
     <SwitchPreference
+        android:key="default_landscape_orientation"
+        android:summary="@string/default_landscape_orientation_summary"
+        android:title="@string/default_landscape_orientation_title" />
+
+    <SwitchPreference
         android:key="lockscreen_rotation"
         android:title="@string/display_lockscreen_rotation_title"
         android:dependency="accelerometer"
