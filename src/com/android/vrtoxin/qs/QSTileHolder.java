@@ -55,7 +55,7 @@ public class QSTileHolder {
                 stringId = R.string.qs_tile_ambient_display;
                 break;
             case QSConstants.TILE_AIRPLANE:
-                resourceName = "ic_signal_airplane_enable_animation";
+                resourceName = "ic_qs_airplane_on";
                 stringId = R.string.airplane_mode;
                 break;
             case QSConstants.TILE_BLUETOOTH:
@@ -87,7 +87,7 @@ public class QSTileHolder {
                 stringId = R.string.power_flashlight;
                 break;
             case QSConstants.TILE_HEADSUP:
-                resourceName = "ic_qs_heads_up_on";
+                resourceName = "ic_headsup_toggle_on";
                 stringId = R.string.qs_tile_heads_up;
                 break;
             case QSConstants.TILE_HOTSPOT:
