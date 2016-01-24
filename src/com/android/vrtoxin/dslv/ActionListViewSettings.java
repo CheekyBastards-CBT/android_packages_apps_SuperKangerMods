@@ -58,6 +58,7 @@ import android.widget.TextView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.internal.util.vrtoxin.ActionChecker;
 import com.android.internal.util.vrtoxin.ActionConfig;
 import com.android.internal.util.vrtoxin.ActionConstants;
 import com.android.internal.util.vrtoxin.ActionHelper;
@@ -92,6 +93,10 @@ public class ActionListViewSettings extends ListFragment implements
     private static final int DLG_DELETION_NOT_ALLOWED = 2;
     private static final int DLG_SHOW_HELP_SCREEN     = 3;
     private static final int DLG_RESET_TO_DEFAULT     = 4;
+    private static final int DLG_HOME_REMOVED_DIALOG   = 5;
+    private static final int DLG_BACK_REMOVED_DIALOG   = 6;
+    private static final int DLG_HOME_REASSIGN_DIALOG  = 7;
+    private static final int DLG_BACK_REASSIGN_DIALOG  = 8;
 
     private static final int MENU_HELP = Menu.FIRST;
     private static final int MENU_RESET = MENU_HELP + 1;
@@ -170,6 +175,14 @@ public class ActionListViewSettings extends ListFragment implements
                     (mActionConfigs == null || mActionConfigs.size() == 0)) {
                     mActionConfigsAdapter.add(item);
                     showDialogInner(DLG_DELETION_NOT_ALLOWED, 0, false, false);
+                } else if (!ActionChecker.containsAction(
+                           mActivity, item, ActionConstants.ACTION_BACK)) {
+                    mActionConfigsAdapter.add(item);
+                    showDialogInner(DLG_BACK_REMOVED_DIALOG, 0, false, false);
+                } else if (!ActionChecker.containsAction(
+                        mActivity, item, ActionConstants.ACTION_HOME)) {
+                    mActionConfigsAdapter.add(item);
+                    showDialogInner(DLG_HOME_REMOVED_DIALOG, 0, false, false);
                 } else {
                     deleteIconFileIfPresent(item, true);
                     setConfig(mActionConfigs, false);
@@ -248,7 +261,16 @@ public class ActionListViewSettings extends ListFragment implements
                         mPicker.pickShortcut(getId(), true);
                     }
                 } else if (!mUseAppPickerOnly) {
-                    showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, false, false);
+                    ActionConfig actionConfig = mActionConfigsAdapter.getItem(arg2);
+                    if (ActionConstants.ACTION_HOME.equals(actionConfig.getClickAction())) {
+                        // Do not allow to change normal action on Home
+                        showDialogInner(DLG_HOME_REASSIGN_DIALOG, 0, false, false);
+                    } else if (ActionConstants.ACTION_BACK.equals(actionConfig.getClickAction())) {
+                        // Do not allow to change normal action on Back
+                        showDialogInner(DLG_BACK_REASSIGN_DIALOG, 0, false, false);
+                    } else {
+                        showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, false, false);
+                    }
                 } else {
                     if (mPicker != null) {
                         mPendingIndex = arg2;
@@ -993,6 +1015,25 @@ public class ActionListViewSettings extends ListFragment implements
                             }
                         }
                     })
+                    .create();
+                case DLG_HOME_REMOVED_DIALOG:
+                case DLG_BACK_REMOVED_DIALOG:
+                case DLG_HOME_REASSIGN_DIALOG:
+                case DLG_BACK_REASSIGN_DIALOG:
+                    int msg;
+                    if (id == DLG_HOME_REMOVED_DIALOG) {
+                        msg = R.string.remove_home_key;
+                    } else if (id == DLG_BACK_REMOVED_DIALOG) {
+                        msg = R.string.remove_back_key;
+                    } else if (id == DLG_HOME_REASSIGN_DIALOG) {
+                        msg = R.string.reassign_home_key;
+                    } else {
+                        msg = R.string.reassign_back_key;
+                    }
+                    return new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.attention)
+                    .setMessage(msg)
+                    .setPositiveButton(R.string.dlg_ok, null)
                     .create();
             }
             throw new IllegalArgumentException("unknown id " + id);

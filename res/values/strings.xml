@@ -1435,6 +1435,13 @@
     <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
     <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
 
+    <string name="no_home_key">You have no button assigned any more to the \"Home\" action!\n\nThis can make your device unusable!</string>
+    <string name="no_back_key">You have no button assigned any more to the \"Back\" action!\n\nThis can make your device unusable!</string>
+    <string name="reassign_home_key">Reassigning "Home" button or longpress "Home" is not permitted !\n\nThis would make your device unusable!</string>
+    <string name="reassign_back_key">Reassigning "Back" button is not permitted !\n\nThis would make your device unusable!</string>
+    <string name="remove_home_key">You may not remove the "Home" button action,\nit has been readded as last entry!\n\nThis would make your device unusable!</string>
+    <string name="remove_back_key">You may not remove the "Back" button action,\nit has been readded as last entry!\n\nThis can make your device unusable!</string>
+
   <!-- Volume Steps Fragment -->
     <string name="volume_steps_fragment_title">Volume steps</string>
     <string name="volume_steps_summary">Customize volume steps</string>
