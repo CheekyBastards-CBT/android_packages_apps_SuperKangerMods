@@ -214,6 +214,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_reboot_recovery";
                 stringId = R.string.qs_tile_slimaction;
                  break;
+            case QSConstants.TILE_POWERMENU:
+                resourceName = "ic_qs_powermenu";
+                stringId = R.string.qs_tile_powermenu;
+                break;
             default:
                 return null;
         }
