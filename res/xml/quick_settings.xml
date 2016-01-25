@@ -31,6 +31,11 @@
             android:summary="@string/qs_panel_tiles_summary" />
 
         <Preference
+            android:key="qs_action"
+            android:title="@string/qs_action_tile"
+            android:summary="@string/qs_action_tile_summary" />
+
+        <Preference
             android:key="qs_bar_buttons"
             android:title="@string/customize_title"
             android:summary="@string/qs_bar_buttons_summary" />

@@ -70,10 +70,13 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
             "qs_bar_buttons";
     private static final String QS_COLOR =
             "qs_colors";
+    private static final String QS_ACTION_TILE =
+            "qs_action";
 
     private Preference mQsTiles;
     private Preference mQsBar;
     private Preference mQsColor;
+    private Preference mQsActionTile;
 
     private ListPreference mQSType;
     private ListPreference mQuickPulldown;
@@ -113,6 +116,7 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
         mQsTiles = findPreference(QS_ORDER);
         mQsBar = findPreference(QS_BAR);
         mQsColor = findPreference(QS_COLOR);
+        mQsActionTile = findPreference(QS_ACTION_TILE);
         mMainTiles = (SwitchPreference) findPreference(PREF_MAIN_TILES);
         mLocationAdvanced = (SwitchPreference) findPreference(PREF_LOCATION_ADVANCED);
         mCollapsePanel = (SwitchPreference) findPreference(PREF_COLLAPSE_PANEL);
@@ -149,6 +153,7 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
             prefSet.removePreference(findPreference("quick_settings_collapse_panel"));
             prefSet.removePreference(findPreference("qs_wifi_detail"));
             prefSet.removePreference(findPreference("quick_settings_vibrate"));
+            prefSet.removePreference(findPreference("qs_action"));
         }
 
         if (qsType == QS_TYPE_PANEL || qsType == QS_TYPE_HIDDEN) {
@@ -218,6 +223,22 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
 
         if (pref == mQsColor) {
             ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.qs_colors_title));
+
+            return true;
+        }
+
+        if (pref == mQsActionTile) {
+            Intent action = new Intent(Intent.ACTION_MAIN);
+            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
+            action.putExtra("actionMode", 5);
+            action.putExtra("maxAllowedActions", 10);
+            action.putExtra("disableLongpress", true);
+            action.putExtra("disableDeleteLastEntry", true);
+            action.putExtra("actionValues", "shortcut_action_tile_values");
+            action.putExtra("actionEntries", "shortcut_action_tile_entries");
+            action.putExtra("fragment", "com.android.vrtoxin.qs.QuickTileFragment");
+            action.setComponent(cn);
+            startActivity(action);
 
             return true;
         }

@@ -210,6 +210,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_led_on";
                 stringId = R.string.qs_tile_led;
                 break;
+            case QSConstants.TILE_SLIMACTION:
+                resourceName = "ic_qs_reboot_recovery";
+                stringId = R.string.qs_tile_slimaction;
+                 break;
             default:
                 return null;
         }

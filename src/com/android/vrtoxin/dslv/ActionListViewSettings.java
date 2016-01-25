@@ -109,8 +109,7 @@ public class ActionListViewSettings extends ListFragment implements
     private static final int QUICKTILE              = 5;
     private static final int QUICK_SETTINGS_BAR     = 6;
     private static final int RECENT_APP_SIDEBAR     = 7;
-    private static final int BUTTONS_BAR_EXTENSION  = 8;
-    private static final int PANEL_SHORTCUTS        = 9;
+    private static final int PANEL_SHORTCUTS        = 8;
 
     private static final int DEFAULT_MAX_ACTION_NUMBER = 5;
     private static final int DEFAULT_NUMBER_OF_ACTIONS = 3;
@@ -586,17 +585,15 @@ public class ActionListViewSettings extends ListFragment implements
             case POWER_MENU:
                 return PowerMenuHelper.getPowerMenuConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
-            /*case QUICKTILE:
+            case QUICKTILE:
                 return ActionHelper.getQuickTileConfigWithDescription(
-                    mActivity, mActionValuesKey, mActionEntriesKey);*/
+                    mActivity, mActionValuesKey, mActionEntriesKey);
             case QUICK_SETTINGS_BAR:
                 return QSBarHelper.getQSBarConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case RECENT_APP_SIDEBAR:
                 return ActionHelper.getRecentAppSidebarConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
-            /*case BUTTONS_BAR_EXTENSION:
-                return ActionHelper.getLockscreenButtonBarExtensionConfig(mActivity);*/
         }
         return null;
     }
@@ -627,10 +624,10 @@ public class ActionListViewSettings extends ListFragment implements
                 PowerMenuHelper.setPowerMenuConfig(mActivity, actionConfigs, reset);
                 updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
                 break;
-            /*case QUICKTILE:
+            case QUICKTILE:
                 ActionHelper.setQuickTileConfig(mActivity, actionConfigs, reset);
                 updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
-                break;*/
+                break;
             case QUICK_SETTINGS_BAR:
                 QSBarHelper.setQSBarConfig(mActivity, actionConfigs, reset);
                 updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
@@ -639,9 +636,6 @@ public class ActionListViewSettings extends ListFragment implements
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());
                 break;
-            /*case BUTTONS_BAR_EXTENSION:
-                ActionHelper.setLockscreenButtonBarExtensionConfig(mActivity, actionConfigs, reset);
-                updateFabVisibility(reset ? mDefaultNumberOfActions : actionConfigs.size());*/
         }
     }
 
@@ -1094,11 +1088,6 @@ public class ActionListViewSettings extends ListFragment implements
                         ic.setTint(iconColor);
                     }
                 } else if (getOwner().mActionMode == LOCKSCREEN_BUTTONS_BAR) {
-                    final int iconSize = Settings.System.getInt(getOwner().mActivity.getContentResolver(),
-                            Settings.System.LOCK_SCREEN_BUTTONS_BAR_ICON_SIZE, 36);
-                    ic = ImageHelper.resize(getOwner().mActivity, (Drawable) getItem(position), iconSize);
-                    int iconColor = LockScreenColorHelper.getIconColor(getOwner().mActivity, ic);
-                } else if (getOwner().mActionMode == BUTTONS_BAR_EXTENSION) {
                     final int iconSize = Settings.System.getInt(getOwner().mActivity.getContentResolver(),
                             Settings.System.LOCK_SCREEN_BUTTONS_BAR_ICON_SIZE, 36);
                     ic = ImageHelper.resize(getOwner().mActivity, (Drawable) getItem(position), iconSize);

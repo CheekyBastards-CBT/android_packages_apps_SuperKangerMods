@@ -1846,4 +1846,56 @@
         <item>1800000</item>
     </string-array>
 
+    <string-array name="shortcut_action_tile_entries">
+        <item>@string/shortcut_action_ambient_display</item>
+        <item>@string/shortcut_action_appcirclebar</item>
+        <item>@string/shortcut_action_appsidebar</item>
+        <item>@string/shortcut_action_back</item>
+        <item>@string/shortcut_action_expanded_desktop</item>
+        <item>@string/shortcut_action_floating_windows</item>
+        <item>@string/shortcut_action_gesture_anywhere</item>
+        <item>@string/shortcut_action_heads_up</item>
+        <item>@string/shortcut_action_home</item>
+        <item>@string/shortcut_action_hwkeys</item>
+        <item>@string/shortcut_action_ime</item>
+        <item>@string/shortcut_action_kill</item>
+        <item>@string/shortcut_action_lastapp</item>
+        <item>@string/shortcut_action_menu</item>
+        <item>@string/shortcut_action_navbar</item>
+        <item>@string/shortcut_action_none</item>
+        <item>@string/shortcut_action_power_menu</item>
+        <item>@string/shortcut_action_recent</item>
+        <item>@string/shortcut_action_restartui</item>
+        <item>@string/shortcut_action_power</item>
+        <item>@string/shortcut_action_screenshot</item>
+        <item>@string/shortcut_action_search</item>
+        <item>@string/shortcut_action_pie</item>
+    </string-array>
+
+    <string-array name="shortcut_action_tile_values" translatable="false">
+        <item>**ambient_display**</item>
+        <item>**appcirclebar**</item>
+        <item>**appsidebar**</item>
+        <item>**back**</item>
+        <item>**expanded_desktop**</item>
+        <item>**floating_windows**</item>
+        <item>**gesture_anywhere**</item>
+        <item>**heads_up**</item>
+        <item>**home**</item>
+        <item>**hwkeys**</item>
+        <item>**ime**</item>
+        <item>**kill**</item>
+        <item>**lastapp**</item>
+        <item>**menu_big**</item>
+        <item>**nav_bar**</item>
+        <item>**null**</item>
+        <item>**power_menu**</item>
+        <item>**recents**</item>
+        <item>**restartui**</item>
+        <item>**power**</item>
+        <item>**screenshot**</item>
+        <item>**search**</item>
+        <item>**pie**</item>
+	</string-array>
+
 </resources>
