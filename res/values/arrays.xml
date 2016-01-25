@@ -27,10 +27,10 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>48</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>49</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
-        <item>4</item>
+        <item>5</item>
         <item>2</item>
     </integer-array>
 
@@ -47,6 +47,7 @@
         <item>@string/ime_animation_title</item>
         <item>@string/scrolling_title</item>
         <item>@string/title_animation_controls</item>
+        <item>@string/display_rotation_frag_title</item>
         <item>@string/breathing_notifications_frag_title</item>
         <item>@string/volume_dialog_frag_title</item>
         <item>@string/notification_color_frag_title</item>
@@ -95,8 +96,9 @@
         <item>@string/recents_frag_title</item>
         <item>@string/status_bar_frag_title</item>
         <item>@string/vrtoxin_animations_settings</item>
-        <item>@string/sounds_frag_title</item>
+        <item>@string/display_frag_title</item>
         <item>@string/notif_frag_title</item>
+        <item>@string/sounds_frag_title</item>
         <item>@string/theme_frag_title</item>
         <item>@string/toolinfo_frag_title</item>
         <item>@string/weather_control_master_title</item>
@@ -116,6 +118,7 @@
         <item>animations.KeyboardAnimationInterfaceFragment</item>
         <item>animations.ScrollAnimationInterfaceFragment</item>
         <item>animations.AnimationControlsFragment</item>
+        <item>display.DisplayRotationFragment</item>
         <item>notification.BreathingNotificationsFragment</item>
         <item>notification.VolumeDialogFragment</item>
         <item>notification.NotificationColorFragment</item>
@@ -164,8 +167,9 @@
         <item>RecentsFragment</item>
         <item>StatusBarFragment</item>
         <item>MasterAnimationControlFragment</item>
-        <item>SoundFragment</item>
+        <item>DisplayFragment</item>
         <item>NotificationFragment</item>
+        <item>SoundFragment</item>
         <item>ThemesFragment</item>
         <item>DeviceFragment</item>
         <item>WeatherControlFragment</item>
@@ -175,6 +179,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -234,8 +239,9 @@
         <item>@drawable/ic_recents</item>
         <item>@drawable/ic_statusbar</item>
         <item>@drawable/ic_animations</item>
-        <item>@drawable/ic_sound</item>
+        <item>@drawable/ic_display</item>
         <item>@drawable/ic_notifications</item>
+        <item>@drawable/ic_sound</item>
         <item>@drawable/ic_themes</item>
         <item>@drawable/ic_tools</item>
         <item>@drawable/ic_weather</item>
@@ -1814,6 +1820,30 @@
     <string-array name="gesture_anywhere_position_values" translatable="false">
         <item>3</item>
         <item>5</item>
+    </string-array>
+
+  <!-- Display fragment -->
+    <string-array name="screen_timeout_entries">
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+        <item>45 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="screen_timeout_values" translatable="false">
+        <item>15000</item>
+        <item>30000</item>
+        <item>45000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1800000</item>
     </string-array>
 
 </resources>
