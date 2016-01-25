@@ -76,6 +76,8 @@ public class DisplayFragment extends PreferenceFragment implements
             "screen_timeout";
     private static final String KEY_DOZE =
             "doze";
+    private static final String KEY_DOZE_CAT =
+            "doze_notification_cat";
     private static final String KEY_AUTO_BRIGHTNESS =
             "auto_brightness";
     private static final String KEY_DISPLAY_ROTATION =
@@ -177,7 +179,7 @@ public class DisplayFragment extends PreferenceFragment implements
                 mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
                 mDozePreference.setOnPreferenceChangeListener(this);
             } else {
-                mPrefSet.removePreference(findPreference("doze"));
+                mPrefSet.removePreference(findPreference("doze_notification_cat"));
             }
 
             if (RotationPolicy.isRotationLockToggleVisible(activity)) {

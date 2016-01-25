@@ -1899,4 +1899,10 @@
     <string name="display_rotation_270_title">270 degrees</string>
     <string name="display_lockscreen_rotation_title">Lock Screen</string>
 
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_cat_title">Ambient Display</string>
+    <string name="doze_notification_color_invert_title">Color inversion</string>
+    <string name="doze_notification_color_invert_summary_off">Ambient display notifications will not be inverted. Use for dark themes.</string>
+    <string name="doze_notification_color_invert_summary_on">Ambient display notifications will show as inverted. Use for light/default theme.</string>
+
 </resources>

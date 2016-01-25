@@ -35,12 +35,6 @@
             <intent android:action="android.intent.action.SHOW_BRIGHTNESS_DIALOG" />
         </Preference>
 
-        <SwitchPreference
-            android:key="doze"
-            android:title="@string/doze_title"
-            android:summary="@string/doze_summary"
-            android:persistent="false" />
-
         <Preference
             android:key="display_rotation"
             android:title="@string/display_rotation_frag_title" />
@@ -65,5 +59,25 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="doze_notification_cat"
+        android:title="@string/doze_notification_cat_title">
+
+        <SwitchPreference
+            android:key="doze"
+            android:title="@string/doze_title"
+            android:summary="@string/doze_summary"
+            android:persistent="false" />
+
+        <com.android.vrtoxin.preferences.SecureSettingSwitchPreference
+            android:defaultValue="true"
+            android:dependency="doze"
+            android:key="doze_notification_invert_enabled"
+            android:summaryOff="@string/doze_notification_color_invert_summary_off"
+            android:summaryOn="@string/doze_notification_color_invert_summary_on"
+            android:title="@string/doze_notification_color_invert_title" />
+
+        </PreferenceCategory>
 
 </PreferenceScreen>
