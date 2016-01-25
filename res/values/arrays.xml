@@ -28,10 +28,10 @@
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
         <item>48</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
-        <item>4</item>  <!-- Nav Drawer Menu Items -->
+        <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>4</item>
-        <item>2</item>  <!-- Total: 12 -->
+        <item>2</item>
     </integer-array>
 
   <!-- Nav Drawer Menu Items -->
@@ -223,22 +223,22 @@
         <item>null</item>
         <item>null</item>
         <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
-        <item>null</item>
+        <item>@drawable/ic_buttons</item> <!-- Nav Drawer Menu Items -->
+        <item>@drawable/ic_navigation</item>
+        <item>@drawable/ic_pie_control</item>
+        <item>@drawable/ic_powermenu</item>
+        <item>@drawable/ic_multiwindow</item>
+        <item>@drawable/ic_gestures</item>
+        <item>@drawable/ic_lock_screen</item>
+        <item>@drawable/ic_notif_drawer</item>
+        <item>@drawable/ic_recents</item>
+        <item>@drawable/ic_statusbar</item>
+        <item>@drawable/ic_animations</item>
+        <item>@drawable/ic_sound</item>
+        <item>@drawable/ic_notifications</item>
+        <item>@drawable/ic_themes</item>
+        <item>@drawable/ic_tools</item>
+        <item>@drawable/ic_weather</item>
     </array>
 
  <!-- Example sliding tab titles -->
