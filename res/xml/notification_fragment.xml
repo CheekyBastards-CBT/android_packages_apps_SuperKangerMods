@@ -53,17 +53,11 @@
             android:entryValues="@array/less_notification_sounds_values"
             android:persistent="false" />
 
-        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
-            android:key="battery_saver_notification"
-            android:title="@string/battery_saver_notif_title"
-            android:summary="@string/battery_saver_notif_summary"
-            android:defaultValue="true" />
+    </PreferenceCategory>
 
-        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
-            android:key="battery_low_notification"
-            android:title="@string/battery_low_notif_title"
-            android:summary="@string/battery_low_notif_summary"
-            android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="power_notifications_cat"
+        android:title="@string/power_notifications_category_title">
 
         <SwitchPreference
             android:key="power_notifications"
@@ -90,6 +84,18 @@
     <PreferenceCategory
         android:key="notifications_cat"
         android:title="@string/notifications_category" >
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_saver_notification"
+            android:title="@string/battery_saver_notif_title"
+            android:summary="@string/battery_saver_notif_summary"
+            android:defaultValue="true" />
+
+        <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
+            android:key="battery_low_notification"
+            android:title="@string/battery_low_notif_title"
+            android:summary="@string/battery_low_notif_summary"
+            android:defaultValue="true" />
 
         <!-- Breathing notifications -->
         <Preference

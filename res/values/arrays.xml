@@ -1861,7 +1861,7 @@
         <item>@string/shortcut_action_kill</item>
         <item>@string/shortcut_action_lastapp</item>
         <item>@string/shortcut_action_menu</item>
-        <item>@string/shortcut_action_navbar</item>
+        <item>@string/shortcut_action_nav_bar</item>
         <item>@string/shortcut_action_none</item>
         <item>@string/shortcut_action_power_menu</item>
         <item>@string/shortcut_action_recent</item>
