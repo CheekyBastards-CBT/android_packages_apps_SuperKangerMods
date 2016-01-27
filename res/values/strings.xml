@@ -1571,8 +1571,10 @@
     <string name="ticker_colors_title">Ticker Colors</string>
     <string name="notif_colors_title">Notif Count Colors</string>
     <string name="ticker_title">Status Bar Ticker</string>
+    <string name="icon_dark_title">Icon (light status bar)</string>
     <string name="ticker_screen_summary">Customize the ticker style</string>
     <string name="ticker_summary">Enable the old status bar ticker</string>
+    <string name="notification_ticker_text_color_dark_mode_title">Text (light status bar)</string>
 
     <!-- Heads up -->
     <string name="heads_up_notifications">Heads Up</string>
