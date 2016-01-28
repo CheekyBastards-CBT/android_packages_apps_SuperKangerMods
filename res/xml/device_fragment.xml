@@ -48,9 +48,9 @@
     <Preference
         android:title="@string/wifi_title"
         android:summary="@string/wifi_summary">
-        <intent android:targetPackage="com.grarak.kerneladiutor"
+        <intent android:targetPackage="com.android.settings"
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+            android:targetClass="com.android.settings.wifi.WifiInfo" />
     </Preference>
 
     <Preference
