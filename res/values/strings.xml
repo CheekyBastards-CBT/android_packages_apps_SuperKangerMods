@@ -865,6 +865,7 @@
     <string name="qs_tile_led">LED</string>
     <string name="qs_tile_slimaction">VRToxin Action</string>
     <string name="qs_tile_powermenu">Power Menu</string>
+    <string name="qs_tile_sounds">Sound Mode</string>
 
     <!-- Location tile mode -->
     <string name="qs_advanced_location_title">Advanced Location Detail</string>
