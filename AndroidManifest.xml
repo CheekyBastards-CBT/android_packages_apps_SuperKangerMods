@@ -4,6 +4,9 @@
 
     <uses-sdk android:minSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,6 +16,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.CONTROL_INCALL_EXPERIENCE" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" android:protectionLevel="signatureOrSystem" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -41,6 +45,33 @@
         <activity android:name=".SlimSizerFragment" />
         <activity android:name=".gestures.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".gestures.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
+        <activity
+            android:name=".VRToxinOTA"
+            android:label="@string/ota_updater_frag_title"
+            android:parentActivityName=".AboutFragment" >
+        </activity>
+
+        <service android:name="com.android.vrtoxin.ota.updater.UpdateService" />
+
+        <receiver android:name="com.commonsware.cwac.wakeful.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.commonsware.cwac.wakeful"
+                android:resource="@xml/wakeful" />
+        </receiver>
+        <receiver
+            android:name="com.android.vrtoxin.ota.updater.ConnectivityReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.android.vrtoxin.ota.settings.OTASettings" />
     </application>
 
 </manifest>

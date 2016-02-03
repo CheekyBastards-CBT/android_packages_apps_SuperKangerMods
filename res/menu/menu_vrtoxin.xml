@@ -44,6 +44,12 @@
             android:orderInCategory="35"
             android:checkable="true"
             vrtoxin:showAsAction="never" />
+        <item
+            android:id="@+id/action_ota_setting"
+            android:title="@string/ota_settings_frag_title"
+            android:orderInCategory="40"
+            android:showAsAction="never">
+    </item>
     </group>
 </menu>
 

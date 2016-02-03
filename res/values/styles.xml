@@ -25,6 +25,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+        <!-- To change the popup menu and app text color  -->
+        <item name="android:textColor">@color/white</item>
+        <!-- To change the background of options menu-->
+        <item name="android:itemBackground">@color/background_color</item>
+
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:navigationBarColor">@*android:color/material_blue_grey</item>
         <item name="android:statusBarColor">@android:color/transparent</item>

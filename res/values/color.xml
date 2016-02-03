@@ -40,6 +40,7 @@
     <color name="purple">#ff800080</color>
     <color name="yellow">#ffffff00</color>
     <color name="orange">#ffffa500</color>
+    <color name="background_color">@*android:color/material_blue_grey</color>
 
   <!-- DSLV -->
     <color name="dslv_divider">#1fffffff</color>
