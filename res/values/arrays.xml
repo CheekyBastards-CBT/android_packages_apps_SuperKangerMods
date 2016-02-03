@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>50</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>52</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>5</item>
@@ -41,7 +41,9 @@
         <item>@string/buildprop_frag_title2</item>
         <item>@string/apppicker_frag_title</item>
         <item>@string/fiswitch_frag_title</item>
+        <item>@string/ota_settings_frag_title</item>
         <item>@string/about_frag_title</item>
+        <item>@string/ota_updater_frag_title</item>
         <item>@string/sizer_frag_title</item>
         <item>@string/wakelock_frag_title</item>
         <item>@string/ime_animation_title</item>
@@ -113,7 +115,9 @@
         <item>EditPropFragment</item>
         <item>AppPickerFragment</item>
         <item>FiSwitchFragment</item>
+        <item>ota.settings.OTASettings</item>
         <item>AboutFragment</item>
+        <item>VRToxinOTA</item>
         <item>SlimSizerFragment</item>
         <item>WakelockBlockerFragment</item>
         <item>animations.KeyboardAnimationInterfaceFragment</item>
@@ -181,6 +185,8 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -1912,6 +1918,21 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
-    </string-array> 
+    </string-array>
+
+  <!-- VRToxinUpdater -->
+    <string-array name="entries_update_interval">
+        <item>@string/update_interval_day</item>
+        <item>@string/update_interval_half_day</item>
+        <item>@string/update_interval_hour</item>
+        <item>@string/update_interval_disable</item>
+    </string-array>
+
+    <string-array name="values_update_interval" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 
 </resources>

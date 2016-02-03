@@ -28,28 +28,100 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Download -->
         <android.support.v7.widget.CardView
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/cardview_pref_height"
             vrtoxin:cardUseCompatPadding="true"
             vrtoxin:cardElevation="@dimen/cardview_elevate"
             vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
             vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:id="@+id/download_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/logo_card"
+                android:clickable="true"
                 android:background="?android:selectableItemBackground"
                 android:padding="@dimen/cardview_padding">
-                <ImageView android:layout_width="match_parent"
+                <ImageView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/logo"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/download"
                     android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/short_cut_download_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="bottom" />
+                    <TextView
+                        android:id="@+id/short_cut_download_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/short_cut_download_uptodate_summary"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Changelog -->
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_pref_height"
+            vrtoxin:cardUseCompatPadding="true"
+            vrtoxin:cardElevation="@dimen/cardview_elevate"
+            vrtoxin:cardBackgroundColor="@color/cardlayout_bg"
+            vrtoxin:cardCornerRadius="@dimen/cardview_rounding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/changelog_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="@dimen/cardview_padding">
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/changelog"
+                    android:contentDescription="@string/desc_list_item_icon" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/short_cut_changelog_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/cardview_pref_title"
+                        android:gravity="bottom" />
+                    <TextView
+                        android:id="@+id/short_cut_changelog_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/short_cut_changelog_summary"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:gravity="top" />
+                </LinearLayout>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -57,10 +129,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/vrtoxin_links"
+            android:text="@string/vrtoxin_ota_about"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:gravity="center"
             android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
 
         <!-- Website -->
         <android.support.v7.widget.CardView

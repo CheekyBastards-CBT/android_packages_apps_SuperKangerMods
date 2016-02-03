@@ -56,6 +56,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 import com.android.vrtoxin.dslv.ActionListViewSettings;
+import com.android.vrtoxin.ota.settings.OTASettings;
 
 public class VRToxinActivity extends AppCompatActivity {
 
@@ -499,8 +500,7 @@ public class VRToxinActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_vrtoxin, menu);
-//        menu.findItem(R.id.action_launchhide).setChecked(!isLauncherIconEnabled());
-
+        menu.findItem(R.id.action_launchhide).setChecked(!isLauncherIconEnabled());
         return true;
     }
 
@@ -532,6 +532,10 @@ public class VRToxinActivity extends AppCompatActivity {
                 item.setChecked(!checked);
                 setLauncherIconEnabled(checked);
                 return true;
+            case R.id.action_ota_setting:
+                Intent intentSettings = new Intent(this, OTASettings.class);
+                startActivity(intentSettings);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -548,15 +552,17 @@ public class VRToxinActivity extends AppCompatActivity {
             boolean iseditprop = (mItemPosition == 2);
             boolean isapppicker = (mItemPosition == 3);
             boolean isfiswitch = (mItemPosition == 4);
+            boolean isotaupdater = (mItemPosition == 7);
             boolean isHome =  (mItemPosition == 0);
-            boolean subFrags =  (mItemPosition >= 6);
+            boolean subFrags =  (mItemPosition >= 8);
             menu.findItem(R.id.action_backup).setVisible(isbuildprop);
             menu.findItem(R.id.action_restore).setVisible(isbuildprop);
             menu.findItem(R.id.action_search).setVisible(isbuildprop);
             menu.findItem(R.id.action_discard).setVisible(iseditprop);
             menu.findItem(R.id.action_delete).setVisible(iseditprop);
             menu.findItem(R.id.action_fabhide).setVisible(isfiswitch);
-            menu.findItem(R.id.action_launchhide).setVisible(!(isbuildprop || iseditprop || isapppicker ||isfiswitch ||isHome ||subFrags));
+            menu.findItem(R.id.action_ota_setting).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch || isHome || subFrags));
+            menu.findItem(R.id.action_launchhide).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch || isHome || subFrags));
             menu.findItem(R.id.action_home).setVisible(!(isbuildprop || iseditprop || isapppicker || isfiswitch || isHome));
         } else {
             menu.setGroupVisible(R.id.action_items, false);

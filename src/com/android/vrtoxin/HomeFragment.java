@@ -71,7 +71,7 @@ public class HomeFragment extends Fragment {
         LinearLayout statusBarSettings = (LinearLayout)v.findViewById(R.id.status_bar_card);
         LinearLayout restartSystemUI = (LinearLayout)v.findViewById(R.id.restart_systemui_card);
         LinearLayout powerMenu = (LinearLayout)v.findViewById(R.id.power_menu_card);
-        LinearLayout aboutFrag = (LinearLayout)v.findViewById(R.id.about_card);
+        LinearLayout otaFrag = (LinearLayout)v.findViewById(R.id.ota_card);
 
         fullScreen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,10 +133,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        aboutFrag.setOnClickListener(new View.OnClickListener() {
+        otaFrag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.about_frag_title));
+                ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.ota_updater_frag_title));
             }
         });
 
