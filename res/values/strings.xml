@@ -1982,7 +1982,7 @@
 
     <!-- Links url strings -->
     <string name="download_url">http://www.vrtoxin.net/downloads</string>
-    <string name="changelog_url">http://vrtoxin.net/ota/changelog.txt</string>
+    <string name="changelog_url">http://vrtoxin.net/ota/changelog-nexus.txt</string>
 
     <!-- Update checker -->
     <string name="xml_url_mm">http://vrtoxin.net/ota/ota_file.xml</string>
