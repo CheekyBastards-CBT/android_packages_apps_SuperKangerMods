@@ -97,6 +97,13 @@
             android:summary="@string/battery_low_notif_summary"
             android:defaultValue="true" />
 
+        <!-- Battery fully charged notification -->
+        <com.android.vrtoxin.preferences.GlobalSettingSwitchPreference
+            android:key="battery_fully_charge_notif"
+            android:title="@string/battery_fully_charge_notif_title"
+            android:summary="@string/battery_fully_charge_notif_summary"
+            android:defaultValue="false" />
+
         <!-- Breathing notifications -->
         <Preference
             android:key="breathing_notifications"

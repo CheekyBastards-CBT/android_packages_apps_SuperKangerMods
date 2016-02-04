@@ -2009,7 +2009,7 @@
     <string name="toast_no_data_text">No data connection. Please turn on</string>
 
     <!-- Multi User Coloring -->
-    <string name="status_bar_multi_user_switch_settings_title">User Icon &amp; Multiuser Switch</string>
+    <string name="status_bar_multi_user_switch_frag_title">User Icon &amp; Multiuser Switch</string>
     <string name="status_bar_multi_user_switch_settings_summary">Customize the user icon &amp; multi user switch on the lock screen</string>
     <string name="status_bar_user_icon_settings_title">User Icon</string>
     <string name="status_bar_user_icon_settings_summary">Customize the user icon on the lock screen</string>
@@ -2017,5 +2017,9 @@
     <string name="multi_user_switch_guest_icon_color_title">Guest Icon</string>
     <string name="multi_user_switch_active_text_frame_color_title">Text and Icon Frame, (active user)</string>
     <string name="multi_user_switch_inactive_text_color_title">Text, (inactive users)</string>
+
+    <!-- Battery fully charged notification -->
+    <string name="battery_fully_charge_notif_title">Battery fully charged</string>
+    <string name="battery_fully_charge_notif_summary">Shows a notification when the battery is fully charged.</string>
 
 </resources>
