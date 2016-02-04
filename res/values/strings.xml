@@ -2008,4 +2008,14 @@
     <string name="toast_text">Looking for updates, please wait.</string>
     <string name="toast_no_data_text">No data connection. Please turn on</string>
 
+    <!-- Multi User Coloring -->
+    <string name="status_bar_multi_user_switch_settings_title">User Icon &amp; Multiuser Switch</string>
+    <string name="status_bar_multi_user_switch_settings_summary">Customize the user icon &amp; multi user switch on the lock screen</string>
+    <string name="status_bar_user_icon_settings_title">User Icon</string>
+    <string name="status_bar_user_icon_settings_summary">Customize the user icon on the lock screen</string>
+    <string name="multi_user_switch_icon_color_title">Guest- &amp; New User Icon</string>
+    <string name="multi_user_switch_guest_icon_color_title">Guest Icon</string>
+    <string name="multi_user_switch_active_text_frame_color_title">Text and Icon Frame, (active user)</string>
+    <string name="multi_user_switch_inactive_text_color_title">Text, (inactive users)</string>
+
 </resources>

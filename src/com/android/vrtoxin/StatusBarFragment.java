@@ -42,6 +42,7 @@ public class StatusBarFragment extends PreferenceFragment implements
     private static final String NETWORK_TRAFFIC_FRAG = "network_traffic_state";
     private static final String NOTIFICATION_ICONS_FRAG = "status_bar_notification_icons_settings";
     private static final String RANDOM_FRAG = "status_bar_random";
+    private static final String MULTI_USER_FRAG = "status_bar_multi_user_switch_fragment";
     private static final String TICKER_FRAG = "status_bar_ticker";
     private static final String LOGO_FRAG = "status_bar_vrtoxin_logo";
     private static final String WEATHER_TEMP_FRAG = "status_bar_weather_temperature";
@@ -55,6 +56,7 @@ public class StatusBarFragment extends PreferenceFragment implements
     private Preference mNetworkTraffic;
     private Preference mNotifIcons;
     private Preference mRandom;
+    private Preference mMultiUser;
     private Preference mTicker;
     private Preference mLogo;
     private Preference mWeatherTemp;
@@ -75,6 +77,7 @@ public class StatusBarFragment extends PreferenceFragment implements
         mNetworkTraffic = (Preference)findPreference(NETWORK_TRAFFIC_FRAG);
         mNotifIcons = (Preference)findPreference(NOTIFICATION_ICONS_FRAG);
         mRandom = (Preference)findPreference(RANDOM_FRAG);
+        mMultiUser = (Preference)findPreference(MULTI_USER_FRAG);
         mTicker = (Preference)findPreference(TICKER_FRAG);
         mLogo = (Preference)findPreference(LOGO_FRAG);
         mWeatherTemp = (Preference)findPreference(WEATHER_TEMP_FRAG);
@@ -132,6 +135,12 @@ public class StatusBarFragment extends PreferenceFragment implements
 
         if (pref == mRandom) {
             ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.status_bar_random_title));
+
+            return true;
+        }
+
+        if (pref == mMultiUser) {
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.status_bar_multi_user_switch_frag_title));
 
             return true;
         }
