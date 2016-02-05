@@ -40,6 +40,15 @@
         android:title="@string/expanded_header_network_icons_settings_title"
         android:summary="@string/expanded_header_network_icons_settings_summary" />
 
+    <ListPreference
+        android:key="power_menu_button"
+        android:title="@string/power_menu_button_title"
+        android:dialogTitle="@string/power_menu_button_title"
+        android:entries="@array/power_menu_button_entries"
+        android:entryValues="@array/power_menu_button_values"
+        android:defaultValue="2"
+        android:persistent="false" />
+
     <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
         android:key="vrtoxin_button"
         android:title="@string/vrtoxin_button_title"

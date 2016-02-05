@@ -1941,4 +1941,17 @@
         <item>3</item>
     </string-array>
 
+  <!--  Power Menu Button -->
+    <string-array name="power_menu_button_entries" translatable="false">
+        <item>@string/power_menu_button_off</item>
+        <item>@string/power_menu_button_action_screen_off</item>
+        <item>@string/power_menu_button_action_dialog</item>
+    </string-array>
+
+    <string-array name="power_menu_button_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

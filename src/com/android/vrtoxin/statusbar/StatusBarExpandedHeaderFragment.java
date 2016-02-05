@@ -55,6 +55,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
     private static final String STATUS_BAR_HEADER_ICONS = "expanded_header_network_icons_settings";
     private static final String STATUS_BAR_HEADER_SHORTCUTS = "custom_header_shortcuts";
     private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
+    private static final String POWER_MENU_BUTTON = "power_menu_button";
 
     private static final int SYSTEMUI_SECONDARY = 0xff384248;
     private static final int BLACK = 0xff000000;
@@ -75,6 +76,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
     private Preference mHeaderIcons;
     private Preference mHeaderShortcuts;
     private ListPreference mCustomHeaderDefault;
+    private ListPreference mPowerMenuButton;
 
     private ContentResolver mResolver;
 
@@ -119,14 +121,14 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
 
         mStatusBarHeaderFontStyle = (ListPreference) findPreference(STATUS_BAR_HEADER_FONT_STYLE);
         mStatusBarHeaderFontStyle.setOnPreferenceChangeListener(this);
-        mStatusBarHeaderFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0)));
+        mStatusBarHeaderFontStyle.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0)));
         mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
 
         mCustomHeaderDefault = (ListPreference) findPreference(PREF_CUSTOM_HEADER_DEFAULT);
         mCustomHeaderDefault.setOnPreferenceChangeListener(this);
-        mCustomHeaderDefault.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, 0)));
+        mCustomHeaderDefault.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, 0)));
         mCustomHeaderDefault.setSummary(mCustomHeaderDefault.getEntry());
 
         mBackgroundColor =
@@ -172,6 +174,13 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
         mIconColor.setSummary(hexColor);
         mIconColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mIconColor.setOnPreferenceChangeListener(this);
+
+        // Power Menu Button
+        mPowerMenuButton = (ListPreference) findPreference(POWER_MENU_BUTTON);
+        mPowerMenuButton.setOnPreferenceChangeListener(this);
+        mPowerMenuButton.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                Settings.System.POWER_MENU_BUTTON, 2)));
+        mPowerMenuButton.setSummary(mPowerMenuButton.getEntry());
 
         setHasOptionsMenu(true);
     }
@@ -281,6 +290,13 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
                 Settings.System.STATUS_BAR_EXPANDED_HEADER_ICON_COLOR, intHex);
             preference.setSummary(hex);
             return true;
+        } else if (preference == mPowerMenuButton) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mPowerMenuButton.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWER_MENU_BUTTON, val);
+            mPowerMenuButton.setSummary(mPowerMenuButton.getEntries()[index]);
+            return true;
         }
         return false;
     }
@@ -333,6 +349,8 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_ICON_COLOR,
                                     WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.POWER_MENU_BUTTON, 0);
                             getOwner().refreshSettings();
                         }
                     })
@@ -355,6 +373,8 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_ICON_COLOR,
                                     VRTOXIN_BLUE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.POWER_MENU_BUTTON, 2);
                             getOwner().refreshSettings();
                         }
                     })

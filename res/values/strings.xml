@@ -2039,4 +2039,11 @@
     <string name="vrtoxin_button_title">VRToxin Button</string>
     <string name="vrtoxin_button_summary">Show a VRToxin button in the expanded header</string>
 
+    <!-- Status bar power menu -->
+    <string name="power_menu_button_title">Power Menu Button</string>
+    <string name="power_menu_button_dialog_title">Set tap and long-press actions</string>
+    <string name="power_menu_button_off">Disabled</string>
+    <string name="power_menu_button_action_screen_off">Screen Off - Power Menu</string>
+    <string name="power_menu_button_action_dialog">Power Menu - ScreenOff</string>
+
 </resources>
