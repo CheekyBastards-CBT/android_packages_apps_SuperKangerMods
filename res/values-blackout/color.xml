@@ -41,6 +41,7 @@
     <color name="yellow">#ffffff00</color>
     <color name="orange">#ffffa500</color>
     <color name="background_color">@android:color/black</color>
+    <color name="ota_notification_color">#ff1976D2</color>
 
   <!-- DSLV -->
     <color name="dslv_divider">#ff1976D2</color>

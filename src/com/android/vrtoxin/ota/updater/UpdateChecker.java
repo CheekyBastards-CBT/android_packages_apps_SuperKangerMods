@@ -226,6 +226,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             .setContentTitle(mContext.getString(R.string.title_update))
             .setContentText(mContext.getString(R.string.notification_message))
             .setSmallIcon(R.drawable.ic_notification_ota)
+            .setColor(mContext.getResources().getColor(R.color.ota_notification_color))
             .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_notification_ota));
 
         Intent intent = new Intent(mContext, VRToxinActivity.class);
