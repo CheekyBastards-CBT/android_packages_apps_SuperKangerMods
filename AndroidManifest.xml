@@ -47,6 +47,15 @@
         <activity android:name=".gestures.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <activity
+            android:name="com.android.vrtoxin.ota.VRTUpdaterActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".VRToxinOTA"
             android:label="@string/ota_updater_frag_title"
             android:parentActivityName=".AboutFragment" >
