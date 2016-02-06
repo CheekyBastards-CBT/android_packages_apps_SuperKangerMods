@@ -24,7 +24,6 @@ import android.content.ContentResolver;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -72,9 +71,6 @@ public class NavigationBarFragment extends PreferenceFragment implements
     //VRToxinActivity
     private static final String NAVBUTTONSFRAG = "navigation_bar_button_advanced";
     private static final String CUSTOMIZE_BUTTONS = "navigation_bar_button_settings";
-
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME = "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME = "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private Preference mNavButtons;
     private Preference mCustomizeNavButtons;
@@ -184,14 +180,8 @@ public class NavigationBarFragment extends PreferenceFragment implements
         }
 
         if (pref == mCustomizeNavButtons) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 0);
-            action.putExtra("maxAllowedActions", 5);
-            action.putExtra("defaultNumberOfActions", 3);
-            action.putExtra("disableDeleteLastEntry", true);
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayNavbarActionListView();
 
             return true;
         }

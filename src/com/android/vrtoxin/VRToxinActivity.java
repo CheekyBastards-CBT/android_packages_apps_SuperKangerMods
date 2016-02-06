@@ -419,6 +419,31 @@ public class VRToxinActivity extends AppCompatActivity {
         }, 400);
     }
 
+    public void displayNavbarActionListView() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        // below replicates the visual delay seen when launching frags from navdrawer
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Fragment fragment = new ActionListViewSettings();
+                Bundle fragmentData = new Bundle();
+                fragmentData.putInt("actionMode", 0);
+                fragmentData.putInt("maxAllowedActions", 5);
+                fragmentData.putInt("defaultNumberOfActions", 3);
+                fragmentData.putBoolean("disableDeleteLastEntry", true);
+                fragment.setArguments(fragmentData);
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frame_container, fragment);
+                fragmentTransaction.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                fragmentTransaction.commit();
+            }
+        }, 400);
+    }
+
     public void displaySubFrag(String title) {
         int poscheck = -1;
 
