@@ -423,7 +423,6 @@ public class VRToxinActivity extends AppCompatActivity {
         myHandler.removeCallbacksAndMessages(null);
         mMenu = true;
         removeCurrent();
-        // below replicates the visual delay seen when launching frags from navdrawer
         myHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -433,6 +432,33 @@ public class VRToxinActivity extends AppCompatActivity {
                 fragmentData.putInt("maxAllowedActions", 5);
                 fragmentData.putInt("defaultNumberOfActions", 3);
                 fragmentData.putBoolean("disableDeleteLastEntry", true);
+                fragment.setArguments(fragmentData);
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frame_container, fragment);
+                fragmentTransaction.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                fragmentTransaction.commit();
+            }
+        }, 400);
+    }
+
+    public void displayPowerMenuActionListView() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Fragment fragment = new ActionListViewSettings();
+                Bundle fragmentData = new Bundle();
+                fragmentData.putInt("actionMode", 4);
+                fragmentData.putInt("maxAllowedActions", 12);
+                fragmentData.putBoolean("disableLongpress", true);
+                fragmentData.putBoolean("disableIconPicker", true);
+                fragmentData.putBoolean("disableDeleteLastEntry", true);
+                fragmentData.putString("actionValues", "power_menu_action_values");
+                fragmentData.putString("actionEntries", "power_menu_action_entries");
                 fragment.setArguments(fragmentData);
 
                 FragmentManager fragmentManager = getFragmentManager();
