@@ -114,6 +114,9 @@ public class AboutFragment extends Fragment {
         LinearLayout changelog = (LinearLayout)v.findViewById(R.id.changelog_card);
         mChangelogSummary = (TextView) v.findViewById(R.id.short_cut_changelog_summary);
 
+        //Gapps button
+        LinearLayout gapps = (LinearLayout)v.findViewById(R.id.gapps_card);
+
         //VRToxin website
         LinearLayout link1 = (LinearLayout)v.findViewById(R.id.link1_card);
         //Google+
@@ -173,6 +176,35 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 launchUrl(getString(R.string.changelog_url));
+            }
+        });
+
+        gapps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("http://opengapps.org");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+            }
+        });
+
+        gapps.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse("http://vrtoxin.net/downloads/download.php?file=files/GApps/TBO_GAPPS_12-19.zip");
+                link.setData(url);
+                try {
+                    startActivity(link);
+                } catch (android.content.ActivityNotFoundException e) {
+                    noBrowserSnack(v);
+                }
+                return true;
             }
         });
 

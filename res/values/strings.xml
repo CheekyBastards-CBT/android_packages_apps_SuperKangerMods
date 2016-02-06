@@ -1980,6 +1980,10 @@
     <string name="short_cut_changelog_summary">View the changelog</string>
     <string name="short_cut_changelog_summary_update_available">Important!!! Read changelog carefully</string>
 
+    <!-- Gapps button strings -->
+    <string name="short_cut_gapps_title">Download Google apps</string>
+    <string name="short_cut_gapps_summary">Longpress to download TBO Gapps</string>
+
     <!-- Links url strings -->
     <string name="download_url">http://www.vrtoxin.net/downloads</string>
     <string name="changelog_url">http://vrtoxin.net/ota/changelog-nexus.txt</string>
