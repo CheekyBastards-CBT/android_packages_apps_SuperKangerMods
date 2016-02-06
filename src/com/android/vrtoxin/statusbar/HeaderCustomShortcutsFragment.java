@@ -32,7 +32,7 @@ import java.net.URISyntaxException;
 
 import com.android.vrtoxin.utils.AppSelectListPreference;
 
-public class HeaderCustomShortcutsFragment extends SettingsPreferenceFragment implements
+public class HeaderCustomShortcutsFragment extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String CLOCK_SHORTCUT = "clock_shortcut";

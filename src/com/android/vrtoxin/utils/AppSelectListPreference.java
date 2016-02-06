@@ -39,7 +39,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.graphics.drawable.Drawable;
-import com.android.settings.R;
+import com.android.vrtoxin.R;
 
 import java.text.Collator;
 import java.util.ArrayList;

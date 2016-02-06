@@ -293,7 +293,7 @@ public class StatusBarExpandedHeaderFragment extends PreferenceFragment implemen
         } else if (preference == mPowerMenuButton) {
             int val = Integer.parseInt((String) newValue);
             int index = mPowerMenuButton.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.POWER_MENU_BUTTON, val);
             mPowerMenuButton.setSummary(mPowerMenuButton.getEntries()[index]);
             return true;
