@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 Slimroms Project
+<!--
+     Copyright (C) 2015 Slimroms Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,11 +15,12 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vrtoxin="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceScreen
-        android:fragment="com.android.vrtoxin.recents.RecentAppSidebar"
-        android:key="recent_app_sidebar"
+    <Preference
+        android:key="recent_app_sidebar_style"
         android:title="@string/recent_app_sidebar_style_title"
         android:summary="@string/recent_app_sidebar_style_summary" />
 

@@ -17,17 +17,24 @@
 package com.android.vrtoxin.recents;
 
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.android.vrtoxin.R;
+import com.android.vrtoxin.VRToxinActivity;
 
 public class RecentAppSidebarFragment extends PreferenceFragment {
 
     public RecentAppSidebarFragment(){}
+
+    private static final String PREF_APP_SIDEBAR_STYLE = "recent_app_sidebar_style";
+
+    private Preference mAppBarStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,7 +45,10 @@ public class RecentAppSidebarFragment extends PreferenceFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup container, Bundle savedInstanceState) {
+
+        mAppBarStyle = (Preference)findPreference(PREF_APP_SIDEBAR_STYLE);
+
         final View view = super.onCreateView(inflater, container, savedInstanceState);
         final ListView list = (ListView) view.findViewById(android.R.id.list);
         // our container already takes care of the padding
@@ -48,5 +58,16 @@ public class RecentAppSidebarFragment extends PreferenceFragment {
             list.setPadding(0, paddingTop, 0, paddingBottom);
         }
         return view;
+    }
+
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mAppBarStyle) {
+
+            ((VRToxinActivity)getActivity()).displaySubFrag(getString(R.string.recent_app_sidebar_style_title));
+
+            return true;
+        }
+
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
