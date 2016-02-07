@@ -18,7 +18,6 @@ package com.android.vrtoxin.lockscreen;
 
 import android.content.ComponentName;
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -30,16 +29,12 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 
 import com.android.vrtoxin.R;
+import com.android.vrtoxin.VRToxinActivity;
 
 public class LockscreenShortcutFragment extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public LockscreenShortcutFragment(){}
-
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME =
-            "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME =
-            "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private static final String PREF_CAT_NOTIFICATIONS =
             "buttons_cat_notifications";
@@ -164,15 +159,8 @@ public class LockscreenShortcutFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
         if (pref == mButtonsBar) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 3);
-            action.putExtra("maxAllowedActions", 50);
-            action.putExtra("defaultNumberOfActions", 0);
-            action.putExtra("disableLongpress", true);
-            action.putExtra("useAppPickerOnly", true);
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewLSShortcuts();
 
             return true;
         }

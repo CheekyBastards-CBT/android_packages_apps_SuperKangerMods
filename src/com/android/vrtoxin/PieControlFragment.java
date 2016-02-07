@@ -19,7 +19,6 @@ package com.android.vrtoxin;
 
 import android.content.ComponentName;
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,9 +40,6 @@ public class PieControlFragment extends PreferenceFragment
     private static final String PIEBUTTONFRAG = "piebutton";
     private static final String PIESTYLEFRAG = "piestyle";
     private static final String PIETRIGGERFRAG = "pietrigger";
-
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME = "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME = "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private Preference mPieButton;
     private Preference mPieStyle;
@@ -107,14 +103,8 @@ public class PieControlFragment extends PreferenceFragment
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
         if (pref == mPieButton) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 1);
-            action.putExtra("maxAllowedActions", 5);
-            action.putExtra("disableDeleteLastEntry", true);
-            action.putExtra("fragment", "com.android.settings.vrtoxin.pie.PieButtonFragment");
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewPie();
 
             return true;
         }

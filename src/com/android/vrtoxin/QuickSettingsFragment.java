@@ -19,7 +19,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.ComponentName;
 import android.content.res.Resources;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.ListPreference;
@@ -60,10 +59,6 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
     private static final int QS_TYPE_HIDDEN = 2;
 
     //VRToxinActivity
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME =
-            "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME =
-            "com.android.settings.Settings$ActionListViewSettingsActivity";
     private static final String QS_ORDER =
             "qs_panel_tiles";
     private static final String QS_BAR =
@@ -205,18 +200,8 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
         }
 
         if (pref == mQsBar) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 6);
-            action.putExtra("maxAllowedActions", 30);
-            action.putExtra("defaultNumberOfActions", 6);
-            action.putExtra("disableLongpress", true);
-            action.putExtra("disableIconPicker", true);
-            action.putExtra("disableDeleteLastEntry", true);
-            action.putExtra("actionValues", "qab_button_values");
-            action.putExtra("actionEntries", "qab_button_entries");
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewQsBar();
 
             return true;
         }
@@ -228,17 +213,8 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
         }
 
         if (pref == mQsActionTile) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 5);
-            action.putExtra("maxAllowedActions", 10);
-            action.putExtra("disableLongpress", true);
-            action.putExtra("disableDeleteLastEntry", true);
-            action.putExtra("actionValues", "shortcut_action_tile_values");
-            action.putExtra("actionEntries", "shortcut_action_tile_entries");
-            action.putExtra("fragment", "com.android.vrtoxin.qs.QuickTileFragment");
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewQsActionTile();
 
             return true;
         }

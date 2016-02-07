@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>54</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>55</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>5</item>
@@ -90,6 +90,7 @@
         <item>@string/app_circle_bar_frag_title</item>
         <item>@string/app_sidebar_frag_title</item>
         <item>@string/gesture_anywhere_frag_title</item>
+        <item>@string/action_list_view_frag_title</item>
         <item>@string/hw_keys_frag_title</item> <!-- Nav Drawer Menu Items -->
         <item>@string/navigation_bar_settings_title</item>
         <item>@string/pie_control_frag_title</item>
@@ -166,6 +167,7 @@
         <item>gestures.AppCircleBarFragment</item>
         <item>gestures.AppSideBarFragment</item>
         <item>gestures.gestureanywhere.GestureAnywhereFragment</item>
+        <item>dslv.ActionListViewSettings</item>
         <item>HardwareKeysFragment</item> <!-- Nav Drawer Menu Items -->
         <item>NavigationBarFragment</item>
         <item>PieControlFragment</item>
@@ -189,6 +191,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>

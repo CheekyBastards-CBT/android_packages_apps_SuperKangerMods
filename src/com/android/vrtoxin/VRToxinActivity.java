@@ -375,6 +375,423 @@ public class VRToxinActivity extends AppCompatActivity {
         }
     }
 
+    private void displayCustomizeNavbar(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 0);
+        fragmentData.putInt("maxAllowedActions", 5);
+        fragmentData.putInt("defaultNumberOfActions", 3);
+        fragmentData.putBoolean("disableDeleteLastEntry", true);
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizePie(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 1);
+        fragmentData.putInt("maxAllowedActions", 5);
+        fragmentData.putBoolean("disableDeleteLastEntry", true);
+        fragmentData.putString("fragment", "com.android.vrtoxin.pie.PieButtonFragment");
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizePieSecond(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 2);
+        fragmentData.putInt("maxAllowedActions", 7);
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizeLockScreenShortcuts(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 3);
+        fragmentData.putInt("maxAllowedActions", 50);
+        fragmentData.putInt("defaultNumberOfActions", 0);
+        fragmentData.putBoolean("disableLongpress", true);
+        fragmentData.putBoolean("useAppPickerOnly", true);
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizePowerMenuActions(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 4);
+        fragmentData.putInt("maxAllowedActions", 12);
+        fragmentData.putBoolean("disableLongpress", true);
+        fragmentData.putBoolean("disableIconPicker", true);
+        fragmentData.putBoolean("disableDeleteLastEntry", true);
+        fragmentData.putString("actionValues", "power_menu_action_values");
+        fragmentData.putString("actionEntries", "power_menu_action_entries");
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizeQsActionTile(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 5);
+        fragmentData.putInt("maxAllowedActions", 10);
+        fragmentData.putBoolean("disableLongpress", true);
+        fragmentData.putBoolean("disableDeleteLastEntry", true);
+        fragmentData.putString("actionValues", "shortcut_action_tile_values");
+        fragmentData.putString("actionEntries", "shortcut_action_tile_entries");
+        fragmentData.putString("fragment", "com.android.vrtoxin.qs.QuickTileFragment");
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizeQsBarButtons(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 6);
+        fragmentData.putInt("maxAllowedActions", 30);
+        fragmentData.putInt("defaultNumberOfActions", 6);
+        fragmentData.putBoolean("disableLongpress", true);
+        fragmentData.putBoolean("disableIconPicker", true);
+        fragmentData.putBoolean("disableDeleteLastEntry", true);
+        fragmentData.putString("actionValues", "qab_button_values");
+        fragmentData.putString("actionEntries", "qab_button_entries");
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
+    private void displayCustomizeAppBarButtons(int position) {
+        boolean mKeepStack = checkPosition(position);
+
+        Fragment frags = new ActionListViewSettings();
+        Bundle fragmentData = new Bundle();
+        fragmentData.putInt("actionMode", 7);
+        fragmentData.putInt("maxAllowedActions", -1);
+        fragmentData.putBoolean("useAppPickerOnly", true);
+        fragmentData.putString("fragment", "com.android.vrtoxin.recents.RecentAppSidebarFragment");
+        frags.setArguments(fragmentData);
+        String fragname = navMenuFrags[position];
+
+        if (frags != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+            try {
+                FragmentTransaction fragtrans = fragmentManager.beginTransaction();
+                if (mFromClick || mMenu || mBackPress) {
+                    fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
+                }
+                fragtrans.add(R.id.frame_container, frags);
+                if (!mKeepStack && !mBackPress) {
+                    fragmentStack.clear();
+                    fragmentStack.push(navMenuFrags[0]);
+                }
+                if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+                    fragmentStack.push(navMenuFrags[position]);
+                }
+                fragtrans.commit();
+            } catch (Exception e) { }
+
+            if (mFromClick || mBackPress) {
+                mFromClick = false;
+                mBackPress = false;
+            } else {
+                setTitle(navMenuTitles[position]);
+                if (mMenu) {
+                    mMenu = false;
+                    mItemPosition = position;
+                } else {
+                    mDrawerLayout.closeDrawer(mNavView);
+                }
+            }
+            invalidateOptionsMenu();
+        } else {
+            // error in creating fragment
+            Log.e("VRToxinActivity", "Error in creating fragment");
+        }
+    }
+
     private void removeCurrent() {
         // update the main content by replacing fragments, first by removing the old
         FragmentTransaction fragtrans = fragmentManager.beginTransaction();
@@ -415,6 +832,102 @@ public class VRToxinActivity extends AppCompatActivity {
             @Override
             public void run() {
                 displayView(2);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewNavbar() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizeNavbar(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewPie() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizePie(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewPieSecond() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizePieSecond(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewLSShortcuts() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizeLockScreenShortcuts(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewPowerMenu() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizePowerMenuActions(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewQsActionTile() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizeQsActionTile(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewQsBar() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizeQsBarButtons(54);
+            }
+        }, 400);
+    }
+
+    public void displayActionListViewSlimAppBar() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayCustomizeAppBarButtons(54);
             }
         }, 400);
     }

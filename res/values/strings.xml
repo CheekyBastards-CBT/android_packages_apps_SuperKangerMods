@@ -102,6 +102,8 @@
     <string name="click2">It\'s not like pressing this %1$d times will do anything&#8230; lay off, sheesh</string>
     <string name="click3">&#8230; %1$d times now?! Ok, just quit. I\'m going to act like nothing happened, so stop</string>
 
+    <!--ActionListView Frag-->
+    <string name="action_list_view_frag_title">Customize</string>
 
   <!--Home fragment shortcuts-->
     <!--Full screen VRToxinMods -->

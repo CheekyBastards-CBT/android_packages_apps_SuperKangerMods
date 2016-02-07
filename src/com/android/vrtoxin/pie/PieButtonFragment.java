@@ -17,7 +17,6 @@
 package com.android.vrtoxin.pie;
 
 import android.content.ComponentName;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -40,9 +39,6 @@ public class PieButtonFragment extends PreferenceFragment {
 
     private static final String PIESTYLEFRAG = "pie_button_style";
     private static final String PIEBUTTONFRAG = "pie_button_second_layer";
-
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME = "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME = "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private Preference mPieButton;
     private Preference mPieStyle;
@@ -81,12 +77,8 @@ public class PieButtonFragment extends PreferenceFragment {
         }
 
         if (pref == mPieButton) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 2);
-            action.putExtra("maxAllowedActions", 7);
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewPieSecond();
 
             return true;
         }

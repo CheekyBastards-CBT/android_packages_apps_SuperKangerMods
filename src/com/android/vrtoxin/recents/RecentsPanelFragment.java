@@ -18,7 +18,6 @@ package com.android.vrtoxin.recents;
 
 import android.content.ComponentName;
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -43,8 +42,6 @@ public class RecentsPanelFragment extends PreferenceFragment implements
             "use_slim_recents";
     private static final String SLIM_RECENTS_SETTINGS = "slim_recents_settings";
     private static final String SLIM_RECENTS_APP_SIDEBAR = "recent_app_sidebar_content";
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME = "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME = "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private SwitchPreference mUseSlimRecents;
     private Preference mSlimSettings;
@@ -97,14 +94,8 @@ public class RecentsPanelFragment extends PreferenceFragment implements
         }
 
         if (preference == mSlimAppBar) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 7);
-            action.putExtra("maxAllowedActions", -1);
-            action.putExtra("useAppPickerOnly", true);
-            action.putExtra("fragment", "com.android.vrtoxin.recents.RecentAppSidebarFragment");
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewSlimAppBar();
 
             return true;
         }

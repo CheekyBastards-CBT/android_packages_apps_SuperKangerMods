@@ -23,7 +23,6 @@ import android.content.ContentResolver;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.ListPreference;
@@ -49,9 +48,6 @@ public class PowerMenuFragment extends PreferenceFragment implements
 
     //VRToxinActivity
     private static final String POWERACTIONSFRAG = "power_menu_actions";
-
-    public static final String KEY_ACTION_LISTVIEW_PACKAGE_NAME = "com.android.settings";
-    public static final String KEY_ACTION_LISTVIEW_CLASS_NAME = "com.android.settings.Settings$ActionListViewSettingsActivity";
 
     private Preference mPowerActions;
 
@@ -203,17 +199,8 @@ public class PowerMenuFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
         if (pref == mPowerActions) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_ACTION_LISTVIEW_PACKAGE_NAME, KEY_ACTION_LISTVIEW_CLASS_NAME);
-            action.putExtra("actionMode", 4);
-            action.putExtra("maxAllowedActions", 12);
-            action.putExtra("disableLongpress", true);
-            action.putExtra("disableIconPicker", true);
-            action.putExtra("disableDeleteLastEntry", true);
-            action.putExtra("actionValues", "power_menu_action_values");
-            action.putExtra("actionEntries", "power_menu_action_entries");
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayActionListViewPowerMenu();
 
             return true;
         }
