@@ -126,8 +126,8 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
         mQSType.setSummary(mQSType.getEntry());
         mQSType.setOnPreferenceChangeListener(this);
 
+        mNumColumns = (ListPreference) findPreference("sysui_qs_num_columns");
         if (qsType == QS_TYPE_PANEL) {
-            mNumColumns = (ListPreference) findPreference(PREF_NUM_OF_COLUMNS);
             int numColumns = Settings.System.getIntForUser(mResolver,
                     Settings.System.QS_NUM_TILE_COLUMNS, getDefaultNumColums(),
                     UserHandle.USER_CURRENT);
@@ -135,14 +135,12 @@ public class QuickSettingsFragment extends PreferenceFragment implements Prefere
             updateNumColumnsSummary(numColumns);
             mNumColumns.setOnPreferenceChangeListener(this);
             DraggableGridView.setColumnCount(numColumns);
-
         } else {
-            prefSet.removePreference(findPreference("sysui_qs_num_columns"));
+            prefSet.removePreference(mNumColumns);
         }
 
         if (qsType == QS_TYPE_BAR || qsType == QS_TYPE_HIDDEN) {
             prefSet.removePreference(findPreference("qs_panel_tiles"));
-            prefSet.removePreference(mNumColumns);
             prefSet.removePreference(findPreference("sysui_qs_main_tiles"));
             prefSet.removePreference(findPreference("qs_location_advanced"));
             prefSet.removePreference(findPreference("quick_settings_collapse_panel"));
