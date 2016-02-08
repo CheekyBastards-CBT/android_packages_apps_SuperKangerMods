@@ -45,7 +45,7 @@
 
   <!-- About Fragment -->
     <string name="about_frag_title">About</string>
-    <string name="about_frag_summary">Read all about us, links to VRToxin social media and website</string>
+    <string name="about_frag_summary">Look for the latest rom update and read all about us</string>
     <string name="home_frag_title">Home</string>
     <string name="vrtoxin_site" translatable="false">http://vrtoxin.net</string>
     <string name="gplus_data" translatable="false">https://plus.google.com/communities/108303487813436381401</string>
@@ -1981,7 +1981,7 @@
 
     <!-- Changelog button strings -->
     <string name="short_cut_changelog_title">Changelog</string>
-    <string name="short_cut_changelog_summary">View the new changelog or longpress to view current changelog</string>
+    <string name="short_cut_changelog_summary">View the new changelog, longpress for current changelog</string>
     <string name="short_cut_changelog_summary_update_available">Important!!! Read changelog carefully</string>
 
     <!-- VRToxin Changelog -->
