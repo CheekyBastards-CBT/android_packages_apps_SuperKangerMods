@@ -58,6 +58,19 @@
             android:title="@string/lock_screen_visualizer_frag_title"
             android:summary="@string/lock_screen_visualizer_settings_summary" />
 
+        <com.android.vrtoxin.preferences.SingleLineSummaryPreference
+            android:key="owner_info_settings"
+            android:title="@string/owner_info_settings_title" />
+
+        <com.android.vrtoxin.preferences.SeekBarPreference
+            android:key="owner_info_font_size"
+            android:title="@string/lockscreen_owner_info_size"
+            android:max="30"
+            vrtoxin:minimum="5"
+            vrtoxin:unitsLeft=""
+            vrtoxin:unitsRight="dp"
+            android:persistent="false" />
+
         <com.android.vrtoxin.preferences.SystemSettingSwitchPreference
             android:key="keyguard_toggle_torch"
             android:title="@string/keyguard_torch_title"
