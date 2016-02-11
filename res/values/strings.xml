@@ -213,6 +213,8 @@
     <string name="dlg_reset_values_message">Reset values to\nAndroid- or VRToxin default?</string>
     <string name="dlg_reset_colors_message">Reset colors to\nAndroid- or VRToxin default?</string>
     <string name="additional_options_title">Additional options</string>
+    <string name="help_uri_default" translatable="false"></string>
+    <string name="settings_safetylegal_activity_loading">Loading\u2026</string>
     <string name="always_title">Always</string>
     <string name="number_of_notifications_title">Number of notifications</string>
     <string name="number_of_notifications_two_title">2</string>
