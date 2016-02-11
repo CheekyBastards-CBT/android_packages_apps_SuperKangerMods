@@ -74,6 +74,7 @@ public class VRToxinActivity extends AppCompatActivity {
 
     // stuff for widget calls to open fragments
     public static final String EXTRA_START_FRAGMENT = "com.android.vrtoxin.tinkerings.EXTRA_START_FRAGMENT";
+    public static final String EXTRA_FRAGMENT_ARG_KEY = ":vrtoxin:fragment_args_key";
 
     public static final int REQUEST_CREATE_SHORTCUT = 3;
     public static final String PROJFI_PACKAGE_NAME = "com.google.android.apps.tycho";
