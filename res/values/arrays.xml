@@ -27,7 +27,7 @@
     </string-array>
 
     <integer-array name="nav_drawer_cat_nums" translatable="false">
-        <item>57</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
+        <item>58</item> <!-- this first part indicates the number of navdrawer frags NOT to be listed -->
         <item>4</item>  <!-- Nav Drawer Menu Items --> <!-- Current Items: 16 -->
         <item>6</item>
         <item>5</item>
@@ -55,6 +55,7 @@
         <item>@string/breathing_notifications_frag_title</item>
         <item>@string/volume_dialog_frag_title</item>
         <item>@string/notification_color_frag_title</item>
+        <item>@string/heads_up_notifications</item>
         <item>@string/status_bar_battery_status_settings_title</item>
         <item>@string/status_bar_carrier_label_settings_title</item>
         <item>@string/status_bar_clock_settings_title</item>
@@ -134,6 +135,7 @@
         <item>notification.BreathingNotificationsFragment</item>
         <item>notification.VolumeDialogFragment</item>
         <item>notification.NotificationColorFragment</item>
+        <item>notification.HeadsUpFragment</item>
         <item>statusbar.BatteryStyleFragment</item>
         <item>statusbar.CarrierLabelFragment</item>
         <item>statusbar.StatusBarClockFragment</item>
@@ -195,6 +197,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons" translatable="false">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>

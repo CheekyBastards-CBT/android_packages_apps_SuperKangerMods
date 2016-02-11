@@ -61,7 +61,6 @@ public class NotificationFragment extends PreferenceFragment implements
     public static final String KEY_NOTIF_BATTERY_LIGHT_CLASS_NAME = "com.android.settings.Settings$BatteryLightSettingsActivity";
     public static final String KEY_NOTIF_LIGHT_CLASS_NAME = "com.android.settings.Settings$NotificationLightSettingsActivity";
     public static final String KEY_NOTIF_MANAGER_CLASS_NAME = "com.android.settings.Settings$NotificationManagerSettingsActivity";
-    public static final String KEY_NOTIF_HEADS_UP_CLASS_NAME = "com.android.settings.Settings$HeadsUpSettingsActivity";
 
     private static final int DLG_SAFE_HEADSET_VOLUME = 0;
 
@@ -235,10 +234,8 @@ public class NotificationFragment extends PreferenceFragment implements
         }
 
         if (preference == mHeadsUp) {
-            Intent action = new Intent(Intent.ACTION_MAIN);
-            ComponentName cn = new ComponentName(KEY_NOTIFICATION_ACTIVITY_PACKAGE_NAME, KEY_NOTIF_HEADS_UP_CLASS_NAME);
-            action.setComponent(cn);
-            startActivity(action);
+
+            ((VRToxinActivity) getActivity()).displayHeadsUp();
 
             return true;
         }
