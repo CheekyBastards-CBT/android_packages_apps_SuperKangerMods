@@ -23,6 +23,7 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.Preference;
@@ -64,6 +65,8 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
             "status_bar_ticker_text_color_dark_mode";
     private static final String STATUS_BAR_TICKER_FONT_SIZE  =
             "status_bar_ticker_font_size";
+    private static final String STATUS_BAR_TICKER_FONT_STYLE =
+            "status_bar_ticker_font_style";
 
     private static final int BLACK                  = 0xff000000;
     private static final int WHITE                  = 0xffffffff;
@@ -81,6 +84,7 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
     private ColorPickerPreference mCountTextColor;
     private ColorPickerPreference mTextColorDark;
     private SeekBarPreference mTickerFontSize;
+    private ListPreference mTickerFontStyle;
 
     private ContentResolver mResolver;
 
@@ -124,6 +128,12 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
             mTickerFontSize.setValue(Settings.System.getInt(mResolver,
                     Settings.System.STATUS_BAR_TICKER_FONT_SIZE, 14));
             mTickerFontSize.setOnPreferenceChangeListener(this);
+
+            mTickerFontStyle = (ListPreference) findPreference(STATUS_BAR_TICKER_FONT_STYLE);
+            mTickerFontStyle.setOnPreferenceChangeListener(this);
+            mTickerFontStyle.setValue(Integer.toString(Settings.System.getInt(mResolver,
+                    Settings.System.STATUS_BAR_TICKER_FONT_STYLE, 0)));
+            mTickerFontStyle.setSummary(mTickerFontStyle.getEntry());
 
             mTextColor =
                     (ColorPickerPreference) findPreference(TEXT_COLOR);
@@ -170,6 +180,7 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
             mIconColorDark.setOnPreferenceChangeListener(this);
         } else {
             prefSet.removePreference(findPreference("ticker_colors"));
+            prefSet.removePreference(findPreference("status_bar_ticker_font_style"));
         }
 
         if (showCount) {
@@ -293,6 +304,13 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
             Settings.System.putInt(mResolver,
                     Settings.System.STATUS_BAR_TICKER_FONT_SIZE, width);
             return true;
+        } else if (preference == mTickerFontStyle) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mTickerFontStyle.findIndexOfValue((String) newValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.STATUS_BAR_TICKER_FONT_STYLE, val);
+            mTickerFontStyle.setSummary(mTickerFontStyle.getEntries()[index]);
+            return true;
         }
         return false;
     }
@@ -334,6 +352,10 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_SHOW_TICKER, 0);
                             Settings.System.putInt(getOwner().mResolver,
+                                     Settings.System.STATUS_BAR_TICKER_FONT_SIZE, 14);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_TICKER_FONT_STYLE, 0);
+                            Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_TICKER_TEXT_COLOR,
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
@@ -355,6 +377,10 @@ public class StatusBarTickerFragment extends PreferenceFragment implements
                                     Settings.System.STATUS_BAR_NOTIF_COUNT, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_SHOW_TICKER, 1);
+                            Settings.System.putInt(getOwner().mResolver,
+                                     Settings.System.STATUS_BAR_TICKER_FONT_SIZE, 16);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_TICKER_FONT_STYLE, 24);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_TICKER_TEXT_COLOR,
                                     VRTOXIN_BLUE);

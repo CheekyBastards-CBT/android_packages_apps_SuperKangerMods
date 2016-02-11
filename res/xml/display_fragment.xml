@@ -47,9 +47,10 @@
             android:entries="@array/screen_timeout_entries"
             android:entryValues="@array/screen_timeout_values" />
 
-        <ListPreference
+        <EditTextPreference
             android:key="lcd_density"
             android:title="@string/lcd_density"
+            android:inputType="number"
             android:persistent="false" />
 
         <SwitchPreference
