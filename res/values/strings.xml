@@ -1488,7 +1488,8 @@
 
     <string name="lock_screen_weather_settings_title">Lockscreen Weather</string>
     <string name="lock_screen_clock_font_size_title">LockClock Size</string>
-    <string name="lock_screen_weather_font_size_title">Weather Texts Size</string>
+    <string name="lock_screen_alarm_date_font_size_title">Alarm and Date Size</string>
+    <string name="lock_screen_weather_font_size_title">Weather Text Size</string>
     <string name="lock_screen_weather_settings_summary">Customize Lockscreen Weather Display</string>
     <string name="lock_clock_weather_general_summary">General cLock weather settings</string>
     <string name="weather_control_title">General cLock Weather</string>

@@ -53,6 +53,15 @@
         android:persistent="false" />
 
     <com.android.vrtoxin.preferences.SeekBarPreference
+        android:key="ls_alarm_date_font_size"
+        android:title="@string/lock_screen_alarm_date_font_size_title"
+        android:max="30"
+        vrtoxin:minimum="4"
+        vrtoxin:unitsLeft=""
+        vrtoxin:unitsRight="dp"
+        android:persistent="false" />
+
+    <com.android.vrtoxin.preferences.SeekBarPreference
         android:key="ls_weather_font_size"
         android:title="@string/lock_screen_weather_font_size_title"
         android:max="30"
